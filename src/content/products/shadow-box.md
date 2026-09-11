@@ -7,8 +7,8 @@ tagline: A keepsake box with a baby's name, date and the details that matter.
 images:
   - /images/20260803_182444.jpg
   - /images/20260805_181754-1-.jpg
-  - /images/20260805_181656-1-.jpg
   - /images/20260805_181837-2-.jpg
+  - /images/20260805_181656-1-.jpg
 icon: shadowBox
 fromPrice: 45
 priceMode: single
