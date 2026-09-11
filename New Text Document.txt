@@ -1,0 +1,3 @@
+cd Desktop\make3d-site-source
+
+npm run dev

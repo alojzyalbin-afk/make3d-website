@@ -1,0 +1,169 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import ProductIcon from '../../components/ProductIcon.astro';
+
+const productEntries = await getCollection('products');
+const categoryEntries = await getCollection('categories');
+
+const products = productEntries.map((entry) => ({
+  slug: entry.id,
+  name: entry.data.name,
+  tagline: entry.data.tagline,
+  fromPrice: entry.data.fromPrice,
+  icon: entry.data.icon,
+  category: entry.data.category,
+  thumb: entry.data.images[0] ?? null,
+}));
+
+// Categories in their set order, each with a live product count.
+const categories = categoryEntries
+  .map((entry) => ({
+    slug: entry.id,
+    name: entry.data.name,
+    description: entry.data.description ?? '',
+    order: entry.data.order,
+    count: products.filter((p) => p.category === entry.id).length,
+  }))
+  .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name));
+
+// Any category a product points at that has no category file of its own.
+const orphanCategories = [...new Set(products.map((p) => p.category))].filter(
+  (slug) => !categories.some((c) => c.slug === slug)
+);
+---
+
+<Layout title="Shop" description="Every custom 3D-printed piece I make — lights, keepsakes, figurines and more, all made to order in Dublin.">
+
+  <section class="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-16">
+
+    <p class="font-mono text-xs tracking-widest text-gold uppercase mb-3">CATALOGUE</p>
+    <h1 class="font-display font-bold text-3xl sm:text-4xl mb-4">Everything I make</h1>
+    <p class="text-paper/70 leading-relaxed max-w-lg mb-10">
+      Pick a category, or browse the lot. Every piece is made to order — sizes, colours and details are yours to choose.
+    </p>
+
+    <!-- CATEGORY FILTER -->
+    <div class="flex flex-wrap gap-2 mb-10 pb-8 border-b border-paper/10">
+      <button type="button" data-filter="all"
+        class="filter-chip is-active text-sm font-mono px-4 py-2 rounded-full border transition-colors">
+        All <span class="opacity-60">({products.length})</span>
+      </button>
+      {categories.map((cat) => (
+        <button type="button" data-filter={cat.slug}
+          class="filter-chip text-sm font-mono px-4 py-2 rounded-full border transition-colors">
+          {cat.name} <span class="opacity-60">({cat.count})</span>
+        </button>
+      ))}
+      {orphanCategories.map((slug) => (
+        <button type="button" data-filter={slug}
+          class="filter-chip text-sm font-mono px-4 py-2 rounded-full border transition-colors">
+          {slug} <span class="opacity-60">({products.filter((p) => p.category === slug).length})</span>
+        </button>
+      ))}
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div id="product-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {products.map((product) => (
+        <a href={`/shop/${product.slug}`} data-category={product.category}
+          class="product-card group block bg-panel rounded-2xl border border-paper/10 overflow-hidden transition-all hover:-translate-y-1 hover:border-gold/40 hover:shadow-xl hover:shadow-black/30">
+          {product.thumb ? (
+            <div class="aspect-[4/3] overflow-hidden bg-ink">
+              <img src={product.thumb} alt={product.name} loading="lazy" decoding="async"
+                class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          ) : (
+            <div class="aspect-[4/3] flex items-center justify-center bg-ink">
+              <ProductIcon icon={product.icon} size={48} />
+            </div>
+          )}
+          <div class="p-5">
+            <h2 class="font-display font-semibold text-lg mb-1.5">{product.name}</h2>
+            <p class="text-sm text-paper/65 leading-relaxed mb-3">{product.tagline}</p>
+            <p class="font-mono text-sm text-gold">from €{product.fromPrice}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- EMPTY STATE (shown when a filter has no products) -->
+    <div id="empty-state" class="hidden text-center py-16">
+      <p class="text-paper/70 mb-2">Nothing here yet.</p>
+      <p class="text-sm text-paper/55">
+        Want something in this category? Email
+        <a href="mailto:contact@make3d.ie" class="text-gold hover:underline">contact@make3d.ie</a>
+        and I'll quote it.
+      </p>
+    </div>
+
+    <!-- CUSTOM WORK -->
+    <div class="mt-16 p-8 rounded-2xl bg-panel border border-paper/10">
+      <h2 class="font-display font-semibold text-xl mb-2">Don't see what you need?</h2>
+      <p class="text-paper/70 leading-relaxed mb-5 max-w-lg">
+        Most of what I make starts as someone's idea, a photo, or a broken part that can't be bought anymore. Send me the details and I'll come back with a price.
+      </p>
+      <a href="mailto:contact@make3d.ie"
+        class="inline-flex items-center gap-2 bg-red text-paper font-display font-semibold px-6 py-3 rounded-full hover:bg-red/90 transition-colors focus-visible:outline-2 focus-visible:outline-gold">
+        Ask for a quote
+      </a>
+    </div>
+
+  </section>
+
+</Layout>
+
+<style>
+  .filter-chip {
+    border-color: rgba(246, 243, 236, 0.15);
+    color: rgba(246, 243, 236, 0.7);
+  }
+  .filter-chip:hover {
+    border-color: rgba(246, 243, 236, 0.4);
+    color: #f6f3ec;
+  }
+  .filter-chip.is-active {
+    border-color: #d4af37;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: #d4af37;
+  }
+</style>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>('.filter-chip');
+  const cards = document.querySelectorAll<HTMLAnchorElement>('.product-card');
+  const grid = document.getElementById('product-grid');
+  const empty = document.getElementById('empty-state');
+
+  function applyFilter(value: string) {
+    let visible = 0;
+    cards.forEach((card) => {
+      const match = value === 'all' || card.dataset.category === value;
+      card.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+    grid?.classList.toggle('hidden', visible === 0);
+    empty?.classList.toggle('hidden', visible !== 0);
+  }
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      chips.forEach((c) => c.classList.remove('is-active'));
+      chip.classList.add('is-active');
+      const value = chip.dataset.filter ?? 'all';
+      applyFilter(value);
+      // keep the choice in the URL so it can be linked and refreshed
+      const url = new URL(window.location.href);
+      if (value === 'all') url.searchParams.delete('category');
+      else url.searchParams.set('category', value);
+      history.replaceState({}, '', url);
+    });
+  });
+
+  // honour ?category=... on load
+  const initial = new URL(window.location.href).searchParams.get('category');
+  if (initial) {
+    const target = Array.from(chips).find((c) => c.dataset.filter === initial);
+    if (target) target.click();
+  }
+</script>

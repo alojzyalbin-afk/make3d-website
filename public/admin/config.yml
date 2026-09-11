@@ -1,0 +1,126 @@
+backend:
+  name: github
+  repo: alojzyalbin-afk/make3d-website
+  branch: main
+  base_url: https://make3d.ie
+  auth_endpoint: api/auth
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "products"
+    label: "Products"
+    label_singular: "Product"
+    folder: "src/content/products"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    summary: "{{name}} — from €{{fromPrice}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Heading (big title on the product page)", name: "heading", widget: "string" }
+      - label: "Category"
+        name: "category"
+        widget: "relation"
+        collection: "categories"
+        search_fields: ["name"]
+        value_field: "{{slug}}"
+        display_fields: ["name"]
+        hint: "Manage the list under Categories in the sidebar."
+      - { label: "Tagline (short, shown on the homepage card)", name: "tagline", widget: "string" }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        required: false
+        label_singular: "Image"
+        summary: "{{image}}"
+        field: { label: "Image", name: "image", widget: "image" }
+        hint: "First image is the main photo and the homepage thumbnail. Use 'Add Image' for more."
+      - label: "Icon (only used when there are no photos yet)"
+        name: "icon"
+        widget: "select"
+        options: ["nameLights", "shadowBox", "dateBalloon", "figurines", "generic"]
+        default: "generic"
+      - { label: "From price (€)", name: "fromPrice", widget: "number", value_type: "float" }
+      - label: "Pricing type"
+        name: "priceMode"
+        widget: "select"
+        options: ["single", "matrix"]
+        hint: "single = one list of priced options (sizes/variants). matrix = two dimensions, like type × size (used for figurines)."
+      - { label: "Options label (heading above the option buttons)", name: "optionsLabel", widget: "string", default: "Options", required: false }
+      - label: "Options (only for 'single' pricing)"
+        name: "options"
+        widget: "list"
+        required: false
+        label_singular: "Option"
+        summary: "{{fields.label}} — €{{fields.price}}"
+        fields:
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "Price (€)", name: "price", widget: "number", value_type: "float" }
+      - label: "Sizes (only for 'matrix' pricing)"
+        name: "sizes"
+        widget: "list"
+        required: false
+        label_singular: "Size"
+        field: { label: "Size", name: "size", widget: "string" }
+      - label: "Tiers (only for 'matrix' pricing)"
+        name: "tiers"
+        widget: "list"
+        required: false
+        label_singular: "Tier"
+        summary: "{{fields.label}}"
+        fields:
+          - { label: "Key (no spaces)", name: "key", widget: "string" }
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "Description", name: "desc", widget: "string", required: false }
+          - label: "Prices (€, one per size, same order as Sizes above)"
+            name: "prices"
+            widget: "list"
+            field: { label: "Price", name: "price", widget: "number", value_type: "float" }
+      - label: "Custom fields (extra inputs on the order form)"
+        name: "customFields"
+        widget: "list"
+        required: false
+        label_singular: "Field"
+        summary: "{{fields.label}}"
+        fields:
+          - { label: "Field ID (no spaces, e.g. babyName)", name: "id", widget: "string" }
+          - { label: "Field label (shown to the customer)", name: "label", widget: "string" }
+          - { label: "Placeholder text", name: "placeholder", widget: "string", required: false }
+          - { label: "Required?", name: "required", widget: "boolean", default: false }
+      - label: "Short details"
+        name: "details"
+        widget: "relation"
+        collection: "details"
+        search_fields: ["text"]
+        value_field: "{{slug}}"
+        display_fields: ["text"]
+        multiple: true
+        required: false
+        hint: "Pick from your reusable list. Manage them under Short details in the sidebar."
+      - { label: "Description (main text on the product page)", name: "body", widget: "markdown" }
+
+  - name: "categories"
+    label: "Categories"
+    label_singular: "Category"
+    folder: "src/content/categories"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    summary: "{{name}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Sort order (lower shows first)", name: "order", widget: "number", value_type: "int", default: 99, required: false }
+
+  - name: "details"
+    label: "Short details"
+    label_singular: "Detail"
+    folder: "src/content/details"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: text
+    summary: "{{text}}"
+    fields:
+      - { label: "Text", name: "text", widget: "string", hint: "One short line, e.g. 'USB-C powered, 5V LED strip included'." }

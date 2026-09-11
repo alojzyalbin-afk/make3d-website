@@ -1,0 +1,193 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import ProductIcon from '../components/ProductIcon.astro';
+
+const productEntries = await getCollection('products');
+const products = productEntries.map((entry) => ({
+  slug: entry.id,
+  name: entry.data.name,
+  tagline: entry.data.tagline,
+  fromPrice: entry.data.fromPrice,
+  icon: entry.data.icon,
+  thumb: entry.data.images[0] ?? null,
+}));
+
+const M_PATH =
+  'M30,200 L30,40 L74,40 L120,128 L166,40 L210,40 L210,200 L176,200 L176,92 L133,170 L107,170 L64,92 L64,200 Z';
+const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
+---
+
+<Layout title="Custom 3D-printed gifts, made in Dublin">
+
+  <!-- HERO -->
+  <section class="bg-ink text-paper">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="font-mono text-xs tracking-widest text-muted uppercase mb-5">MAKE3D.IE — DUBLIN, IRELAND</p>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl leading-[1.08] mb-5">Still <span class="text-gold">printing.</span></h1>
+        <p class="text-paper/75 text-lg leading-relaxed mb-6 max-w-md">Custom gifts, on-demand builds and replacement parts — designed, printed and finished by hand, right here in Dublin.</p>
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="text-xs font-mono px-3 py-1.5 rounded-full border border-paper/10 bg-panel">Custom Design</span>
+          <span class="text-xs font-mono px-3 py-1.5 rounded-full border border-paper/10 bg-panel">Personalized Gifts</span>
+          <span class="text-xs font-mono px-3 py-1.5 rounded-full border border-paper/10 bg-panel">Made to Order</span>
+        </div>
+        <div class="flex items-center gap-6 flex-wrap">
+          <a href="/shop" class="inline-flex items-center gap-2 bg-red text-paper font-display font-semibold px-6 py-3.5 rounded-full hover:bg-red/90 transition-colors focus-visible:outline-2 focus-visible:outline-gold">
+            See what I make
+          </a>
+          <a href="#how-it-works" class="text-sm font-medium text-paper/70 hover:text-gold transition-colors underline underline-offset-4 decoration-paper/30">How it works</a>
+        </div>
+      </div>
+      <div class="flex justify-center md:justify-end">
+        <!-- Vector path, so it never depends on a font loading.
+             SVG clip (letter shape) and CSS clip (print reveal) sit on
+             separate nested groups - on one element the CSS overrides the SVG. -->
+        <svg viewBox="0 0 240 240" class="w-56 h-56 sm:w-64 sm:h-64" role="img" aria-label="make3d.ie">
+          <defs>
+            <linearGradient id="mGrad" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stop-color="#E7382C" />
+              <stop offset="45%" stop-color="#D4AF37" />
+              <stop offset="100%" stop-color="#EBC75A" />
+            </linearGradient>
+            <clipPath id="letterM">
+              <path d={M_PATH} />
+            </clipPath>
+          </defs>
+          <g clip-path="url(#letterM)">
+            <g class="letter-glow">
+              <rect x="0" y="0" width="240" height="240" fill="url(#mGrad)" />
+              {layerLines.map((y) => (
+                <rect x="0" y={y} width="240" height="1.2" fill="#0D0C10" opacity="0.45" />
+              ))}
+            </g>
+          </g>
+          <path d={M_PATH} fill="none" stroke="#F6F3EC" stroke-width="1.5" stroke-dasharray="1200" opacity="0.4" class="layer-lines" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-20">
+    <h2 class="font-display font-bold text-3xl mb-12">How it works</h2>
+    <div class="grid sm:grid-cols-3 gap-8">
+      <div>
+        <p class="font-mono text-xs text-gold mb-3">01</p>
+        <h3 class="font-display font-semibold mb-2">Send your details</h3>
+        <p class="text-sm text-paper/65 leading-relaxed">Tell me what you need — a product, a custom idea, or a part to match.</p>
+      </div>
+      <div>
+        <p class="font-mono text-xs text-gold mb-3">02</p>
+        <h3 class="font-display font-semibold mb-2">Get a price</h3>
+        <p class="text-sm text-paper/65 leading-relaxed">I confirm the details and the price before anything's printed.</p>
+      </div>
+      <div>
+        <p class="font-mono text-xs text-gold mb-3">03</p>
+        <h3 class="font-display font-semibold mb-2">Collect or delivered</h3>
+        <p class="text-sm text-paper/65 leading-relaxed">Pick it up free around Dublin, or I post it to you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section id="products" class="bg-panel border-y border-paper/10">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-20">
+      <div class="flex items-end justify-between flex-wrap gap-4 mb-10">
+        <div>
+          <h2 class="font-display font-bold text-3xl mb-3">Featured products</h2>
+          <p class="text-paper/70 leading-relaxed max-w-md">Each one opens to sizes, colours and pricing.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="carousel-prev" aria-label="Previous" class="w-9 h-9 rounded-full border border-paper/20 flex items-center justify-center hover:bg-paper/5 transition-colors focus-visible:outline-2 focus-visible:outline-gold">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <button id="carousel-next" aria-label="Next" class="w-9 h-9 rounded-full border border-paper/20 flex items-center justify-center hover:bg-paper/5 transition-colors focus-visible:outline-2 focus-visible:outline-gold">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="carousel" class="flex gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2 scroll-smooth">
+        {products.map((product) => (
+          <a href={`/shop/${product.slug}`} class="snap-start shrink-0 w-64 group block bg-ink rounded-2xl border border-paper/10 overflow-hidden transition-all hover:-translate-y-1 hover:border-gold/40 hover:shadow-xl hover:shadow-black/30">
+            {product.thumb ? (
+              <div class="aspect-[4/3] overflow-hidden bg-panel">
+                <img src={product.thumb} alt={product.name} loading="lazy" decoding="async"
+                  class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300" />
+              </div>
+            ) : (
+              <div class="aspect-[4/3] flex items-center justify-center bg-panel">
+                <ProductIcon icon={product.icon} size={48} />
+              </div>
+            )}
+            <div class="p-6">
+              <h3 class="font-display font-semibold text-lg mb-1.5">{product.name}</h3>
+              <p class="text-sm text-paper/65 leading-relaxed mb-4">{product.tagline}</p>
+              <p class="font-mono text-sm text-gold mb-3">from €{product.fromPrice}</p>
+              <span class="text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">See options →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <a href="/shop" class="inline-flex items-center gap-1 mt-8 text-sm font-medium text-gold hover:gap-2 transition-all">
+        Browse the full catalogue →
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-24">
+    <div class="max-w-xl mb-12">
+      <h2 class="font-display font-bold text-3xl mb-3">What I can make for you</h2>
+      <p class="text-paper/70 leading-relaxed">Beyond the shop — if it can be modelled, it can probably be printed.</p>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl bg-panel border border-paper/10">
+        <div class="w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3 3 8v8l9 5 9-5V8z" /><path d="M3 8l9 5 9-5" /><path d="M12 13v8" />
+          </svg>
+        </div>
+        <h3 class="font-display font-semibold text-lg mb-2">Custom &amp; made-to-order</h3>
+        <p class="text-sm text-paper/65 leading-relaxed">Any of the pieces above, sized and coloured your way.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-panel border border-paper/10">
+        <div class="w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 21V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v13" /><path d="M9 6V4a3 3 0 0 1 6 0v2" /><path d="M9 13h6" />
+          </svg>
+        </div>
+        <h3 class="font-display font-semibold text-lg mb-2">On-demand builds</h3>
+        <p class="text-sm text-paper/65 leading-relaxed">Figurines, cars, props, one-off ideas — describe it and I'll quote it.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-panel border border-paper/10">
+        <div class="w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a4 4 0 0 1-5 5L5 16v3h3l4.7-4.7a4 4 0 0 1 5-5l1.6-1.6-3-3z" />
+          </svg>
+        </div>
+        <h3 class="font-display font-semibold text-lg mb-2">Repairs &amp; replacement parts</h3>
+        <p class="text-sm text-paper/65 leading-relaxed">Broke a clip, a bracket, a part you can't buy anymore? Send a photo or the measurements and I'll print a replacement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-panel border-y border-paper/10">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 py-16 md:py-20">
+      <h2 class="font-display font-bold text-3xl mb-6">About</h2>
+      <p class="text-paper/70 leading-relaxed text-lg">Custom 3D Prints Ireland is a one-person workshop in Dublin. I design, print, sand, prime and paint every piece myself — nothing is outsourced. It started as a side project and turned into something people keep coming back to.</p>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const track = document.getElementById('carousel');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+  const scrollAmount = 276;
+
+  prevBtn?.addEventListener('click', () => track?.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+  nextBtn?.addEventListener('click', () => track?.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
+</script>

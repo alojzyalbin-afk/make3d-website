@@ -1,0 +1,209 @@
+---
+interface Option {
+  label: string;
+  price: number;
+}
+interface Tier {
+  key: string;
+  label: string;
+  desc?: string;
+  prices: number[];
+}
+interface CustomField {
+  id: string;
+  label: string;
+  placeholder?: string;
+  required: boolean;
+}
+interface Props {
+  slug: string;
+  name: string;
+  fromPrice: number;
+  priceMode: 'single' | 'matrix';
+  optionsLabel?: string;
+  options?: Option[];
+  sizes?: string[];
+  tiers?: Tier[];
+  customFields: CustomField[];
+}
+
+const { slug, name, fromPrice, priceMode, optionsLabel = 'Options', options = [], sizes = [], tiers = [], customFields } = Astro.props;
+
+const priceMatrix = priceMode === 'matrix' ? Object.fromEntries(tiers.map((t) => [t.key, t.prices])) : null;
+const initialPrice = priceMode === 'matrix' ? tiers[0]?.prices[0] ?? fromPrice : options[0]?.price ?? fromPrice;
+---
+
+<div class="bg-panel rounded-2xl border border-paper/10 p-6 sm:p-8">
+  <h2 class="font-display font-semibold text-xl mb-6">Order this piece</h2>
+
+  <form id="order-form" class="space-y-5" data-slug={slug}>
+    <input type="hidden" name="access_key" value="38b3beaa-aa0d-4a06-adf5-d066f732ffcd" />
+    <input type="hidden" name="subject" value={`New order — ${name} (make3d.ie)`} />
+    <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
+
+    {priceMode === 'matrix' && (
+      <fieldset>
+        <legend class="text-sm font-mono uppercase tracking-wide text-muted mb-3">Type</legend>
+        <div class="grid grid-cols-1 gap-2">
+          {tiers.map((tier, i) => (
+            <label class="cursor-pointer">
+              <input type="radio" name="tier" value={tier.label} data-key={tier.key} checked={i === 0} class="peer sr-only" />
+              <span class="block rounded-lg border border-paper/15 px-4 py-2.5 text-sm peer-checked:border-gold peer-checked:bg-gold/10 peer-checked:text-gold transition-colors">
+                <span class="font-semibold block">{tier.label}</span>
+                {tier.desc && <span class="text-xs opacity-75">{tier.desc}</span>}
+              </span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    )}
+
+    {priceMode === 'matrix' && (
+      <fieldset>
+        <legend class="text-sm font-mono uppercase tracking-wide text-muted mb-3">Size</legend>
+        <div class="grid grid-cols-4 gap-2">
+          {sizes.map((size, i) => (
+            <label class="cursor-pointer">
+              <input type="radio" name="size" value={size} data-index={i} checked={i === 0} class="peer sr-only" />
+              <span class="block text-center rounded-lg border border-paper/15 py-2 text-xs peer-checked:border-gold peer-checked:bg-gold/10 peer-checked:text-gold peer-checked:font-semibold transition-colors">
+                {size}
+              </span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    )}
+
+    {priceMode === 'single' && (
+      <fieldset>
+        <legend class="text-sm font-mono uppercase tracking-wide text-muted mb-3">{optionsLabel}</legend>
+        <div class="grid grid-cols-3 gap-2">
+          {options.map((opt, i) => (
+            <label class="cursor-pointer">
+              <input type="radio" name="option" value={`${opt.label} — €${opt.price}`} data-price={opt.price} checked={i === 0} class="peer sr-only" />
+              <span class="block text-center rounded-lg border border-paper/15 py-2.5 text-sm peer-checked:border-gold peer-checked:bg-gold/10 peer-checked:text-gold peer-checked:font-semibold transition-colors">
+                {opt.label}
+              </span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    )}
+
+    {customFields.length > 0 && (
+      <div class="grid grid-cols-2 gap-4">
+        {customFields.map((field) => (
+          <div>
+            <label for={field.id} class="block text-sm font-medium mb-1.5">{field.label}</label>
+            <input id={field.id} name={field.id} type="text" placeholder={field.placeholder} required={field.required}
+              class="w-full rounded-lg border border-paper/15 bg-paper/[0.04] px-3 py-2.5 text-sm text-paper placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-gold" />
+          </div>
+        ))}
+      </div>
+    )}
+
+    <fieldset>
+      <legend class="text-sm font-medium mb-2">Collection</legend>
+      <div class="flex gap-4 text-sm">
+        <label class="flex items-center gap-2">
+          <input type="radio" name="delivery" value="Collect in Dublin (free)" checked class="accent-gold" />
+          Collect in Dublin (free)
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="radio" name="delivery" value="Post" class="accent-gold" />
+          Post it to me
+        </label>
+      </div>
+    </fieldset>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label for="name" class="block text-sm font-medium mb-1.5">Your name</label>
+        <input id="name" name="name" type="text" required
+          class="w-full rounded-lg border border-paper/15 bg-paper/[0.04] px-3 py-2.5 text-sm text-paper placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-gold" />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium mb-1.5">Email</label>
+        <input id="email" name="email" type="email" required
+          class="w-full rounded-lg border border-paper/15 bg-paper/[0.04] px-3 py-2.5 text-sm text-paper placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-gold" />
+      </div>
+    </div>
+
+    <div>
+      <label for="notes" class="block text-sm font-medium mb-1.5">Anything else? (colours, timing, questions)</label>
+      <textarea id="notes" name="notes" rows="3"
+        class="w-full rounded-lg border border-paper/15 bg-paper/[0.04] px-3 py-2.5 text-sm text-paper placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+    </div>
+
+    <p class="text-sm text-paper/60 leading-relaxed">
+      Want something custom based on your own photo? Email it to
+      <a href="mailto:contact@make3d.ie" class="text-gold hover:underline">contact@make3d.ie</a>
+      and I'll take it from there.
+    </p>
+
+    <button type="submit" id="submit-btn"
+      class="w-full bg-red text-paper font-display font-semibold py-3.5 rounded-full hover:bg-red/90 transition-colors focus-visible:outline-2 focus-visible:outline-gold">
+      Send request — <span id="price-display">€{initialPrice}</span>
+    </button>
+
+    <p id="form-status" class="text-sm text-center hidden"></p>
+  </form>
+</div>
+
+<script define:vars={{ priceMode, priceMatrix }}>
+  const form = document.getElementById('order-form');
+  const priceDisplay = document.getElementById('price-display');
+  const status = document.getElementById('form-status');
+  const submitBtn = document.getElementById('submit-btn');
+
+  function updatePrice() {
+    if (!priceDisplay) return;
+    if (priceMode === 'matrix') {
+      const tierKey = document.querySelector('input[name="tier"]:checked')?.dataset.key;
+      const sizeIndex = Number(document.querySelector('input[name="size"]:checked')?.dataset.index ?? 0);
+      const price = priceMatrix?.[tierKey]?.[sizeIndex];
+      if (price !== undefined) priceDisplay.textContent = `€${price}`;
+    } else {
+      const price = document.querySelector('input[name="option"]:checked')?.dataset.price;
+      if (price !== undefined) priceDisplay.textContent = `€${price}`;
+    }
+  }
+
+  form?.querySelectorAll('input[name="tier"], input[name="size"], input[name="option"]').forEach((input) => {
+    input.addEventListener('change', updatePrice);
+  });
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!status || !submitBtn || !form) return;
+
+    submitBtn.disabled = true;
+    const originalText = submitBtn.innerHTML;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        status.textContent = "Thanks — I'll get back to you with a quote and payment details soon.";
+        status.className = 'text-sm text-center text-gold';
+        form.reset();
+        updatePrice();
+      } else {
+        throw new Error(result.message || 'Something went wrong');
+      }
+    } catch (err) {
+      status.textContent = 'Something went wrong sending this — please email contact@make3d.ie directly.';
+      status.className = 'text-sm text-center text-red';
+    } finally {
+      status.classList.remove('hidden');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
+  });
+</script>

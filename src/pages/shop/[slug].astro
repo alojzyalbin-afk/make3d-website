@@ -1,0 +1,118 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import ProductIcon from '../../components/ProductIcon.astro';
+import { getCategoryMap, getDetailMap, resolveCategory, resolveDetails } from '../../lib/library';
+
+export async function getStaticPaths() {
+  const products = await getCollection('products');
+  return products.map((product) => ({
+    params: { slug: product.id },
+    props: { product },
+  }));
+}
+
+const { product } = Astro.props;
+const { Content } = await render(product);
+const p = product.data;
+
+const categoryMap = await getCategoryMap();
+const detailMap = await getDetailMap();
+const categoryName = resolveCategory(p.category, categoryMap);
+const detailLines = resolveDetails(p.details, detailMap);
+---
+
+<Layout title={p.name} description={p.tagline}>
+
+  <section class="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-16">
+    <a href="/#products" class="text-sm text-paper/60 hover:text-gold transition-colors inline-flex items-center gap-1 mb-8">
+      ← Back to all products
+    </a>
+
+    <div class="grid md:grid-cols-2 gap-12">
+
+      <div>
+        <p class="font-mono text-xs tracking-widest text-gold uppercase mb-3">{categoryName}</p>
+        <h1 class="font-display font-bold text-3xl sm:text-4xl mb-6">{p.heading}</h1>
+
+        {p.images.length > 0 ? (
+          <div class="mb-8">
+            <!-- object-contain so portrait and landscape photos both show in full -->
+            <div class="rounded-2xl overflow-hidden border border-paper/10 bg-panel aspect-[4/5]">
+              <img id="gallery-main" src={p.images[0]} alt={p.name} decoding="async"
+                class="w-full h-full object-contain transition-opacity duration-200" />
+            </div>
+
+            {p.images.length > 1 && (
+              <div class="flex gap-3 mt-3 overflow-x-auto no-scrollbar pb-1">
+                {p.images.map((img, i) => (
+                  <button type="button" data-src={img} aria-label={`View photo ${i + 1}`}
+                    class={`gallery-thumb shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${i === 0 ? 'border-gold' : 'border-paper/15 hover:border-paper/40'}`}>
+                    <img src={img} alt="" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        ) : (
+          <div class="rounded-2xl border border-paper/10 bg-panel aspect-[4/5] flex items-center justify-center mb-8">
+            <ProductIcon icon={p.icon} size={72} />
+          </div>
+        )}
+
+        <div class="text-paper/70 leading-relaxed mb-8 max-w-md space-y-4">
+          <Content />
+        </div>
+
+        {detailLines.length > 0 && (
+          <div class="space-y-2 text-sm text-paper/65 border-t border-paper/10 pt-6">
+            {detailLines.map((detail) => <p>· {detail}</p>)}
+          </div>
+        )}
+      </div>
+
+      <div class="md:sticky md:top-24 md:self-start">
+        <QuoteForm
+          slug={product.id}
+          name={p.name}
+          fromPrice={p.fromPrice}
+          priceMode={p.priceMode}
+          optionsLabel={p.optionsLabel}
+          options={p.options}
+          sizes={p.sizes}
+          tiers={p.tiers}
+          customFields={p.customFields}
+        />
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const main = document.getElementById('gallery-main') as HTMLImageElement | null;
+  const thumbs = document.querySelectorAll<HTMLButtonElement>('.gallery-thumb');
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener('click', () => {
+      const src = thumb.dataset.src;
+      if (!main || !src) return;
+
+      main.style.opacity = '0';
+      const swap = () => {
+        main.src = src;
+        main.style.opacity = '1';
+      };
+      setTimeout(swap, 150);
+
+      thumbs.forEach((t) => {
+        t.classList.remove('border-gold');
+        t.classList.add('border-paper/15', 'hover:border-paper/40');
+      });
+      thumb.classList.add('border-gold');
+      thumb.classList.remove('border-paper/15', 'hover:border-paper/40');
+    });
+  });
+</script>
