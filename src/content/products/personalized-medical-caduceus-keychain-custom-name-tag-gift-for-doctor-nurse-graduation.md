@@ -1,6 +1,5 @@
 ---
-name: Personalized Medical Caduceus Keychain, Custom Name  Tag Gift for Doctor,
-  Nurse, Graduation
+name: Personalized Medical Caduceus Keychain
 heading: Personalized Medical Caduceus Keychain
 category: keychains
 tagline: Personalized Medical Caduceus Keychain, Custom Name  Tag Gift for
@@ -13,6 +12,10 @@ fromPrice: 7
 priceMode: single
 optionsLabel: Options
 customFields: []
+details:
+  - collect-or-post
+  - colour-options-ask
+  - made-in-dublin
 ---
 A meaningful keepsake for anyone in medicine. This dog-tag style keychain features the classic medical caduceus symbol, personalized with the name of your choice — perfect for a doctor, medical graduate, or anyone who's earned the title.
 
