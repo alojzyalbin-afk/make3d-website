@@ -43,6 +43,12 @@ collections:
         options: ["nameLights", "shadowBox", "dateBalloon", "figurines", "generic"]
         default: "generic"
       - { label: "From price (€)", name: "fromPrice", widget: "number", value_type: "float" }
+      - label: "Etsy listing URL"
+        name: "etsyUrl"
+        widget: "string"
+        required: false
+        pattern: ['^https://(www\.)?etsy\.com/.+', "Must be a full Etsy link starting with https://www.etsy.com/"]
+        hint: "Paste the Share & Save link from your Etsy listing so the sale counts towards your 4% fee discount. Leave empty if this item is not on Etsy - the button is then hidden."
       - label: "Pricing type"
         name: "priceMode"
         widget: "select"

@@ -12,6 +12,10 @@ const products = defineCollection({
     images: z.array(z.string()).default([]),
     fromPrice: z.number(),
 
+    // Etsy listing for this product. When set, a "Buy on Etsy" button
+    // appears under the order form. Leave empty for items not listed there.
+    etsyUrl: z.string().url().optional(),
+
     priceMode: z.enum(['single', 'matrix']),
     optionsLabel: z.string().default('Options'),
     options: z

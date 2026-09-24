@@ -25,16 +25,23 @@ interface Props {
   sizes?: string[];
   tiers?: Tier[];
   customFields: CustomField[];
+  // true when this product is also on Etsy, so the two options can be told apart
+  hasEtsy?: boolean;
 }
 
-const { slug, name, fromPrice, priceMode, optionsLabel = 'Options', options = [], sizes = [], tiers = [], customFields } = Astro.props;
+const { slug, name, fromPrice, priceMode, optionsLabel = 'Options', options = [], sizes = [], tiers = [], customFields, hasEtsy = false } = Astro.props;
 
 const priceMatrix = priceMode === 'matrix' ? Object.fromEntries(tiers.map((t) => [t.key, t.prices])) : null;
 const initialPrice = priceMode === 'matrix' ? tiers[0]?.prices[0] ?? fromPrice : options[0]?.price ?? fromPrice;
 ---
 
 <div class="bg-panel rounded-2xl border border-paper/10 p-6 sm:p-8">
-  <h2 class="font-display font-semibold text-xl mb-6">Order this piece</h2>
+  <h2 class="font-display font-semibold text-xl mb-1">{hasEtsy ? 'Order direct' : 'Order this piece'}</h2>
+  {hasEtsy ? (
+    <p class="text-sm text-paper/60 leading-relaxed mb-6">Best price, and anything on this page can be changed to suit you.</p>
+  ) : (
+    <div class="mb-6"></div>
+  )}
 
   <form id="order-form" class="space-y-5" data-slug={slug}>
     <input type="hidden" name="access_key" value="38b3beaa-aa0d-4a06-adf5-d066f732ffcd" />
@@ -136,9 +143,7 @@ const initialPrice = priceMode === 'matrix' ? tiers[0]?.prices[0] ?? fromPrice :
     </div>
 
     <p class="text-sm text-paper/60 leading-relaxed">
-      Want something custom based on your own photo? Email it to
-      <a href="mailto:contact@make3d.ie" class="text-gold hover:underline">contact@make3d.ie</a>
-      and I'll take it from there.
+      Want something custom based on your own photo? Email it to <a href="mailto:contact@make3d.ie" class="text-gold hover:underline">contact@make3d.ie</a> and I'll take it from there.
     </p>
 
     <button type="submit" id="submit-btn"
