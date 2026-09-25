@@ -9,6 +9,7 @@ images:
   - /images/20260805_181609.jpg
 icon: dateBalloon
 fromPrice: 27
+etsyUrl: https://make3die.etsy.com/listing/4550646535
 priceMode: single
 optionsLabel: Size
 options:
