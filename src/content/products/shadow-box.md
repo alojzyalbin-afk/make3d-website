@@ -11,6 +11,7 @@ images:
   - /images/20260805_181656-1-.jpg
 icon: shadowBox
 fromPrice: 45
+etsyUrl: https://make3die.etsy.com/listing/4550031242
 priceMode: single
 optionsLabel: Decoration
 options:
