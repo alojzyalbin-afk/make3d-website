@@ -7,13 +7,17 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "optimize": "node scripts/optimize-images.mjs",
+    "build": "node scripts/optimize-images.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.1.6",
+    "playwright": "^1.63.0",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4.3.3"
   }
 }

@@ -6,12 +6,18 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title: string;
   description?: string;
+  image?: string;
 }
 
 const {
   title,
   description = 'Custom 3D-printed gifts, made to order in Dublin — name lights, keepsakes, figurines and replacement parts.',
+  image,
 } = Astro.props;
+
+const fullTitle = `${title} · make3d.ie`;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://make3d.ie');
+const ogImage = image ? new URL(image, Astro.site ?? 'https://make3d.ie').href : undefined;
 ---
 
 <!DOCTYPE html>
@@ -20,9 +26,25 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl.href} />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} · make3d.ie</title>
+    <title>{fullTitle}</title>
     <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl.href} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="make3d.ie" />
+    <meta property="og:locale" content="en_IE" />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,6 +52,18 @@ const {
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2L36H9BKJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-X2L36H9BKJ');
+    </script>
+
+    <!-- Cloudflare Web Analytics (cookieless, GDPR-safe) -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d34ac78e20944a7e9f32f6043384ba64"}'></script>
   </head>
   <body class="bg-ink text-paper font-body">
     <Nav />

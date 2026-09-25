@@ -23,7 +23,7 @@ const categoryName = resolveCategory(p.category, categoryMap);
 const detailLines = resolveDetails(p.details, detailMap);
 ---
 
-<Layout title={p.name} description={p.tagline}>
+<Layout title={p.name} description={p.tagline} image={p.images[0]}>
 
   <section class="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-16">
     <a href="/#products" class="text-sm text-paper/60 hover:text-gold transition-colors inline-flex items-center gap-1 mb-8">
@@ -40,8 +40,11 @@ const detailLines = resolveDetails(p.details, detailMap);
           <div class="mb-8">
             <!-- object-contain so portrait and landscape photos both show in full -->
             <div class="rounded-2xl overflow-hidden border border-paper/10 bg-panel aspect-[4/5]">
-              <img id="gallery-main" src={p.images[0]} alt={p.name} decoding="async"
-                class="w-full h-full object-contain transition-opacity duration-200" />
+              <picture>
+                <source srcset={p.images[0].replace(/\.(jpg|jpeg|png)$/i, '.webp')} type="image/webp" />
+                <img id="gallery-main" src={p.images[0]} alt={p.name} width="1200" height="1500" decoding="async"
+                  class="w-full h-full object-contain transition-opacity duration-200" />
+              </picture>
             </div>
 
             {p.images.length > 1 && (
@@ -115,6 +118,28 @@ const detailLines = resolveDetails(p.details, detailMap);
 
     </div>
   </section>
+
+  <!-- JSON-LD structured data for Google -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: p.name,
+    description: p.tagline,
+    image: p.images[0] ? new URL(p.images[0], 'https://make3d.ie').href : undefined,
+    brand: { '@type': 'Brand', name: 'make3d.ie' },
+    offers: {
+      '@type': 'Offer',
+      price: p.fromPrice,
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+      url: `https://make3d.ie/shop/${product.id}`,
+      seller: {
+        '@type': 'Organization',
+        name: 'Custom 3D Prints Ireland',
+        url: 'https://make3d.ie',
+      },
+    },
+  })} />
 
 </Layout>
 
