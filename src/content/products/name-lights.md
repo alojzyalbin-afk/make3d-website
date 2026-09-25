@@ -3,11 +3,12 @@ name: Name Lights
 heading: A name, glowing.
 category: lighting
 tagline: A glowing letter with a name across it, wired and ready to plug in.
-icon: nameLights
 images:
   - /images/name-lights-sophie.jpg
   - /images/shadow-box.jpg
-fromPrice: 39
+icon: nameLights
+fromPrice: 35
+etsyUrl: https://make3die.etsy.com/listing/4550182391
 priceMode: single
 optionsLabel: Size
 options:
