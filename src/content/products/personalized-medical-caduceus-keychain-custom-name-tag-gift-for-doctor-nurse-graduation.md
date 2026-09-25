@@ -9,6 +9,7 @@ images:
   - /images/1789269527931-1-.png
 icon: generic
 fromPrice: 7
+etsyUrl: https://make3die.etsy.com/listing/4574281533
 priceMode: single
 optionsLabel: Options
 customFields: []
