@@ -5,10 +5,10 @@ heading: Custom 3D Nursery Name Sign | Newborn Tracker Keepsake | Personalized
 category: keepsakes
 tagline: A keepsake box with a baby's name, date and the details that matter.
 images:
-  - /images/20260803_182444.jpg
-  - /images/20260805_181754-1-.jpg
-  - /images/20260805_181837-2-.jpg
-  - /images/20260805_181656-1-.jpg
+  - /images/20260803_182444.png
+  - /images/20260805_181656-1-.png
+  - /images/20260805_181754-1-.png
+  - /images/20260805_181837-2-.png
 icon: shadowBox
 fromPrice: 45
 etsyUrl: https://make3die.etsy.com/listing/4550031242
