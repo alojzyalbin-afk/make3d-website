@@ -6,8 +6,8 @@ tagline: "A personalised name light: a large letter with your name in flowing
   cursive, lit softly from inside. Made to order for a nursery, a child's
   bedroom, a desk or a gift table."
 images:
-  - /images/name-lights-sophie.jpg
-  - /images/shadow-box.jpg
+  - /images/name-lights-sophie.webp
+  - /images/shadow-box.webp
 icon: nameLights
 fromPrice: 35
 etsyUrl: https://make3die.etsy.com/listing/4550182391
