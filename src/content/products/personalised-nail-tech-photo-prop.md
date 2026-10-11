@@ -3,7 +3,9 @@ name: Personalised Nail Tech Photo Prop
 heading: Personalised Nail Tech Photo Prop
 category: business
 tagline: A hand-held plaque with your salon name, made for photos of fresh nails.
-images: []
+images:
+- /images/personalised-nail-tech-photo-prop-01.jpg
+- /images/personalised-nail-tech-photo-prop-02.jpg
 icon: generic
 fromPrice: 13.5
 etsyUrl: https://make3die.etsy.com/listing/4590761213

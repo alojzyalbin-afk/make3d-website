@@ -22,9 +22,23 @@ const detailMap = await getDetailMap();
 const categoryName = resolveCategory(p.category, categoryMap);
 const detailLines = resolveDetails(p.details, detailMap);
 const shipping = SHIPPING[p.shipping];
+
+// Gallery items can be photos or short videos (.mp4). Each video has a
+// "-poster.jpg" frame next to it, used as its thumbnail.
+const media = p.images.map((src) => {
+  const video = /\.(mp4|webm)$/i.test(src);
+  return {
+    src,
+    video,
+    poster: video ? src.replace(/\.(mp4|webm)$/i, '-poster.jpg') : src,
+    webp: video ? '' : src.replace(/\.(jpg|jpeg|png)$/i, '.webp'),
+  };
+});
+const first = media[0];
+const shareImage = media.find((m) => !m.video)?.src ?? first?.poster;
 ---
 
-<Layout title={p.name} description={p.tagline} image={p.images[0]}>
+<Layout title={p.name} description={p.tagline} image={shareImage}>
 
   <section class="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-16">
     <a href="/#products" class="text-sm text-paper/60 hover:text-gold transition-colors inline-flex items-center gap-1 mb-8">
@@ -37,23 +51,32 @@ const shipping = SHIPPING[p.shipping];
         <p class="font-mono text-xs tracking-widest text-gold uppercase mb-3">{categoryName}</p>
         <h1 class="font-display font-bold text-3xl sm:text-4xl mb-6">{p.heading}</h1>
 
-        {p.images.length > 0 ? (
+        {first ? (
           <div class="mb-8">
             <!-- object-contain so portrait and landscape photos both show in full -->
             <div class="rounded-2xl overflow-hidden border border-paper/10 bg-panel aspect-[4/5]">
-              <picture>
-                <source srcset={p.images[0].replace(/\.(jpg|jpeg|png)$/i, '.webp')} type="image/webp" />
-                <img id="gallery-main" src={p.images[0]} alt={p.name} width="1200" height="1500" decoding="async"
+              <picture id="gallery-picture" class={first.video ? 'hidden' : 'block w-full h-full'}>
+                <source id="gallery-source" srcset={first.webp || undefined} type="image/webp" />
+                <img id="gallery-main" src={first.video ? first.poster : first.src} alt={p.name} width="1200" height="1500" decoding="async"
                   class="w-full h-full object-contain transition-opacity duration-200" />
               </picture>
+              <video id="gallery-video" class={first.video ? 'w-full h-full object-contain' : 'hidden w-full h-full object-contain'}
+                src={first.video ? first.src : undefined} poster={first.video ? first.poster : undefined}
+                muted loop playsinline controls preload="metadata" autoplay={first.video}></video>
             </div>
 
-            {p.images.length > 1 && (
+            {media.length > 1 && (
               <div class="flex gap-3 mt-3 overflow-x-auto no-scrollbar pb-1">
-                {p.images.map((img, i) => (
-                  <button type="button" data-src={img} aria-label={`View photo ${i + 1}`}
-                    class={`gallery-thumb shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${i === 0 ? 'border-gold' : 'border-paper/15 hover:border-paper/40'}`}>
-                    <img src={img} alt="" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+                {media.map((m, i) => (
+                  <button type="button" data-src={m.src} data-webp={m.webp} data-poster={m.poster} data-video={m.video ? '1' : ''}
+                    aria-label={m.video ? `Play video ${i + 1}` : `View photo ${i + 1}`}
+                    class={`gallery-thumb relative shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${i === 0 ? 'border-gold' : 'border-paper/15 hover:border-paper/40'}`}>
+                    <img src={m.poster} alt="" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+                    {m.video && (
+                      <span class="absolute inset-0 flex items-center justify-center bg-ink/30" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="#F6F3EC"><path d="M8 5v14l11-7z" /></svg>
+                      </span>
+                    )}
                   </button>
                 ))}
               </div>
@@ -194,20 +217,45 @@ const shipping = SHIPPING[p.shipping];
 </Layout>
 
 <script>
+  const picture = document.getElementById('gallery-picture');
+  const source = document.getElementById('gallery-source') as HTMLSourceElement | null;
   const main = document.getElementById('gallery-main') as HTMLImageElement | null;
+  const video = document.getElementById('gallery-video') as HTMLVideoElement | null;
   const thumbs = document.querySelectorAll<HTMLButtonElement>('.gallery-thumb');
+
+  function showVideo(src: string, poster: string) {
+    if (!video || !picture) return;
+    picture.classList.add('hidden');
+    picture.classList.remove('block');
+    video.classList.remove('hidden');
+    video.poster = poster;
+    video.src = src;
+    video.play().catch(() => {});
+  }
+
+  function showImage(src: string, webp: string) {
+    if (!main || !picture) return;
+    if (video) {
+      video.pause();
+      video.classList.add('hidden');
+    }
+    picture.classList.remove('hidden');
+    picture.classList.add('block');
+    main.style.opacity = '0';
+    setTimeout(() => {
+      // the <source> wins over the <img> in the browser, so both must change
+      if (source) source.srcset = webp || src;
+      main.src = src;
+      main.style.opacity = '1';
+    }, 150);
+  }
 
   thumbs.forEach((thumb) => {
     thumb.addEventListener('click', () => {
-      const src = thumb.dataset.src;
-      if (!main || !src) return;
-
-      main.style.opacity = '0';
-      const swap = () => {
-        main.src = src;
-        main.style.opacity = '1';
-      };
-      setTimeout(swap, 150);
+      const { src = '', webp = '', poster = '', video: isVideo } = thumb.dataset;
+      if (!src) return;
+      if (isVideo) showVideo(src, poster);
+      else showImage(src, webp);
 
       thumbs.forEach((t) => {
         t.classList.remove('border-gold');

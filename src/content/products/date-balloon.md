@@ -4,9 +4,9 @@ heading: Personalised Hot Air Balloon Birth Announcement
 category: keepsakes
 tagline: A freestanding hot air balloon with your baby's name, date, time, weight and length.
 images:
-- /images/20260803_145234-1-.jpg
-- /images/20260805_181449-1-.jpg
-- /images/20260805_181609.jpg
+- /images/date-balloon-01.jpg
+- /images/date-balloon-02.jpg
+- /images/date-balloon-03.jpg
 icon: dateBalloon
 fromPrice: 27
 etsyUrl: https://make3die.etsy.com/listing/4550646535

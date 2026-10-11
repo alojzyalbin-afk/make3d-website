@@ -3,7 +3,18 @@ name: Personalised Irish Navy Rank Keyring
 heading: Personalised Irish Navy Rank Keyring
 category: keychains
 tagline: An epaulette keyring with your Naval Service rank and surname.
-images: []
+images:
+- /images/irish-navy-rank-keyring-01.jpg
+- /images/irish-navy-rank-keyring-02.jpg
+- /images/irish-navy-rank-keyring-03.jpg
+- /images/irish-navy-rank-keyring-04.jpg
+- /images/irish-navy-rank-keyring-05.jpg
+- /images/irish-navy-rank-keyring-06.jpg
+- /images/irish-navy-rank-keyring-07.jpg
+- /images/irish-navy-rank-keyring-08.jpg
+- /images/irish-navy-rank-keyring-09.jpg
+- /images/irish-navy-rank-keyring-10.jpg
+- /images/irish-navy-rank-keyring-11.jpg
 icon: generic
 fromPrice: 9
 etsyUrl: https://make3die.etsy.com/listing/4588068700

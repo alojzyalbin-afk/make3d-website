@@ -4,9 +4,13 @@ heading: Personalised Dentist Business Card Holder
 category: business
 tagline: A business card holder with a 3D printed tooth and your name or clinic.
 images:
-- /images/1000104449.png
-- /images/1000104448.png
-- /images/1000104422.jpg
+- /images/personalized-3d-tooth-dentist-business-card-holder-01.jpg
+- /images/personalized-3d-tooth-dentist-business-card-holder-02.jpg
+- /images/personalized-3d-tooth-dentist-business-card-holder-03.jpg
+- /images/personalized-3d-tooth-dentist-business-card-holder-04.jpg
+- /images/personalized-3d-tooth-dentist-business-card-holder-05.jpg
+- /images/personalized-3d-tooth-dentist-business-card-holder-06.mp4
+- /images/personalized-3d-tooth-dentist-business-card-holder-07.mp4
 icon: generic
 fromPrice: 18
 etsyUrl: https://make3die.etsy.com/listing/4576764917

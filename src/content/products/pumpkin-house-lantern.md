@@ -3,7 +3,13 @@ name: Pumpkin House Lantern
 heading: Pumpkin House Lantern
 category: home-decor
 tagline: A little pumpkin house that glows through its windows with an LED tea light.
-images: []
+images:
+- /images/pumpkin-house-lantern-01.jpg
+- /images/pumpkin-house-lantern-02.jpg
+- /images/pumpkin-house-lantern-03.jpg
+- /images/pumpkin-house-lantern-04.jpg
+- /images/pumpkin-house-lantern-05.jpg
+- /images/pumpkin-house-lantern-06.jpg
 icon: generic
 fromPrice: 26.55
 etsyUrl: https://make3die.etsy.com/listing/4583419472

@@ -3,7 +3,13 @@ name: Mini Barber Pole Lamp
 heading: Mini Barber Pole Lamp
 category: lighting
 tagline: A miniature barber pole that gives a warm retro glow on a desk or counter.
-images: []
+images:
+- /images/mini-barber-pole-lamp-01.jpg
+- /images/mini-barber-pole-lamp-02.jpg
+- /images/mini-barber-pole-lamp-03.jpg
+- /images/mini-barber-pole-lamp-04.jpg
+- /images/mini-barber-pole-lamp-05.jpg
+- /images/mini-barber-pole-lamp-06.jpg
 icon: generic
 fromPrice: 36
 etsyUrl: https://make3die.etsy.com/listing/4579749882

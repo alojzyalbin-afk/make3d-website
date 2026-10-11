@@ -12,7 +12,7 @@ const products = productEntries.map((entry) => ({
   fromPrice: entry.data.fromPrice,
   freeIreland: entry.data.shipping === 'free-ireland',
   icon: entry.data.icon,
-  thumb: entry.data.images[0] ?? null,
+  thumb: entry.data.images.find((src) => !/\.(mp4|webm)$/i.test(src)) ?? null,
 }));
 
 const M_PATH =

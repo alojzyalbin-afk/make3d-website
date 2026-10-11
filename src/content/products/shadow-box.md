@@ -4,10 +4,10 @@ heading: Personalised Birth Announcement Shadow Box
 category: keepsakes
 tagline: A birth announcement shadow box with your baby's name and birth details.
 images:
-- /images/20260803_182444.png
-- /images/20260805_181656-1-.png
-- /images/20260805_181754-1-.png
-- /images/20260805_181837-2-.png
+- /images/shadow-box-01.jpg
+- /images/shadow-box-02.jpg
+- /images/shadow-box-03.jpg
+- /images/shadow-box-04.jpg
 icon: shadowBox
 fromPrice: 31.5
 etsyUrl: https://make3die.etsy.com/listing/4550031242

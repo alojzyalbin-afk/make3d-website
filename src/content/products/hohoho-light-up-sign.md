@@ -3,7 +3,13 @@ name: HoHoHo Light Up Sign
 heading: HoHoHo Light Up Sign
 category: christmas
 tagline: A big light-up HoHoHo sign with Santa, an elf and a snowman. USB powered.
-images: []
+images:
+- /images/hohoho-light-up-sign-01.jpg
+- /images/hohoho-light-up-sign-02.jpg
+- /images/hohoho-light-up-sign-03.jpg
+- /images/hohoho-light-up-sign-04.jpg
+- /images/hohoho-light-up-sign-05.jpg
+- /images/hohoho-light-up-sign-06.jpg
 icon: generic
 fromPrice: 40.5
 etsyUrl: https://make3die.etsy.com/listing/4590788521

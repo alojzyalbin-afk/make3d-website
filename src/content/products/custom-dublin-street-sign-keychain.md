@@ -4,10 +4,15 @@ heading: Personalised Dublin Street Sign Keyring
 category: keychains
 tagline: A keyring styled like a Dublin street sign, in Irish and English.
 images:
-- /images/1789380490908-1-.png
-- /images/1789380496357-1-.png
-- /images/1789380502524-1-.png
-- /images/1789380513429-1-.png
+- /images/custom-dublin-street-sign-keychain-01.jpg
+- /images/custom-dublin-street-sign-keychain-02.jpg
+- /images/custom-dublin-street-sign-keychain-03.jpg
+- /images/custom-dublin-street-sign-keychain-04.jpg
+- /images/custom-dublin-street-sign-keychain-05.jpg
+- /images/custom-dublin-street-sign-keychain-06.jpg
+- /images/custom-dublin-street-sign-keychain-07.mp4
+- /images/custom-dublin-street-sign-keychain-08.mp4
+- /images/custom-dublin-street-sign-keychain-09.mp4
 icon: generic
 fromPrice: 7.2
 etsyUrl: https://make3die.etsy.com/listing/4571625546

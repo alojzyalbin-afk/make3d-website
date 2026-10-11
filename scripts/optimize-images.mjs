@@ -33,8 +33,14 @@ async function optimizeImage(filePath) {
     const img = sharp(buf);
     const meta = await img.metadata();
 
-    // Skip tiny images (icons, thumbnails already optimized)
+    // Skip tiny images (icons, thumbnails already optimized), but still make
+    // sure they have a WebP companion: product pages ask for the .webp first,
+    // so a missing one shows as a broken photo.
     if ((meta.width ?? 0) <= MAX_WIDTH && buf.length < 200_000) {
+      const webpPath = path.join(dir, `${baseName}.webp`);
+      if (ext !== '.webp' && !(await fs.stat(webpPath).catch(() => null))) {
+        await fs.writeFile(webpPath, await sharp(buf).webp({ quality: WEBP_QUALITY }).toBuffer());
+      }
       return;
     }
 

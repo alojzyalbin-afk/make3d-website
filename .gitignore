@@ -27,3 +27,5 @@ pnpm-debug.log*
 Photos/
 *.mp4
 *.mov
+# ...except the short product videos used on the site
+!public/images/*.mp4

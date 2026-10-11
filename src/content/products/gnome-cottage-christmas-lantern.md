@@ -3,7 +3,12 @@ name: Gnome Cottage Christmas Lantern
 heading: Gnome Cottage Christmas Lantern
 category: christmas
 tagline: A Santa hat cottage that glows with an LED tea light. Candle not included.
-images: []
+images:
+- /images/gnome-cottage-christmas-lantern-01.jpg
+- /images/gnome-cottage-christmas-lantern-02.jpg
+- /images/gnome-cottage-christmas-lantern-03.jpg
+- /images/gnome-cottage-christmas-lantern-04.jpg
+- /images/gnome-cottage-christmas-lantern-05.mp4
 icon: generic
 fromPrice: 18
 etsyUrl: https://make3die.etsy.com/listing/4573126567

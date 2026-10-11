@@ -4,10 +4,10 @@ heading: Personalised Dublin Street Sign Fridge Magnet
 category: fridge-magnets
 tagline: A fridge magnet styled like a Dublin street sign, in Irish and English.
 images:
-- /images/1789981211282-1-.png
-- /images/1789980973532-1-.png
-- /images/1789981216618-1-.png
-- /images/1789981273194-1-.png
+- /images/personalised-dublin-street-sign-fridge-magnet-01.jpg
+- /images/personalised-dublin-street-sign-fridge-magnet-02.jpg
+- /images/personalised-dublin-street-sign-fridge-magnet-03.jpg
+- /images/personalised-dublin-street-sign-fridge-magnet-04.jpg
 icon: generic
 fromPrice: 6.75
 etsyUrl: https://make3die.etsy.com/listing/4579550538

@@ -4,15 +4,16 @@ heading: Personalised Irish Road Sign Fridge Magnet
 category: fridge-magnets
 tagline: A fridge magnet shaped like an Irish road sign, with your place name and distance.
 images:
-- /images/1789383693438.png
-- /images/1789383687291.png
-- /images/1789383680886.png
-- /images/1789383675224.png
-- /images/1789383669639.png
-- /images/1789383664160.png
-- /images/1789383658090.png
-- /images/1789383651994.png
-- /images/1789383645297.png
+- /images/custom-irish-road-sign-magnet-01.jpg
+- /images/custom-irish-road-sign-magnet-02.jpg
+- /images/custom-irish-road-sign-magnet-03.jpg
+- /images/custom-irish-road-sign-magnet-04.jpg
+- /images/custom-irish-road-sign-magnet-05.jpg
+- /images/custom-irish-road-sign-magnet-06.jpg
+- /images/custom-irish-road-sign-magnet-07.jpg
+- /images/custom-irish-road-sign-magnet-08.jpg
+- /images/custom-irish-road-sign-magnet-09.jpg
+- /images/custom-irish-road-sign-magnet-10.jpg
 icon: generic
 fromPrice: 7.2
 etsyUrl: https://make3die.etsy.com/listing/4570212828

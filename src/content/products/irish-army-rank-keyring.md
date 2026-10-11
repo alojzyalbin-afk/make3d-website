@@ -3,7 +3,19 @@ name: Personalised Irish Army Rank Keyring
 heading: Personalised Irish Army Rank Keyring
 category: keychains
 tagline: An epaulette keyring with your Irish Army rank and surname.
-images: []
+images:
+- /images/irish-army-rank-keyring-01.jpg
+- /images/irish-army-rank-keyring-02.jpg
+- /images/irish-army-rank-keyring-03.jpg
+- /images/irish-army-rank-keyring-04.jpg
+- /images/irish-army-rank-keyring-05.jpg
+- /images/irish-army-rank-keyring-06.jpg
+- /images/irish-army-rank-keyring-07.jpg
+- /images/irish-army-rank-keyring-08.jpg
+- /images/irish-army-rank-keyring-09.jpg
+- /images/irish-army-rank-keyring-10.jpg
+- /images/irish-army-rank-keyring-11.jpg
+- /images/irish-army-rank-keyring-12.jpg
 icon: generic
 fromPrice: 9
 etsyUrl: https://make3die.etsy.com/listing/4585358533

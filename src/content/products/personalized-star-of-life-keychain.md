@@ -4,11 +4,11 @@ heading: Personalised Star of Life Keyring
 category: keychains
 tagline: A Star of Life keyring with your profession, name or callsign.
 images:
-- /images/1789348853584.png
-- /images/1789348786678.png
-- /images/1789348637749.png
-- /images/1789348600669.png
-- /images/1789348754994.png
+- /images/personalized-star-of-life-keychain-01.jpg
+- /images/personalized-star-of-life-keychain-02.jpg
+- /images/personalized-star-of-life-keychain-03.jpg
+- /images/personalized-star-of-life-keychain-04.jpg
+- /images/personalized-star-of-life-keychain-05.jpg
 icon: generic
 fromPrice: 7.2
 etsyUrl: https://make3die.etsy.com/listing/4574819267

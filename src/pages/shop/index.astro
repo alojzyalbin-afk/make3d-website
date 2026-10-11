@@ -15,7 +15,7 @@ const products = productEntries.map((entry) => ({
   freeIreland: entry.data.shipping === 'free-ireland',
   icon: entry.data.icon,
   category: entry.data.category,
-  thumb: entry.data.images[0] ?? null,
+  thumb: entry.data.images.find((src) => !/\.(mp4|webm)$/i.test(src)) ?? null,
 }));
 
 // Categories in their set order, each with a live product count.

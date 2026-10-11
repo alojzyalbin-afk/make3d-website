@@ -4,8 +4,20 @@ heading: Personalised Cursive Name Light
 category: lighting
 tagline: A large letter with a name in cursive, lit softly from inside. USB-C powered.
 images:
-- /images/name-lights-sophie.webp
-- /images/shadow-box.webp
+- /images/name-lights-01.jpg
+- /images/name-lights-02.jpg
+- /images/name-lights-03.jpg
+- /images/name-lights-04.jpg
+- /images/name-lights-05.jpg
+- /images/name-lights-06.jpg
+- /images/name-lights-07.jpg
+- /images/name-lights-08.jpg
+- /images/name-lights-09.jpg
+- /images/name-lights-10.jpg
+- /images/name-lights-11.jpg
+- /images/name-lights-12.jpg
+- /images/name-lights-13.jpg
+- /images/name-lights-14.mp4
 icon: nameLights
 fromPrice: 36
 etsyUrl: https://make3die.etsy.com/listing/4550182391
