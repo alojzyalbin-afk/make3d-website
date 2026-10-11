@@ -1,48 +1,61 @@
 ---
-name: Custom Dublin Street Sign Keychain
-heading: Custom Dublin Street Sign Keychain
+name: Personalised Dublin Street Sign Keyring
+heading: Personalised Dublin Street Sign Keyring
 category: keychains
-tagline: Custom Dublin Street Sign Keychain
+tagline: A keyring styled like a Dublin street sign, in Irish and English.
 images:
-  - /images/1789380490908-1-.png
-  - /images/1789380496357-1-.png
-  - /images/1789380502524-1-.png
-  - /images/1789380513429-1-.png
+- /images/1789380490908-1-.png
+- /images/1789380496357-1-.png
+- /images/1789380502524-1-.png
+- /images/1789380513429-1-.png
 icon: generic
-fromPrice: 7
+fromPrice: 7.2
 etsyUrl: https://make3die.etsy.com/listing/4571625546
+shipping: free-ireland
 priceMode: single
 optionsLabel: Options
-customFields: []
+customFields:
+- id: streetName
+  label: Street or suburb name in English
+  placeholder: e.g. James's Street
+  required: true
+- id: number
+  label: Number for the blue square
+  placeholder: e.g. 8
+  required: true
+- id: irishName
+  label: Irish text (optional)
+  placeholder: Leave blank and I will add it
+  required: false
 details:
-  - collect-or-post
-  - colour-options-ask
-  - made-in-dublin
+- made-in-dublin
+- made-to-order
+- collect-or-post
 ---
-A little piece of Dublin on your keys! This is a custom keychain modeled after the authentic Dublin street signs — Irish (Gaelic) name on top, English below, with a house/street number displayed to the side, just like the real signs you see around the city.
+A personalised keyring modelled on the blue and white street name signs of Dublin. The Irish (Gaeilge) name sits on the top line, the English name below and your number in the blue square. Send me the street, suburb or name you want and I design it for you.
 
-Tell me the street name and number you want (your own address, a favorite pub street, a wedding venue, an inside joke) and I will design and 3D print it just for you.
+Popular choices: your first home, the street of your favourite pub, a student house, a wedding venue or a family name.
 
-✔ Fully customizable street name and number
+### Details
 
-✔ Includes keyring and chain
+- Size: approx. 80 x 17 mm and 3.5 mm thick
+- Matte PLA plastic in Dublin blue and white
+- Comes with a silver metal split ring and chain
+- Designed and 3D printed by me in Dublin, Ireland
 
-✔ Durable PLA, printed and finished by hand in Ireland
+### How to personalise
 
-✔ Great for keys, bag charms, or as a quirky Dublin/Ireland souvenir
+Fill in your details in the order form:
 
+1. Street or suburb name in English (for example James's Street, Crumlin or Citywest)
+2. The number for the blue square (for example 8, 12 or 24)
+3. Optional: your own Irish text. If you leave it out, I add the traditional Irish translation for you.
 
+Layouts vary slightly with the length of the text so every sign stays easy to read.
 
-How to order:
+### Great for
 
-Leave a note at checkout (or comment/DM me) with:
-
-Street name (I'll add the Irish translation, or send your own if you have it)
-
-Number to display
-
-Any color preference (default blue & white, matching real Dublin signs)
-
-
-
-Ships worldwide from Ireland. Free shipping for Ireland included.
+- New home and moving house gifts
+- Irish souvenirs for visitors
+- Bag charms and school bag tags
+- Going-away presents for people leaving Dublin

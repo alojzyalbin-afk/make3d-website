@@ -24,3 +24,34 @@ export function resolveCategory(slug: string, map: Map<string, { name: string }>
 export function resolveDetails(slugs: string[], map: Map<string, string>) {
   return slugs.map((s) => map.get(s) ?? s);
 }
+
+/** €7.20 instead of €7.2, but €36 stays €36. */
+export function formatEuro(value: number) {
+  return Number.isInteger(value) ? `€${value}` : `€${value.toFixed(2)}`;
+}
+
+/**
+ * Delivery rates, same as the Etsy shipping profiles.
+ * 'free-ireland' = keyrings and fridge magnets, 'standard' = everything else.
+ * extra = what each additional item in the same order adds.
+ */
+export const SHIPPING = {
+  'free-ireland': {
+    badge: 'Free delivery in Ireland',
+    rows: [
+      { region: 'Ireland', price: 'Free' },
+      { region: 'European Union', price: '€5', extra: '€5' },
+      { region: 'Outside the EU', price: 'Message me first' },
+    ],
+  },
+  standard: {
+    badge: null,
+    rows: [
+      { region: 'Ireland', price: '€5', extra: '€5' },
+      { region: 'European Union', price: '€10', extra: '€5' },
+      { region: 'Rest of the world', price: '€15', extra: '€10' },
+    ],
+  },
+} as const;
+
+export type ShippingKey = keyof typeof SHIPPING;

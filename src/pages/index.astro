@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import ProductIcon from '../components/ProductIcon.astro';
+import { formatEuro } from '../lib/library';
 
 const productEntries = await getCollection('products');
 const products = productEntries.map((entry) => ({
@@ -9,6 +10,7 @@ const products = productEntries.map((entry) => ({
   name: entry.data.name,
   tagline: entry.data.tagline,
   fromPrice: entry.data.fromPrice,
+  freeIreland: entry.data.shipping === 'free-ireland',
   icon: entry.data.icon,
   thumb: entry.data.images[0] ?? null,
 }));
@@ -126,7 +128,8 @@ const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
             <div class="p-6">
               <h3 class="font-display font-semibold text-lg mb-1.5">{product.name}</h3>
               <p class="text-sm text-paper/65 leading-relaxed mb-4">{product.tagline}</p>
-              <p class="font-mono text-sm text-gold mb-3">from €{product.fromPrice}</p>
+              <p class="font-mono text-sm text-gold mb-3">from {formatEuro(product.fromPrice)}</p>
+            {product.freeIreland && <p class="text-xs text-paper/60 -mt-2 mb-3">Free delivery in Ireland</p>}
               <span class="text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">See options →</span>
             </div>
           </a>

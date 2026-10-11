@@ -1,56 +1,68 @@
 ---
-name: Custom Irish Road Sign Magnet
-heading: Custom Irish Road Sign Magnet
-category: keychains
-tagline: Custom Irish Road Sign Magnet
+name: Personalised Irish Road Sign Fridge Magnet
+heading: Personalised Irish Road Sign Fridge Magnet
+category: fridge-magnets
+tagline: A fridge magnet shaped like an Irish road sign, with your place name and distance.
 images:
-  - /images/1789383693438.png
-  - /images/1789383687291.png
-  - /images/1789383680886.png
-  - /images/1789383675224.png
-  - /images/1789383669639.png
-  - /images/1789383664160.png
-  - /images/1789383658090.png
-  - /images/1789383651994.png
-  - /images/1789383645297.png
+- /images/1789383693438.png
+- /images/1789383687291.png
+- /images/1789383680886.png
+- /images/1789383675224.png
+- /images/1789383669639.png
+- /images/1789383664160.png
+- /images/1789383658090.png
+- /images/1789383651994.png
+- /images/1789383645297.png
 icon: generic
-fromPrice: 7
+fromPrice: 7.2
 etsyUrl: https://make3die.etsy.com/listing/4570212828
+shipping: free-ireland
 priceMode: single
 optionsLabel: Options
-customFields: []
+customFields:
+- id: irishName
+  label: Irish name (optional)
+  placeholder: Leave blank and I will find it
+  required: false
+- id: placeName
+  label: English place name or text
+  placeholder: e.g. DUBLIN
+  required: true
+- id: distance
+  label: Distance in km
+  placeholder: e.g. 42
+  required: true
 details:
-  - collect-or-post
-  - colour-options-ask
-  - made-in-dublin
-  - made-to-order
+- made-in-dublin
+- made-to-order
+- collect-or-post
 ---
-Bring a piece of the Irish roadside home! This is a custom fridge magnet inspired by Ireland's iconic bilingual road signs — Irish (Gaelic) on top, English below, with the distance shown in km, just like the real thing.
+A personalised fridge magnet in the shape of the bilingual road signs you see on every Irish road. Irish (Gaeilge) on the top line, English underneath, the distance in km and a chevron pointing the way. You choose the words.
 
-Tell me your custom destination and distance (a hometown, a partner's name, an inside joke, a wedding date location — anything works) and I will design and 3D print it just for you, hand-finished with a black frame and clean lettering.
+Pick a hometown, a pub, a granny's house, a wedding venue or the place you live now, add the distance and it becomes a small piece of Ireland that sticks to the fridge, a filing cabinet or a locker.
 
-✔ Fully customizable text and number
+### Details
 
-✔ Strong neodymium magnets on the back
+- Size: approx. 75 x 23 mm and 4.5 mm thick
+- White plate with raised black lettering and border, in matte PLA plastic
+- Magnets set into the back
+- Designed and 3D printed by me in Dublin, Ireland
 
-✔ Durable PLA, printed and finished by hand in Ireland
+### Who it is for
 
-✔ Great for fridges, magnetic boards, or as a quirky housewarming/going-away gift
+- Irish people living abroad and anyone missing home
+- Couples who live far apart (show the distance between you in km)
+- Housewarming and going-away presents
+- Stocking fillers and Secret Santa gifts
 
+### How to personalise
 
+Fill in your details in the order form:
 
-How to order:
+1. Irish name (leave it blank if you do not know it and I will look up the traditional Irish version)
+2. English place name or your own short text
+3. Distance in km
 
-Leave a note at checkout (or comment/DM me) with:
+Example: Baile Átha Cliath / DUBLIN / 42
 
-Irish name (if you know it or use Google Translate)
-
-Place name (I'll add the Irish translation if you don'tknow it)
-
-Distance in km
-
-Any color preference (default black & white)
-
-
-
-Ships worldwide from Ireland. Free shipping in Ireland.
+Short place names print biggest and boldest. If your text is long, message me and I will suggest the best fit before I print.

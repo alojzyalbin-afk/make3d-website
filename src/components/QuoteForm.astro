@@ -27,18 +27,21 @@ interface Props {
   customFields: CustomField[];
   // true when this product is also on Etsy, so the two options can be told apart
   hasEtsy?: boolean;
+  // keyrings and magnets: postage in Ireland is free
+  freeIreland?: boolean;
 }
 
-const { slug, name, fromPrice, priceMode, optionsLabel = 'Options', options = [], sizes = [], tiers = [], customFields, hasEtsy = false } = Astro.props;
+const { slug, name, fromPrice, priceMode, optionsLabel = 'Options', options = [], sizes = [], tiers = [], customFields, hasEtsy = false, freeIreland = false } = Astro.props;
 
 const priceMatrix = priceMode === 'matrix' ? Object.fromEntries(tiers.map((t) => [t.key, t.prices])) : null;
 const initialPrice = priceMode === 'matrix' ? tiers[0]?.prices[0] ?? fromPrice : options[0]?.price ?? fromPrice;
+const euro = (v: number) => (Number.isInteger(v) ? `€${v}` : `€${v.toFixed(2)}`);
 ---
 
 <div class="bg-panel rounded-2xl border border-paper/10 p-6 sm:p-8">
   <h2 class="font-display font-semibold text-xl mb-1">{hasEtsy ? 'Order direct' : 'Order this piece'}</h2>
   {hasEtsy ? (
-    <p class="text-sm text-paper/60 leading-relaxed mb-6">Best price, and anything on this page can be changed to suit you.</p>
+    <p class="text-sm text-paper/60 leading-relaxed mb-6">10% less than on Etsy, and anything on this page can be changed to suit you.</p>
   ) : (
     <div class="mb-6"></div>
   )}
@@ -81,13 +84,13 @@ const initialPrice = priceMode === 'matrix' ? tiers[0]?.prices[0] ?? fromPrice :
       </fieldset>
     )}
 
-    {priceMode === 'single' && (
+    {priceMode === 'single' && options.length > 0 && (
       <fieldset>
         <legend class="text-sm font-mono uppercase tracking-wide text-muted mb-3">{optionsLabel}</legend>
         <div class="grid grid-cols-3 gap-2">
           {options.map((opt, i) => (
             <label class="cursor-pointer">
-              <input type="radio" name="option" value={`${opt.label} — €${opt.price}`} data-price={opt.price} checked={i === 0} class="peer sr-only" />
+              <input type="radio" name="option" value={`${opt.label} — ${euro(opt.price)}`} data-price={opt.price} checked={i === 0} class="peer sr-only" />
               <span class="block text-center rounded-lg border border-paper/15 py-2.5 text-sm peer-checked:border-gold peer-checked:bg-gold/10 peer-checked:text-gold peer-checked:font-semibold transition-colors">
                 {opt.label}
               </span>
@@ -118,7 +121,7 @@ const initialPrice = priceMode === 'matrix' ? tiers[0]?.prices[0] ?? fromPrice :
         </label>
         <label class="flex items-center gap-2">
           <input type="radio" name="delivery" value="Post" class="accent-gold" />
-          Post it to me
+          {freeIreland ? 'Post it to me (free in Ireland)' : 'Post it to me'}
         </label>
       </div>
     </fieldset>
@@ -148,7 +151,7 @@ const initialPrice = priceMode === 'matrix' ? tiers[0]?.prices[0] ?? fromPrice :
 
     <button type="submit" id="submit-btn"
       class="w-full bg-red text-paper font-display font-semibold py-3.5 rounded-full hover:bg-red/90 transition-colors focus-visible:outline-2 focus-visible:outline-gold">
-      Send request — <span id="price-display">€{initialPrice}</span>
+      Send request — <span id="price-display">{euro(initialPrice)}</span>
     </button>
 
     <p id="form-status" class="text-sm text-center hidden"></p>
@@ -161,16 +164,18 @@ const initialPrice = priceMode === 'matrix' ? tiers[0]?.prices[0] ?? fromPrice :
   const status = document.getElementById('form-status');
   const submitBtn = document.getElementById('submit-btn');
 
+  const euro = (v) => (Number.isInteger(Number(v)) ? `€${Number(v)}` : `€${Number(v).toFixed(2)}`);
+
   function updatePrice() {
     if (!priceDisplay) return;
     if (priceMode === 'matrix') {
       const tierKey = document.querySelector('input[name="tier"]:checked')?.dataset.key;
       const sizeIndex = Number(document.querySelector('input[name="size"]:checked')?.dataset.index ?? 0);
       const price = priceMatrix?.[tierKey]?.[sizeIndex];
-      if (price !== undefined) priceDisplay.textContent = `€${price}`;
+      if (price !== undefined) priceDisplay.textContent = euro(price);
     } else {
       const price = document.querySelector('input[name="option"]:checked')?.dataset.price;
-      if (price !== undefined) priceDisplay.textContent = `€${price}`;
+      if (price !== undefined) priceDisplay.textContent = euro(price);
     }
   }
 

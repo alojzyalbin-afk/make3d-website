@@ -16,6 +16,10 @@ const products = defineCollection({
     // appears under the order form. Leave empty for items not listed there.
     etsyUrl: z.string().url().optional(),
 
+    // Delivery rates: 'free-ireland' for keyrings and fridge magnets,
+    // 'standard' for everything else. Rates live in src/lib/library.ts.
+    shipping: z.enum(['free-ireland', 'standard']).default('standard'),
+
     priceMode: z.enum(['single', 'matrix']),
     optionsLabel: z.string().default('Options'),
     options: z

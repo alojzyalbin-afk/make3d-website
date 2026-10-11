@@ -1,57 +1,67 @@
 ---
-name: Large Custom Dublin Street Sign
-heading: Large Custom Dublin Street Sign
+name: Large Personalised Dublin Street Sign
+heading: Large Personalised Dublin Street Sign
 category: keepsakes
-tagline: Freestanding Irish Plaque, Personalized Home Gift
+tagline: A large freestanding Dublin street sign with your street, name or number.
 images:
-  - /images/1790121764681-1-.png
-  - /images/1790121860650-1-.png
-  - /images/1790121954972-1-.png
-  - /images/1790122012557-1-.png
+- /images/1790121764681-1-.png
+- /images/1790121860650-1-.png
+- /images/1790121954972-1-.png
+- /images/1790122012557-1-.png
 icon: generic
-fromPrice: 23
+fromPrice: 22.5
+etsyUrl: https://make3die.etsy.com/listing/4581201555
+shipping: standard
 priceMode: single
 optionsLabel: Options
-customFields: []
+customFields:
+- id: irishName
+  label: Irish name (optional)
+  placeholder: Leave blank and I will find it
+  required: false
+- id: streetName
+  label: English street or custom name
+  placeholder: e.g. Grafton Street or Dad's Bar
+  required: true
+- id: number
+  label: District or house number
+  placeholder: e.g. 4
+  required: true
+- id: colour
+  label: Colour (optional)
+  placeholder: Dublin blue by default, or brown or green
+  required: false
 details:
-  - collect-or-post
-  - colour-options-ask
-  - freestanding-no-power
-  - made-in-dublin
-  - made-to-order
+- freestanding-no-power
+- made-in-dublin
+- made-to-order
+- collect-or-post
 ---
-Bring the authentic charm of Dublin's historic streets right into your home!
+A large freestanding version of the blue and white Dublin street sign, made as a statement piece for a shelf, desk, home bar or mantelpiece. The Irish (Gaeilge) name is on top, the English name below and your postal district or house number on the right.
 
-This is the large showcase edition of our personalized Dublin Street Sign — designed specifically as a chunky, freestanding statement piece for shelves, office desks, home bars or mantelpieces. Inspired by the famous blue and white plaques found throughout Ireland's capital, it features the traditional Irish (Gaeilge) name on top, the English name below, and your custom postal district or house number on the right.
+Choose your favourite Dublin street, a family surname, a name for the man cave or an anniversary date. I make it as one chunky sign just for you.
 
-Tell us your favorite Dublin street, your family surname, an inside joke or a special anniversary date, and we will create a heavy-duty, premium replica just for you.
+### Details
 
-✨ Why Our Showcase Edition Stands Out:
+- Size: approx. 285 mm long, 70 mm wide and 15 mm deep
+- Freestanding: it stands on its own, with no stand or wall fixing needed
+- Matte PLA plastic in classic Dublin blue and white
+- Designed and 3D printed by me in Dublin, Ireland
 
-\- True Freestanding Design: At 290mm long and 17mm thick, this sign is perfectly balanced to stand completely on its own. No flimsy acrylic stands or wall mounting needed!
+### Who it is for
 
-\- Premium Matte Materials: Crafted using high-grade matte filaments for rich colors and zero cheap, shiny plastic glare.
+- Housewarming and new home gifts
+- Home bars, garages, offices and man caves
+- Family name signs and anniversary presents
+- Irish people abroad who want their old street in view
 
-\- Fully Customisable Layout: Want to swap the classic Dublin Blue for a vintage brown or scenic green? Prefer the number box on the left? Just let us know!
+### How to personalise
 
-\- Bilingual Expertise: Enter your English street name, and we will gladly source and add the correct, traditional Irish (Gaeilge) translation for you automatically.
+Fill in your details in the order form:
 
-🎨 Bespoke Requests & Custom Changes:
+1. Irish name (leave it blank if you do not know it and I will find the correct translation)
+2. English street or custom name (for example Grafton Street, James's Street or Dad's Bar)
+3. District or house number (for example 2, 4, 8 or 24)
+4. Colour: classic Dublin blue and white by default. Brown or green is available on request.
 
-\- We love custom adjustments! If you want a specific color combination, a different layout or a unique text design, simply send us a direct message before placing your order. We can adapt anything to suit your vision.
-
-✍️ How to Order:
-
-Please leave a note in the personalization box with:
-
-\- Irish Name (If you know it! If not, leave it blank and we will find the correct translation).
-
-\- English Street / Custom Name (e.g., Grafton Street, James's Street, Dad's Bar, Man's Cave).
-
-\- District / House Number (e.g., 2, 4, 8, 24).
-
-\- Color Preference (Default is classic Dublin Blue/White, but brown, green or custom combos are available upon request).
-
-🌍 Shipping Information:
-
-Ships worldwide directly from our workshop in Dublin, Ireland!
+I can also move the number box to the left or change the layout. Send me a message before you order if you want something special.

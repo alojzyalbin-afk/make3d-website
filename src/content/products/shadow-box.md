@@ -1,58 +1,83 @@
 ---
-name: Custom 3D Nursery Name Sign
-heading: Custom 3D Nursery Name Sign | Newborn Tracker Keepsake | Personalized
-  Baby Shower Gift
+name: Personalised Birth Announcement Shadow Box
+heading: Personalised Birth Announcement Shadow Box
 category: keepsakes
-tagline: A keepsake box with a baby's name, date and the details that matter.
+tagline: A birth announcement shadow box with your baby's name and birth details.
 images:
-  - /images/20260803_182444.png
-  - /images/20260805_181656-1-.png
-  - /images/20260805_181754-1-.png
-  - /images/20260805_181837-2-.png
+- /images/20260803_182444.png
+- /images/20260805_181656-1-.png
+- /images/20260805_181754-1-.png
+- /images/20260805_181837-2-.png
 icon: shadowBox
-fromPrice: 45
+fromPrice: 31.5
 etsyUrl: https://make3die.etsy.com/listing/4550031242
+shipping: standard
 priceMode: single
 optionsLabel: Decoration
 options:
-  - label: Balloon or bow
-    price: 45
-  - label: Photo frame
-    price: 50
-  - label: Teddy bear
-    price: 55
+- label: Balloon
+  price: 31.5
+- label: Bow
+  price: 31.5
+- label: Photo frame
+  price: 36
+- label: Teddy bear
+  price: 40.5
 customFields:
-  - id: babyName
-    label: Baby's name
-    required: true
-  - id: dateText
-    label: Date
-    placeholder: e.g. 14.03.2026
-    required: true
-  - id: timeText
-    label: Time
-    placeholder: e.g. 14:32
-    required: true
-  - id: weightText
-    label: Weight
-    placeholder: e.g. 3.4kg
-    required: true
+- id: colour
+  label: Colour
+  placeholder: Pink or blue
+  required: true
+- id: babyName
+  label: Baby's name
+  required: true
+- id: dateOfBirth
+  label: Date of birth
+  placeholder: e.g. 12 March 2026
+  required: true
+- id: timeOfBirth
+  label: Time of birth
+  placeholder: e.g. 4:35 am
+  required: true
+- id: weight
+  label: Weight
+  placeholder: e.g. 3.4 kg
+  required: true
+- id: length
+  label: Length
+  placeholder: e.g. 51 cm
+  required: true
 details:
-  - one-size-22cm
-  - name-date-time-weight
-  - decorative-piece-top
+- name-date-time-weight
+- made-in-dublin
+- made-to-order
+- collect-or-post
 ---
-Celebrate a new arrival with a fully personalized, 3D-printed birth announcement shadow box - designed, printed and finished by hand in Dublin, Ireland.
+A personalised birth announcement shadow box built around your baby's name, date of birth, time of birth, weight and length. A decorative piece on top finishes it: a balloon, a bow, a photo frame or a hand-finished teddy bear.
 
-✨ Choose your piece:
+Designed, 3D printed and finished by hand in Dublin, Ireland.
 
-Every frame is built around your baby's name, date, time, weight and length, finished with a decorative piece on top - a balloon, a bow, a photo frame, or a hand-finished teddy bear.
+### Details
 
-📝 How to order:
-Choose your decoration (Balloon / Bow / Photo Frame / Teddy Bear)
-In the personalisation box, add: Baby's Name, Date of Birth, Time of Birth, Weight, Length
+- Your baby's name, date, time, weight and length on one frame
+- Choose your decoration on top: Balloon, Bow, Photo Frame or Teddy Bear
+- Two colours to choose from: pink or blue
+- A calendar, a clock and a scale, each one a separate piece fitted into place by hand
+- The colour comes from the plastic itself, with no paint
+- Made in my Dublin workshop
+- Size: approx. 15.8cm x 22.8cm x 1.2cm
 
-I'll confirm everything with you before it's printed
+### Great for
 
-🛠️ Made properly:
-3D printed layer by layer in solid colour filament - the colour comes from the material itself, no paint involved. Every detail - the calendar, the clock, the scale, the decoration on top - is its own separate piece, fitted into place by hand. Nothing outsourced, nothing mass-produced.
+- New baby and newborn gifts
+- Baby shower and christening gifts
+- Nursery decor and a keepsake for new parents
+
+### How to personalise
+
+1. Choose your decoration (Balloon, Bow, Photo Frame or Teddy Bear) and your colour (pink or blue) in the order form.
+2. Fill in these details in the order form: baby's name, date of birth, time of birth, weight and length.
+
+I confirm everything with you before it is printed.
+
+Please note: small parts may be a choking hazard for young children, so adult supervision is recommended when it is on display. Each piece is personalised and made to order, so I cannot accept returns. Please message me first if anything is wrong with your order.

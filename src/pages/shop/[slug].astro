@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import ProductIcon from '../../components/ProductIcon.astro';
-import { getCategoryMap, getDetailMap, resolveCategory, resolveDetails } from '../../lib/library';
+import { getCategoryMap, getDetailMap, resolveCategory, resolveDetails, SHIPPING } from '../../lib/library';
 
 export async function getStaticPaths() {
   const products = await getCollection('products');
@@ -21,6 +21,7 @@ const categoryMap = await getCategoryMap();
 const detailMap = await getDetailMap();
 const categoryName = resolveCategory(p.category, categoryMap);
 const detailLines = resolveDetails(p.details, detailMap);
+const shipping = SHIPPING[p.shipping];
 ---
 
 <Layout title={p.name} description={p.tagline} image={p.images[0]}>
@@ -64,7 +65,7 @@ const detailLines = resolveDetails(p.details, detailMap);
           </div>
         )}
 
-        <div class="text-paper/70 leading-relaxed mb-8 max-w-md space-y-4">
+        <div class="product-body text-paper/70 leading-relaxed mb-8 max-w-md space-y-4">
           <Content />
         </div>
 
@@ -73,6 +74,25 @@ const detailLines = resolveDetails(p.details, detailMap);
             {detailLines.map((detail) => <p>· {detail}</p>)}
           </div>
         )}
+
+        <details class="group mt-6 border-t border-paper/10 pt-6 max-w-md text-sm text-paper/65 leading-relaxed">
+          <summary class="cursor-pointer list-none flex items-center justify-between gap-3 font-mono text-xs uppercase tracking-widest text-gold">
+            Before you buy
+            <span class="transition-transform group-open:rotate-45 text-base leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="product-body space-y-3 mt-4">
+            <p>Every piece is 3D printed to order in Dublin. Because it is built up layer by layer in plastic, please know what to expect:</p>
+            <ul>
+              <li>Fine layer lines are part of the look. The surface is not smooth like moulded plastic. You may see or feel the lines where each layer was printed.</li>
+              <li>The side that was printed against the build plate has a fine texture from the textured PEI plate I use.</li>
+              <li>Small seam marks can appear where each layer starts and ends. They look like a thin line or tiny bumps.</li>
+              <li>Small marks or tiny spots can appear, especially where one colour meets another. They come from the printing process and cannot be wiped off.</li>
+              <li>Colours can look a little different from the photos, depending on your screen and the light.</li>
+            </ul>
+            <p>These are normal for 3D printing and do not affect how the item works. Because each piece is made to order, no two are exactly alike.</p>
+            <p>If you have any questions before you buy, send me a message and I will be happy to help.</p>
+          </div>
+        </details>
       </div>
 
       <div class="md:sticky md:top-24 md:self-start">
@@ -87,6 +107,7 @@ const detailLines = resolveDetails(p.details, detailMap);
           tiers={p.tiers}
           customFields={p.customFields}
           hasEtsy={!!p.etsyUrl}
+          freeIreland={p.shipping === 'free-ireland'}
         />
 
         {p.etsyUrl && (
@@ -114,6 +135,35 @@ const detailLines = resolveDetails(p.details, detailMap);
             </p>
           </div>
         )}
+
+        <div class="mt-6 rounded-2xl border border-paper/10 p-6">
+          <h2 class="font-mono text-xs uppercase tracking-widest text-gold mb-4">Delivery</h2>
+          <table class="w-full text-sm">
+            <tbody>
+              <tr class="border-b border-paper/10">
+                <th scope="row" class="text-left font-normal text-paper/70 py-2">Collection in Dublin</th>
+                <td class="text-right font-semibold py-2">Free</td>
+              </tr>
+              {shipping.rows.map((row) => (
+                <tr class="border-b border-paper/10 last:border-0">
+                  <th scope="row" class="text-left font-normal text-paper/70 py-2">{row.region}</th>
+                  <td class="text-right py-2">
+                    <span class="font-semibold">{row.price}</span>
+                    {'extra' in row && row.extra && (
+                      <span class="block text-xs text-paper/55">+{row.extra} each extra item</span>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p class="text-xs text-paper/55 leading-relaxed mt-4">
+            Made to order in Dublin and posted from Ireland, so EU buyers pay no customs fees.
+            {p.shipping === 'standard' && (
+              <> Outside the EU, import duties and taxes are set by your country and paid by you on delivery. I message you an estimate before I post, and only ship once you agree.</>
+            )}
+          </p>
+        </div>
       </div>
 
     </div>

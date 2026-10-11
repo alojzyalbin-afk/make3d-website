@@ -49,6 +49,14 @@ collections:
         required: false
         pattern: ['^https://([a-zA-Z0-9-]+\.)?etsy\.com/.+', "Must be a full Etsy link (e.g. https://make3die.etsy.com/listing/...)"]
         hint: "Paste the Share & Save link from your Etsy listing so the sale counts towards your 4% fee discount. Leave empty if this item is not on Etsy - the button is then hidden."
+      - label: "Delivery"
+        name: "shipping"
+        widget: "select"
+        default: "standard"
+        options:
+          - { label: "Keyrings and magnets: free in Ireland, EU €5 + €5", value: "free-ireland" }
+          - { label: "Standard: Ireland €5 + €5, EU €10 + €5, rest of world €15 + €10", value: "standard" }
+        hint: "Sets the delivery table on the product page. Rates are the same as on Etsy."
       - label: "Pricing type"
         name: "priceMode"
         widget: "select"

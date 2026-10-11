@@ -1,69 +1,85 @@
 ---
-name: Personalized Hot Air Balloon Birth Details
-heading: Personalized Hot Air Balloon Birth Details
+name: Personalised Hot Air Balloon Birth Announcement
+heading: Personalised Hot Air Balloon Birth Announcement
 category: keepsakes
-tagline: A simple, freestanding keepsake built around one date that matters.
+tagline: A freestanding hot air balloon with your baby's name, date, time, weight and length.
 images:
-  - /images/20260803_145234-1-.jpg
-  - /images/20260805_181449-1-.jpg
-  - /images/20260805_181609.jpg
+- /images/20260803_145234-1-.jpg
+- /images/20260805_181449-1-.jpg
+- /images/20260805_181609.jpg
 icon: dateBalloon
 fromPrice: 27
 etsyUrl: https://make3die.etsy.com/listing/4550646535
+shipping: standard
 priceMode: single
 optionsLabel: Size
 options:
-  - label: 15cm
-    price: 27
-  - label: 17cm
-    price: 31
-  - label: 20cm
-    price: 35
-  - label: 22cm
-    price: 39
-  - label: 25cm
-    price: 45
+- label: 15 cm
+  price: 27
+- label: 17 cm
+  price: 31.5
+- label: 20 cm
+  price: 36
+- label: 22 cm
+  price: 40.5
+- label: 25 cm
+  price: 45
 customFields:
-  - required: false
-    id: Baby_name
-    label: Baby name
-  - required: false
-    id: Date_of_birth
-    label: Date of birth
-  - required: false
-    id: time_of_birth
-    label: Time of birth
-  - required: false
-    id: weight
-    label: Weight
-  - required: false
-    id: lenght
-    label: Lenght
+- id: colour
+  label: Colour
+  placeholder: Blue, pink, red, matcha green or white
+  required: true
+- id: babyName
+  label: Baby's name
+  required: true
+- id: dateOfBirth
+  label: Date of birth
+  placeholder: e.g. 12 March 2026
+  required: true
+- id: timeOfBirth
+  label: Time of birth
+  placeholder: e.g. 4:35 am
+  required: true
+- id: weight
+  label: Weight
+  placeholder: e.g. 3.4 kg
+  required: true
+- id: length
+  label: Length
+  placeholder: e.g. 51 cm
+  required: true
 details:
-  - freestanding-no-power
-  - any-date-short-name
-  - colour-options-ask
+- freestanding-no-power
+- name-date-time-weight
+- made-in-dublin
+- made-to-order
+- collect-or-post
 ---
-Celebrate a new arrival with a fully personalized, 3D-printed hot air balloon birth announcement - designed, printed and finished by hand in Dublin, Ireland.
+A personalised hot air balloon that shows your baby's name, with four floating clouds for the date, time, weight and length of the arrival. It stands on its own base on a shelf, dresser or windowsill. It is a keepsake of the day.
 
-✨ Choose your piece:
+Designed, 3D printed and finished by hand in Dublin, Ireland.
 
-A freestanding balloon carries your baby's name, with four floating clouds showing the date, time, weight and length of your little one's arrival. Available in five sizes (15-25cm) and five colours (blue, pink, red, matcha green, white) to match any nursery.
+### Details
 
-📝 How to order:
+- Freestanding balloon with your baby's name on it
+- Four clouds with date of birth, time of birth, weight and length
+- Five sizes, from 15 cm to 25 cm
+- Five colours: blue, pink, red, matcha green and white
+- The colour comes from the plastic itself, with no paint
+- The balloon and every cloud are separate pieces, fitted into place by hand
+- No LEDs, no batteries and no assembly needed
 
-Choose your size and colour
+### Great for
 
-In the personalisation box, add: Baby's Name, Date of Birth, Time of Birth, Weight, Length
+- New baby and newborn gifts
+- Baby shower and christening gifts
+- Nursery decor and keepsakes for new parents
 
-I'll confirm everything with you before it's printed.
+### How to personalise
 
-🛠️ Made properly:
+1. Choose your size in the order form.
+2. Fill in these details in the order form: colour (blue, pink, red, matcha green or white), baby's name, date of birth, time of birth, weight and length.
 
-3D printed layer by layer in solid colour filament - the colour comes from the material itself, no paint involved. The balloon and every cloud are their own separate piece, fitted into place by hand. Freestanding on its own base - no LEDs, no batteries, no assembly needed. Nothing outsourced, nothing mass-produced.
+I confirm everything with you before it is printed.
 
-🇮🇪 Shipped from Ireland:
-
-No long international shipping, no customs fees for EU buyers - just a straightforward delivery from Dublin.
-
-Please note: small parts may present a choking hazard for young children - adult supervision recommended for display. As each piece is personalized and made to order, I'm unable to accept returns, but please message me first if anything's wrong with your order.
+Please note: small parts may be a choking hazard for young children, so adult supervision is recommended when it is on display. Each piece is personalised and made to order, so I cannot accept returns. Please message me first if anything is wrong with your order.

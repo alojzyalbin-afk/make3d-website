@@ -1,45 +1,50 @@
 ---
-name: Personalized Medical Caduceus Keychain
-heading: Personalized Medical Caduceus Keychain
+name: Personalised Caduceus Keyring
+heading: Personalised Caduceus Keyring
 category: keychains
-tagline: Personalized Medical Caduceus Keychain, Custom Name  Tag Gift for
-  Doctor, Nurse, Graduation
+tagline: A caduceus keyring with the name or title of a doctor or nurse.
 images:
-  - /images/1789269527931-1-.png
-  - /images/1789269527931-1-.png
+- /images/1789269527931-1-.png
 icon: generic
-fromPrice: 7
+fromPrice: 7.2
 etsyUrl: https://make3die.etsy.com/listing/4574281533
+shipping: free-ireland
 priceMode: single
 optionsLabel: Options
-customFields: []
+customFields:
+- id: keyringText
+  label: Name or title
+  placeholder: e.g. DR. MURPHY
+  required: true
 details:
-  - collect-or-post
-  - colour-options-ask
-  - made-in-dublin
+- made-in-dublin
+- made-to-order
+- colour-options-ask
+- collect-or-post
 ---
-A meaningful keepsake for anyone in medicine. This dog-tag style keychain features the classic medical caduceus symbol, personalized with the name of your choice — perfect for a doctor, medical graduate, or anyone who's earned the title.
+A personalised keyring with the traditional Caduceus symbol and the name or title you choose. A gift for a new medical graduate, a doctor, a nurse or a member of hospital staff.
 
-Tell me the name you'd like, and I'll design and 3D print it just for you.
+It works as a graduation present, a thank-you to a doctor who looked after you or a keepsake for a white coat ceremony or a retirement.
 
-✔ Fully customizable name text
+### Details
 
-✔ Includes keyring and chain
+- Two-layer 3D print: navy blue and white base with a gold Caduceus staff (default colours)
+- Your name or title in the design (for example Doctor Smith, Dr. O'Neill or just a name)
+- Hand-sanded and finished by me in my Dublin workshop
+- Light PLA plastic that does not weigh down a key ring
+- Metal keyring and chain included
+- Designed and 3D printed by me in Dublin, Ireland
+- Size: approx. 63mm x 40mm x 3.5mm
 
-✔ Durable PLA, printed and finished in Ireland
+### Great for
 
-✔ Great for medical school graduation, doctor's day, retirement, or a thank-you gift
+- Medical school graduation gifts
+- Doctors' Day and nurse practitioner appreciation
+- Thank-you gifts for hospital staff and surgeons
+- White coat ceremonies and retirement keepsakes
 
+### How to personalise
 
+Type the exact name or title you want shown into the order form (for example DR. MURPHY).
 
-How to order:
-
-Leave a note at checkout (or comment/DM me) with:
-
-Name to display (e.g. "Doctor Smith", "Dr. O'Neill", or just a name)
-
-Any color preference (default navy blue & white, gold caduceus staff)
-
-
-
-Ships worldwide from Ireland.
+Want a different colour scheme? Add it in the order form or send me a message. The default is navy blue and white.

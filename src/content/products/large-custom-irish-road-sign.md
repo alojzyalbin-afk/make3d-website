@@ -1,63 +1,78 @@
 ---
-name: Large Custom Irish Road Sign
-heading: Large Custom Irish Road Sign
+name: Large Personalised Irish Road Sign
+heading: Large Personalised Irish Road Sign
 category: keepsakes
-tagline: Large Custom Irish Road Sign | Gaelic Heritage Decor (Freestanding) |
-  Irish Diaspora Present
+tagline: A large freestanding Irish road sign with your place name, distance and arrow.
 images:
-  - /images/1790031369073-1-.png
-  - /images/1790031490607-1-.png
-  - /images/1790031633233-1-.png
-  - /images/1790031671492-1-.png
-  - /images/1790031448830-1-.png
-  - /images/1790031563170-1-.png
+- /images/1790031369073-1-.png
+- /images/1790031490607-1-.png
+- /images/1790031633233-1-.png
+- /images/1790031671492-1-.png
+- /images/1790031448830-1-.png
+- /images/1790031563170-1-.png
 icon: generic
-fromPrice: 23
+fromPrice: 22.5
+etsyUrl: https://make3die.etsy.com/listing/4580709016
+shipping: standard
 priceMode: single
-optionsLabel: Options
-customFields: []
+optionsLabel: Colour scheme
+options:
+- label: Classic (black and white)
+  price: 22.5
+- label: Heritage (brown and white)
+  price: 22.5
+- label: Scenic (green and white)
+  price: 22.5
+customFields:
+- id: irishName
+  label: Irish name (optional)
+  placeholder: Leave blank and I will find it
+  required: false
+- id: placeName
+  label: English place name or text
+  placeholder: e.g. CRUMLIN
+  required: true
+- id: distance
+  label: Distance in km
+  placeholder: e.g. 29
+  required: true
+- id: arrow
+  label: Arrow direction
+  placeholder: Left or right
+  required: true
 details:
-  - collect-or-post
-  - colour-options-ask
-  - made-in-dublin
-  - made-to-order
+- freestanding-no-power
+- made-in-dublin
+- made-to-order
+- collect-or-post
 ---
-Bring a bold, authentic piece of the Irish roadside into your home!
+A large freestanding version of the Irish road sign, made to stand on a shelf, desk, mantelpiece or display cabinet without a stand. Irish (Gaeilge) on the top line, English below and the distance in km, just like the signs on the road.
 
-This is the large showcase edition of our popular bilingual road sign — designed specifically as a freestanding statement piece for shelves, desks, mantels, or display cabinets. Inspired by Ireland's iconic countryside signage, it features traditional Irish (Gaelic) on top, English below, and the distance shown in kilometers.
+Tell me your destination and distance: a hometown, a wedding venue, a holiday spot, the family home or an inside joke. I make it as one chunky sign just for you.
 
-Tell us your custom destination and distance (a hometown, an inside joke, a memorable Irish holiday spot, or a wedding venue) and we will create a premium, heavy-duty replica just for you.
+### Details
 
-✨ Why This Showcase Edition Stands Out:
+- Size: approx. 290 mm x 85 mm x 17 mm, freestanding
+- Matte PLA plastic with raised lettering
+- Arrow pointing left or right, your choice
+- Three colour schemes: Classic (black and white), Heritage (brown and white) or Scenic (green and white)
+- Designed and 3D printed by me in Dublin, Ireland
 
-\- True Display Size: At 295mm long and 17mm thick, this is a substantial, chunky decor piece that stands perfectly on its own without needing cheap acrylic stands.
+### Who it is for
 
-\- Premium Matte Materials: Made using high-end matte filaments for crisp raised lettering and zero cheap plastic shine.
+- Irish people living abroad who miss a particular place
+- Wedding, anniversary and housewarming gifts
+- Home bars, offices, shelves and display cabinets
+- Anyone with a hometown they want to keep in view
 
-\- Fully Customisable: Choose your text, your distance, and even the direction of the arrow (pointing Left or Right)!
+### How to personalise
 
-\- Historical Color Schemes: Available in classic Black & White, Regional Heritage Brown & White, or Scenic Route Green & White.
+Fill in your details in the order form:
 
-Note: This listing is for the large freestanding sign only (shelf/display cabinet version) and does not include separate mounting brackets.
+1. Irish name (leave it blank if you do not know it and I will find the traditional Irish version)
+2. English place name or your own text
+3. Distance in km
+4. Arrow direction: left or right
+5. Colour scheme: Classic, Heritage or Scenic
 
-🎨 Infinite Customisation Options:
-
-Want a specific color combo not listed? Need a custom logo or a unique layout? We love custom challenges! Just send us a direct message before ordering and we will gladly bring your idea to life.
-
-✍️ How to Order:
-
-Please leave a note in the personalisation box with:
-
-1. Irish Name (If you know it! If not, leave it blank and we will find the correct traditional translation for you).
-
-2. English Place Name (Or your custom text/family name).
-
-3. Distance (Any number you'd like to show in km).
-
-4. Arrow Direction: Left or Right.
-
-5. Color Preference: Classic (Black/White), Heritage (Brown/White) or Scenic (Green/White).
-
-🌍 Shipping Information:
-
-We ship worldwide directly from our workshop in Dublin, Ireland!
+This is for the freestanding sign only. It does not include wall brackets. For a special colour combination or a logo, send me a message before you order.

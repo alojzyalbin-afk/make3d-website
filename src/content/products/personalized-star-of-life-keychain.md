@@ -1,42 +1,57 @@
 ---
-name: Personalized Star of Life Keychain
-heading: Personalized Star of Life Keychain
+name: Personalised Star of Life Keyring
+heading: Personalised Star of Life Keyring
 category: keychains
-tagline: Personalized Star of Life Keychain, Custom Medical Profession Gift
-  (Nurse, Doctor, EMT)
+tagline: A Star of Life keyring with your profession, name or callsign.
 images:
-  - /images/1789348853584.png
-  - /images/1789348786678.png
-  - /images/1789348637749.png
-  - /images/1789348600669.png
-  - /images/1789348754994.png
+- /images/1789348853584.png
+- /images/1789348786678.png
+- /images/1789348637749.png
+- /images/1789348600669.png
+- /images/1789348754994.png
 icon: generic
-fromPrice: 7
+fromPrice: 7.2
 etsyUrl: https://make3die.etsy.com/listing/4574819267
+shipping: free-ireland
 priceMode: single
-optionsLabel: Options
-customFields: []
+optionsLabel: Colour
+options:
+- label: Navy blue
+  price: 7.2
+- label: Grey
+  price: 7.2
+customFields:
+- id: keyringText
+  label: Text to show
+  placeholder: e.g. NURSE, PARAMEDIC or KELLY
+  required: true
+details:
+- made-in-dublin
+- made-to-order
+- collect-or-post
 ---
-A keychain that says exactly who you are. This Star of Life keychain — the universal symbol of emergency medical services — can be personalized with your profession, your name, your unit number, or anything else you'd like.
+A personalised keyring with the Star of Life, the symbol used by emergency medical services. Put your profession, your name, a unit number or a callsign on it.
 
-Nurse, Doctor, Paramedic, EMT, your callsign, your own name — tell me what you want and I'll design and print it just for you.
+Nurse, doctor, paramedic, EMT or student: tell me what you want to see on it and I design and print it for you.
 
-✔ Fully customizable text (profession, name, unit number, anything)
+### Details
 
-✔ Includes keyring
+- Star of Life symbol in white on a navy blue or grey base (choose in the box)
+- Text of your choice next to the symbol: profession, name, unit number or callsign
+- Durable PLA plastic, printed and finished in Ireland
+- Keyring included
+- Designed and 3D printed by me in Dublin, Ireland
+- Size: approx. 55mm x 40mm x 4.5mm
 
-✔ Durable PLA, printed and finished in Ireland
+### Great for
 
-✔ Great for nursing / medical graduation, EMS appreciation, retirement or a thank-you gift
+- Nursing and medical graduation gifts
+- Paramedic and EMT appreciation gifts
+- Retirement gifts and thank-you gifts for hospital or ambulance staff
 
+### How to personalise
 
+Fill in your details in the order form:
 
-How to order:
-
-Leave a note at checkout (or comment/DM me) with:
-
-Text to display (e.g. "NURSE", "PARAMEDIC", "KELLY", "CNM 1")
-
-Any color preference (default navy blue or grey, white symbol)
-
-Ships worldwide from Ireland. Free shipping to Ireland.
+1. The text to show (for example NURSE, PARAMEDIC, KELLY or CNM 1)
+2. Colour: navy blue (default) or grey, with a white symbol

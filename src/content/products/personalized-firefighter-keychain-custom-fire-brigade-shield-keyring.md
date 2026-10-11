@@ -1,59 +1,47 @@
 ---
-name: Personalized Firefighter Keychain - Custom Fire Brigade Shield Keyring
-heading: Personalized Firefighter Keychain - Custom Fire Brigade Shield Keyring
+name: Personalised Fire Brigade Shield Keyring
+heading: Personalised Fire Brigade Shield Keyring
 category: keychains
-tagline: Personalized Firefighter Keychain - Custom Fire Brigade Shield Keyring,
-  Fireman Retirement Gift, Fire Station Graduation Present, Name Tag
+tagline: A fire brigade shield keyring with your name, station or badge number.
 images:
-  - /images/1000104642.png
-  - /images/1000104643.png
-  - /images/1000104644.png
-  - /images/1000104645.png
-  - /images/1000104634.jpg
+- /images/1000104642.png
+- /images/1000104643.png
+- /images/1000104644.png
+- /images/1000104645.png
+- /images/1000104634.jpg
 icon: generic
-fromPrice: 7
+fromPrice: 7.2
 etsyUrl: https://make3die.etsy.com/listing/4578054848
+shipping: free-ireland
 priceMode: single
 optionsLabel: Options
-customFields: []
+customFields:
+- id: shieldText
+  label: Text for the shield (4 to 10 characters)
+  placeholder: e.g. BYRNE or STATION 12
+  required: true
 details:
-  - collect-or-post
-  - colour-options-ask
-  - made-in-dublin
-  - made-to-order
+- made-in-dublin
+- made-to-order
+- colour-options-ask
+- collect-or-post
 ---
-Honor the hero in your life with this premium, fully personalized 3D printed Fire Brigade Shield Keychain! 🚒🧑‍🚒
+A personalised keyring in the shape of a fire brigade shield, with crossed axes, a yellow helmet and your name in raised letters. A keepsake for a firefighter, a retainee or anyone in the fire service.
 
-Modeled after the traditional firefighter shield and featuring a high-contrast design with crossed axes, a vibrant yellow service helmet, and custom-raised lettering, this keyring is the ultimate badge of pride for any fire service professional.
+Give it for a graduation from the fire college, a promotion, a long-service milestone or a retirement.
 
-✨ THE PERFECT GIFT FOR FIREFIGHTERS & RETAINEES ✨
+### Details
 
-Looking for a meaningful way to celebrate a fire station graduation, a promotion, a long-service milestone, or a well-deserved retirement? This custom name tag keyring makes a thoughtful, deeply personal keepsake for family members, friends, or colleagues serving in the fire brigade.
+- Black shield with white axes and text and a yellow helmet (default colours)
+- Your family name, station number or badge ID on the bottom curve, in raised 3D lettering
+- Matte PLA plastic, light enough for gear bags and locker keys
+- Gold-toned metal chain and split ring included
+- Designed and 3D printed by me in Dublin, Ireland
 
-PRODUCT HIGHLIGHTS & SPECIFICATIONS:
+### How to personalise
 
-• 100% Personalized: Your family name, station number, or badge ID cleanly integrated into the bottom curve in crisp, 3D relief text.
+Type your text into the order form (for example BYRNE, DRISCOLL or STATION 12).
 
-• Exceptional Local Quality: Designed, 3D printed, and carefully hand-finished right in our independent workshop in Dublin, Ireland.
+Text works best at 4 to 10 characters, so it stays bold and easy to read.
 
-• Vibrant Multi-Color Contrast: Printed layer-by-layer with robust matte filaments (Sleek Black shield base, clean White axes/text, and a brilliant Hazard Yellow helmet).
-
-• Built for Tough Daily Use: Made from high-grade, resilient PLA plastic. It's durable enough for heavy duty gear bags or locker keys without adding unnecessary weight.
-
-• Ready to Gift: Arrives complete with a secure, polished gold-toned metal chain and split ring attachment.
-
-HOW TO ORDER IN 3 EASY STEPS:
-
-1. Enter your custom name or text (e.g., "BYRNE", "DRISCOLL", "STATION 12") in the personalization box.
-
-2. Want a different color scheme? Just let me know in the notes at checkout (default is Black, Yellow & White).
-
-3. Select your quantity and click "Add to Basket".
-
-4. We will custom-layout your text to ensure perfect spacing, print it fresh, and dispatch it directly from Dublin with Free Shipping across Ireland!
-
-Please Note: To maintain the clean, bold design and optimal legibility, text length is best kept between 4-10 characters. For bulk station orders or specific brigade custom insignia requests, please send us a message!
-
-Dispatch & Packaging:
-
-Every single keyring is made to order right here in Dublin, Ireland. Dispatched quickly via reliable local post so it reaches you or your recipient fresh from the printer.
+Want a different colour scheme? Tell me in the order form or send me a message. For bulk station orders or a special brigade badge, message me first.
