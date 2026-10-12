@@ -1,8 +1,9 @@
 ---
 name: Personalised Hot Air Balloon Birth Announcement
 heading: Personalised Hot Air Balloon Birth Announcement
+seoTitle: Personalised Hot Air Balloon Birth Announcement | Baby Gift
 category: keepsakes
-tagline: A freestanding hot air balloon with your baby's name, date, time, weight and length.
+tagline: A freestanding hot air balloon with your baby's name, date, time, weight and length. Five sizes, five colours. A new baby or christening gift, made in Dublin.
 images:
 - /images/date-balloon-01.jpg
 - /images/date-balloon-02.jpg

@@ -127,7 +127,7 @@ const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
             )}
             <div class="p-6">
               <h3 class="font-display font-semibold text-lg mb-1.5">{product.name}</h3>
-              <p class="text-sm text-paper/65 leading-relaxed mb-4">{product.tagline}</p>
+              <p class="text-sm text-paper/65 leading-relaxed mb-4 line-clamp-3">{product.tagline}</p>
               <p class="font-mono text-sm text-gold mb-3">from {formatEuro(product.fromPrice)}</p>
             {product.freeIreland && <p class="text-xs text-paper/60 -mt-2 mb-3">Free delivery in Ireland</p>}
               <span class="text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">See options →</span>

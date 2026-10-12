@@ -1,8 +1,9 @@
 ---
 name: HoHoHo Light Up Sign
 heading: HoHoHo Light Up Sign
+seoTitle: HoHoHo Light Up Sign | LED Christmas Decoration
 category: christmas
-tagline: A big light-up HoHoHo sign with Santa, an elf and a snowman. USB powered.
+tagline: A big light-up HoHoHo sign with Santa, an elf and a snowman. USB powered with an on/off switch, for a Christmas mantel or shelf. Made in Dublin.
 images:
 - /images/hohoho-light-up-sign-01.jpg
 - /images/hohoho-light-up-sign-02.jpg

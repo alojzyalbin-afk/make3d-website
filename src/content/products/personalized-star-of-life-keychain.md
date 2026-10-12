@@ -1,8 +1,9 @@
 ---
 name: Personalised Star of Life Keyring
 heading: Personalised Star of Life Keyring
+seoTitle: Personalised Star of Life Keyring | Paramedic and Nurse Gift
 category: keychains
-tagline: A Star of Life keyring with your profession, name or callsign.
+tagline: A Star of Life keyring with your profession, name or callsign. A gift for paramedics, EMTs and nurses, for graduation or as a thank you. Made in Dublin.
 images:
 - /images/personalized-star-of-life-keychain-01.jpg
 - /images/personalized-star-of-life-keychain-02.jpg

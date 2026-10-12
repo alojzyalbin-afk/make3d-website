@@ -1,8 +1,9 @@
 ---
 name: Pumpkin House Lantern
 heading: Pumpkin House Lantern
+seoTitle: Pumpkin House Lantern | Halloween Tea Light Holder
 category: home-decor
-tagline: A little pumpkin house that glows through its windows with an LED tea light.
+tagline: A pumpkin house lantern for Halloween and autumn that glows through its windows with an LED tea light (not included). Assembled by hand in Dublin.
 images:
 - /images/pumpkin-house-lantern-01.jpg
 - /images/pumpkin-house-lantern-02.jpg

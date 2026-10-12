@@ -1,8 +1,9 @@
 ---
 name: Personalised Caduceus Keyring
 heading: Personalised Caduceus Keyring
+seoTitle: Personalised Caduceus Keyring | Doctor and Nurse Gift
 category: keychains
-tagline: A caduceus keyring with the name or title of a doctor or nurse.
+tagline: A caduceus keyring in navy blue and gold with a doctor's or nurse's name or title. A medical graduation or thank-you gift, made in Dublin.
 images:
 - /images/personalized-medical-caduceus-keychain-custom-name-tag-gift-for-doctor-nurse-graduation-01.jpg
 - /images/personalized-medical-caduceus-keychain-custom-name-tag-gift-for-doctor-nurse-graduation-02.jpg

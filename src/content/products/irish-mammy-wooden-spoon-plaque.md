@@ -1,8 +1,9 @@
 ---
 name: Irish Mammy's Wooden Spoon of Discipline
 heading: Irish Mammy's Wooden Spoon of Discipline
+seoTitle: Irish Mammy's Wooden Spoon Plaque | Funny Irish Kitchen Gift
 category: home-decor
-tagline: A funny kitchen wall plaque that holds a real wooden spoon, in the colours you choose.
+tagline: A funny Irish kitchen wall plaque that holds a real wooden spoon, included. Celtic knot, raised lettering and your choice of colours. Made in Dublin.
 images:
 - /images/irish-mammy-wooden-spoon-plaque-01.jpg
 - /images/irish-mammy-wooden-spoon-plaque-02.jpg

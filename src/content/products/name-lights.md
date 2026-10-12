@@ -1,8 +1,9 @@
 ---
 name: Personalised Cursive Name Light
 heading: Personalised Cursive Name Light
+seoTitle: Personalised Cursive Name Light | LED Name Lamp, USB-C
 category: lighting
-tagline: A large letter with a name in cursive, lit softly from inside. USB-C powered.
+tagline: A large letter with a name in cursive, lit from inside by LEDs. USB-C powered, 15 to 25 cm tall. A nursery or kids' room gift, made in Dublin.
 images:
 - /images/name-lights-01.jpg
 - /images/name-lights-02.jpg

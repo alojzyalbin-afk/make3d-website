@@ -1,8 +1,9 @@
 ---
 name: Personalised Dublin Street Sign Keyring
 heading: Personalised Dublin Street Sign Keyring
+seoTitle: Personalised Dublin Street Sign Keyring | Irish Souvenir
 category: keychains
-tagline: A keyring styled like a Dublin street sign, in Irish and English.
+tagline: A keyring in the style of Dublin street signs, in Irish and English, with your street and number. An Irish souvenir or new home gift, made in Dublin.
 images:
 - /images/custom-dublin-street-sign-keychain-01.jpg
 - /images/custom-dublin-street-sign-keychain-02.jpg

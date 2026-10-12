@@ -1,8 +1,9 @@
 ---
 name: Gnome Cottage Christmas Lantern
 heading: Gnome Cottage Christmas Lantern
+seoTitle: Gnome Cottage Christmas Lantern | LED Tea Light Holder
 category: christmas
-tagline: A Santa hat cottage that glows with an LED tea light. Candle not included.
+tagline: A Santa hat gnome cottage that glows through its windows with an LED tea light (not included). Cosy Christmas decor and a stocking filler, made in Dublin.
 images:
 - /images/gnome-cottage-christmas-lantern-01.jpg
 - /images/gnome-cottage-christmas-lantern-02.jpg

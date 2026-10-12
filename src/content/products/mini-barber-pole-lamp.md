@@ -1,8 +1,9 @@
 ---
 name: Mini Barber Pole Lamp
 heading: Mini Barber Pole Lamp
+seoTitle: Mini Barber Pole Lamp | Retro Barbershop LED Light
 category: lighting
-tagline: A miniature barber pole that gives a warm retro glow on a desk or counter.
+tagline: A 23 cm mini barber pole lamp with a warm retro glow, USB powered. A gift for barbers and hairdressers, or decor for a salon. Made in Dublin.
 images:
 - /images/mini-barber-pole-lamp-01.jpg
 - /images/mini-barber-pole-lamp-02.jpg

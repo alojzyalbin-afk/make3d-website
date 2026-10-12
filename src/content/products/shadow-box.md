@@ -1,8 +1,9 @@
 ---
 name: Personalised Birth Announcement Shadow Box
 heading: Personalised Birth Announcement Shadow Box
+seoTitle: Birth Announcement Shadow Box | Personalised Baby Keepsake
 category: keepsakes
-tagline: A birth announcement shadow box with your baby's name and birth details.
+tagline: A birth announcement shadow box with your baby's name, date, time, weight and length, in pink or blue. A new baby keepsake, made in Dublin.
 images:
 - /images/shadow-box-01.jpg
 - /images/shadow-box-02.jpg

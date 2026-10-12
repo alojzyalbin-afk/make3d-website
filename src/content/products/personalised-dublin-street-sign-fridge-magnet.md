@@ -1,8 +1,9 @@
 ---
 name: Personalised Dublin Street Sign Fridge Magnet
 heading: Personalised Dublin Street Sign Fridge Magnet
+seoTitle: Personalised Dublin Street Sign Fridge Magnet | Irish Gift
 category: fridge-magnets
-tagline: A fridge magnet styled like a Dublin street sign, in Irish and English.
+tagline: A fridge magnet in the style of Dublin street signs, in Irish and English, with your street or name and a number. A housewarming gift made in Dublin.
 images:
 - /images/personalised-dublin-street-sign-fridge-magnet-01.jpg
 - /images/personalised-dublin-street-sign-fridge-magnet-02.jpg

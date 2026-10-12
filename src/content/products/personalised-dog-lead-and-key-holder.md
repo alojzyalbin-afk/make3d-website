@@ -1,8 +1,9 @@
 ---
 name: Personalised Dog Lead and Key Holder
 heading: Personalised Dog Lead and Key Holder
+seoTitle: Personalised Dog Lead and Key Holder | Family Name Wall Hooks
 category: home-decor
-tagline: A wall plaque with your family and pet's name and hooks for keys and leads.
+tagline: A wall plaque with your family name and your pet's name, with 4, 5 or 6 hooks for keys and leads. Your colours, made to order in Dublin.
 images:
 - /images/personalised-dog-lead-and-key-holder-01.jpg
 - /images/personalised-dog-lead-and-key-holder-02.jpg
