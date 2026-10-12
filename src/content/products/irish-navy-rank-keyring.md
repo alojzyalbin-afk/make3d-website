@@ -1,8 +1,9 @@
 ---
 name: Personalised Irish Navy Rank Keyring
 heading: Personalised Irish Navy Rank Keyring
+seoTitle: Personalised Irish Navy Rank Keyring | Naval Service Gift
 category: keychains
-tagline: An epaulette keyring with your Naval Service rank and surname.
+tagline: An epaulette keyring with your Naval Service rank and surname. A personalised military gift for promotions and retirements, made in Dublin.
 images:
 - /images/irish-navy-rank-keyring-01.jpg
 - /images/irish-navy-rank-keyring-02.jpg

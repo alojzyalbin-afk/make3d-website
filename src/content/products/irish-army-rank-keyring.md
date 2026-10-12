@@ -1,8 +1,9 @@
 ---
 name: Personalised Irish Army Rank Keyring
 heading: Personalised Irish Army Rank Keyring
+seoTitle: Personalised Irish Army Rank Keyring | Defence Forces Gift
 category: keychains
-tagline: An epaulette keyring with your Irish Army rank and surname.
+tagline: An epaulette keyring with your Irish Army rank and surname. A personalised military gift for promotions and retirements, made in Dublin.
 images:
 - /images/irish-army-rank-keyring-01.jpg
 - /images/irish-army-rank-keyring-02.jpg

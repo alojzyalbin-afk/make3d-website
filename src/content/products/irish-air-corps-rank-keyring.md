@@ -1,8 +1,9 @@
 ---
 name: Personalised Irish Air Corps Rank Keyring
 heading: Personalised Irish Air Corps Rank Keyring
+seoTitle: Personalised Irish Air Corps Rank Keyring | Defence Forces Gift
 category: keychains
-tagline: An epaulette keyring with your Irish Air Corps rank and surname.
+tagline: An epaulette keyring with your Irish Air Corps rank and surname. A personalised military gift for promotions and retirements, made in Dublin.
 images:
 - /images/irish-air-corps-rank-keyring-01.jpg
 - /images/irish-air-corps-rank-keyring-02.jpg

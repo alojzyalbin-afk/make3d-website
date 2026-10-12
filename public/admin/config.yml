@@ -20,6 +20,7 @@ collections:
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Heading (big title on the product page)", name: "heading", widget: "string" }
+      - { label: "Google title (optional)", name: "seoTitle", widget: "string", required: false, hint: "Shown in Google results and the browser tab, e.g. Large Personalised Dublin Street Sign | Unique Housewarming Gift. Keep it under about 60 characters. Leave empty to use the name." }
       - label: "Category"
         name: "category"
         widget: "relation"
@@ -28,7 +29,7 @@ collections:
         value_field: "{{slug}}"
         display_fields: ["name"]
         hint: "Manage the list under Categories in the sidebar."
-      - { label: "Tagline (short, shown on the homepage card)", name: "tagline", widget: "string" }
+      - { label: "Tagline (short, shown on the homepage card)", name: "tagline", widget: "string", hint: "Also the description Google shows under the title. Up to about 155 characters." }
       - label: "Images"
         name: "images"
         widget: "list"

@@ -6,6 +6,8 @@ const products = defineCollection({
   schema: z.object({
     name: z.string(),
     heading: z.string(),
+    // Optional title for Google and the browser tab. Falls back to the name.
+    seoTitle: z.string().optional(),
     category: z.string(),
     tagline: z.string(),
     icon: z.enum(['nameLights', 'shadowBox', 'dateBalloon', 'figurines', 'generic']).default('generic'),

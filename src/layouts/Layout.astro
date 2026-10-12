@@ -18,6 +18,31 @@ const {
 const fullTitle = `${title} · make3d.ie`;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://make3d.ie');
 const ogImage = image ? new URL(image, Astro.site ?? 'https://make3d.ie').href : undefined;
+
+// Who runs the site, for Google. Same name as the Google Business Profile.
+// Only the town is given: the business runs from home, so no street address.
+const business = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://make3d.ie/#business',
+  name: 'Make 3D Ireland',
+  alternateName: ['make3d.ie', 'Make3DIE'],
+  description: 'Custom 3D-printed gifts, home decor and replacement parts, designed and printed to order in Dublin, Ireland.',
+  url: 'https://make3d.ie/',
+  email: 'contact@make3d.ie',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Dublin',
+    addressRegion: 'County Dublin',
+    addressCountry: 'IE',
+  },
+  areaServed: { '@type': 'Country', name: 'Ireland' },
+  sameAs: [
+    'https://www.etsy.com/shop/Make3DIE',
+    'https://instagram.com/custom3dprintsireland',
+    'https://www.facebook.com/custom3dprintsdublin',
+  ],
+};
 ---
 
 <!DOCTYPE html>
@@ -45,6 +70,8 @@ const ogImage = image ? new URL(image, Astro.site ?? 'https://make3d.ie').href :
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+    <script type="application/ld+json" set:html={JSON.stringify(business)} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

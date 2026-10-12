@@ -151,8 +151,12 @@ const euro = (v: number) => (Number.isInteger(v) ? `€${v}` : `€${v.toFixed(2
 
     <button type="submit" id="submit-btn"
       class="w-full bg-red text-paper font-display font-semibold py-3.5 rounded-full hover:bg-red/90 transition-colors focus-visible:outline-2 focus-visible:outline-gold">
-      Send request — <span id="price-display">{euro(initialPrice)}</span>
+      Send order details — <span id="price-display">{euro(initialPrice)}</span>
     </button>
+
+    <p class="text-xs text-paper/60 leading-relaxed text-center -mt-1">
+      No payment now. I reply by email to confirm your details and the price before anything is printed, then send you a Revolut payment request.
+    </p>
 
     <p id="form-status" class="text-sm text-center hidden"></p>
   </form>
