@@ -47,7 +47,7 @@ const shareImage = media.find((m) => !m.video)?.src ?? first?.poster;
 
     <div class="grid md:grid-cols-2 gap-12">
 
-      <div>
+      <div class="min-w-0">
         <p class="font-mono text-xs tracking-widest text-gold uppercase mb-3">{categoryName}</p>
         <h1 class="font-display font-bold text-3xl sm:text-4xl mb-6">{p.heading}</h1>
 
@@ -118,7 +118,7 @@ const shareImage = media.find((m) => !m.video)?.src ?? first?.poster;
         </details>
       </div>
 
-      <div class="md:sticky md:top-24 md:self-start">
+      <div class="min-w-0 md:sticky md:top-24 md:self-start">
         <QuoteForm
           slug={product.id}
           name={p.name}
