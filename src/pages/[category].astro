@@ -1,0 +1,57 @@
+---
+// One page per category that has products, e.g. make3d.ie/keyrings/
+import { getCollection, render } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import CategoryNav from '../components/CategoryNav.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { getCatalog } from '../lib/library';
+
+export async function getStaticPaths() {
+  const { categories } = await getCatalog();
+  const entries = await getCollection('categories');
+  return entries
+    .filter((entry) => categories.some((c) => c.slug === entry.id))
+    .map((entry) => ({ params: { category: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { products, categories } = await getCatalog();
+const items = products
+  .filter((p) => p.category === entry.id)
+  .sort((a, b) => a.name.localeCompare(b.name));
+const heading = entry.data.heading ?? entry.data.name;
+---
+
+<Layout title={entry.data.seoTitle ?? heading} description={entry.data.description}>
+  <section class="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-16">
+    <Breadcrumbs items={[
+      { name: 'Home', href: '/' },
+      { name: 'Shop', href: '/shop/' },
+      { name: entry.data.name, href: `/${entry.id}/` },
+    ]} />
+
+    <h1 class="font-display font-bold text-3xl sm:text-4xl mb-4">{heading}</h1>
+    <div class="product-body text-paper/70 leading-relaxed max-w-2xl mb-10 space-y-4">
+      <Content />
+    </div>
+
+    <CategoryNav categories={categories} total={products.length} active={entry.id} />
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {items.map((product) => <ProductCard product={product} />)}
+    </div>
+
+    <div class="mt-16 p-8 rounded-2xl bg-panel border border-paper/10">
+      <h2 class="font-display font-semibold text-xl mb-2">Want something slightly different?</h2>
+      <p class="text-paper/70 leading-relaxed mb-5 max-w-lg">
+        Other colours, other text or a piece that isn't listed here: send me the details and I'll come back with a price.
+      </p>
+      <a href="/custom-3d-printing-dublin/"
+        class="inline-flex items-center gap-2 bg-red text-paper font-display font-semibold px-6 py-3 rounded-full hover:bg-red/90 transition-colors focus-visible:outline-2 focus-visible:outline-gold">
+        Ask for a custom piece
+      </a>
+    </div>
+  </section>
+</Layout>

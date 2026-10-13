@@ -1,0 +1,38 @@
+---
+import ProductIcon from './ProductIcon.astro';
+import { formatEuro, thumbUrl, type CatalogProduct } from '../lib/library';
+
+interface Props {
+  product: CatalogProduct;
+  // 'grid' for the shop and category pages, 'carousel' for the homepage strip
+  variant?: 'grid' | 'carousel';
+  headingTag?: 'h2' | 'h3';
+}
+
+const { product, variant = 'grid', headingTag: Heading = 'h2' } = Astro.props;
+const carousel = variant === 'carousel';
+---
+
+<a href={`/shop/${product.slug}/`}
+  class={`group block rounded-2xl border border-paper/10 overflow-hidden transition-all hover:-translate-y-1 hover:border-gold/40 hover:shadow-xl hover:shadow-black/30 ${carousel ? 'snap-start shrink-0 w-64 bg-ink' : 'bg-panel'}`}>
+  {product.thumb ? (
+    <div class={`aspect-[4/3] overflow-hidden ${carousel ? 'bg-panel' : 'bg-ink'}`}>
+      <!-- small copy first; the full photo if the small one is missing (e.g. in npm run dev) -->
+      <img src={thumbUrl(product.thumb, 'md')} data-full={product.thumb}
+        onerror="this.onerror=null;this.src=this.dataset.full"
+        alt={product.name} loading="lazy" decoding="async" width="640" height="480"
+        class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300" />
+    </div>
+  ) : (
+    <div class={`aspect-[4/3] flex items-center justify-center ${carousel ? 'bg-panel' : 'bg-ink'}`}>
+      <ProductIcon icon={product.icon} size={48} />
+    </div>
+  )}
+  <div class={carousel ? 'p-6' : 'p-5'}>
+    <Heading class="font-display font-semibold text-lg mb-1.5">{product.name}</Heading>
+    <p class="text-sm text-paper/65 leading-relaxed mb-3 line-clamp-3">{product.tagline}</p>
+    <p class="font-mono text-sm text-gold">from {formatEuro(product.fromPrice)}</p>
+    {product.freeIreland && <p class="text-xs text-paper/60 mt-1">Free delivery in Ireland</p>}
+    {carousel && <span class="text-sm font-medium inline-flex items-center gap-1 mt-3 group-hover:gap-2 transition-all">See options →</span>}
+  </div>
+</a>

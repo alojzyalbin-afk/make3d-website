@@ -3,7 +3,8 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import ProductIcon from '../../components/ProductIcon.astro';
-import { getCategoryMap, getDetailMap, resolveCategory, resolveDetails, SHIPPING } from '../../lib/library';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { getCategoryMap, getDetailMap, resolveCategory, resolveDetails, SHIPPING, DELIVERY, thumbUrl } from '../../lib/library';
 
 export async function getStaticPaths() {
   const products = await getCollection('products');
@@ -41,14 +42,17 @@ const shareImage = media.find((m) => !m.video)?.src ?? first?.poster;
 <Layout title={p.seoTitle ?? p.name} description={p.tagline} image={shareImage}>
 
   <section class="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-16">
-    <a href="/#products" class="text-sm text-paper/60 hover:text-gold transition-colors inline-flex items-center gap-1 mb-8">
-      ← Back to all products
-    </a>
+    <Breadcrumbs items={[
+      { name: 'Home', href: '/' },
+      { name: 'Shop', href: '/shop/' },
+      { name: categoryName, href: `/${p.category}/` },
+      { name: p.name, href: `/shop/${product.id}/` },
+    ]} />
 
     <div class="grid md:grid-cols-2 gap-12">
 
       <div class="min-w-0">
-        <p class="font-mono text-xs tracking-widest text-gold uppercase mb-3">{categoryName}</p>
+        <a href={`/${p.category}/`} class="inline-block font-mono text-xs tracking-widest text-gold uppercase mb-3 hover:underline underline-offset-4">{categoryName}</a>
         <h1 class="font-display font-bold text-3xl sm:text-4xl mb-6">{p.heading}</h1>
 
         {first ? (
@@ -71,7 +75,8 @@ const shareImage = media.find((m) => !m.video)?.src ?? first?.poster;
                   <button type="button" data-src={m.src} data-webp={m.webp} data-poster={m.poster} data-video={m.video ? '1' : ''}
                     aria-label={m.video ? `Play video ${i + 1}` : `View photo ${i + 1}`}
                     class={`gallery-thumb relative shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${i === 0 ? 'border-gold' : 'border-paper/15 hover:border-paper/40'}`}>
-                    <img src={m.poster} alt="" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+                    <img src={thumbUrl(m.poster, 'sm')} data-full={m.poster} onerror="this.onerror=null;this.src=this.dataset.full"
+                      alt="" loading="lazy" decoding="async" width="80" height="80" class="w-full h-full object-cover" />
                     {m.video && (
                       <span class="absolute inset-0 flex items-center justify-center bg-ink/30" aria-hidden="true">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="#F6F3EC"><path d="M8 5v14l11-7z" /></svg>
@@ -164,9 +169,21 @@ const shareImage = media.find((m) => !m.video)?.src ?? first?.poster;
           <table class="w-full text-sm">
             <tbody>
               <tr class="border-b border-paper/10">
-                <th scope="row" class="text-left font-normal text-paper/70 py-2">Collection in Dublin</th>
-                <td class="text-right font-semibold py-2">Free</td>
+                <th scope="row" class="text-left font-normal text-paper/70 py-2">
+                  Collection in Dublin
+                  <span class="block text-xs text-paper/55">{DELIVERY.collectionAreas}, by arrangement</span>
+                </th>
+                <td class="text-right font-semibold py-2 align-top">Free</td>
               </tr>
+              {p.shipping === 'standard' && (
+                <tr class="border-b border-paper/10">
+                  <th scope="row" class="text-left font-normal text-paper/70 py-2">
+                    Hand delivery in Dublin
+                    <span class="block text-xs text-paper/55">Orders of €{DELIVERY.handDeliveryMin} or more</span>
+                  </th>
+                  <td class="text-right font-semibold py-2 align-top">Free</td>
+                </tr>
+              )}
               {shipping.rows.map((row) => (
                 <tr class="border-b border-paper/10 last:border-0">
                   <th scope="row" class="text-left font-normal text-paper/70 py-2">{row.region}</th>
@@ -180,11 +197,18 @@ const shareImage = media.find((m) => !m.video)?.src ?? first?.poster;
               ))}
             </tbody>
           </table>
-          <p class="text-xs text-paper/55 leading-relaxed mt-4">
+          <p class="text-xs text-paper/65 leading-relaxed mt-4">
+            Estimated delivery after you confirm: {DELIVERY.times
+              .filter((t) => p.shipping === 'standard' || t.region !== 'Rest of the world')
+              .map((t) => `${t.region} ${t.days}`)
+              .join(', ')}. It depends on the piece and the personalisation, so I confirm the timing in my first reply.
+          </p>
+          <p class="text-xs text-paper/55 leading-relaxed mt-3">
             Made to order in Dublin and posted from Ireland, so EU buyers pay no customs fees.
             {p.shipping === 'standard' && (
               <> Outside the EU, import duties and taxes are set by your country and paid by you on delivery. I message you an estimate before I post, and only ship once you agree.</>
             )}
+            {' '}<a href="/delivery-and-returns/" class="text-gold hover:underline">Delivery and returns</a>
           </p>
         </div>
       </div>
@@ -204,8 +228,8 @@ const shareImage = media.find((m) => !m.video)?.src ?? first?.poster;
       '@type': 'Offer',
       price: p.fromPrice,
       priceCurrency: 'EUR',
-      availability: 'https://schema.org/InStock',
-      url: `https://make3d.ie/shop/${product.id}`,
+      availability: 'https://schema.org/MadeToOrder',
+      url: `https://make3d.ie/shop/${product.id}/`,
       seller: {
         '@type': 'Organization',
         '@id': 'https://make3d.ie/#business',

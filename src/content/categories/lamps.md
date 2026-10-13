@@ -1,4 +1,4 @@
 ---
 name: Lamps
-order: 99
+order: 9
 ---

@@ -2,13 +2,13 @@
 name: Personalised Fire Brigade Shield Keyring
 heading: Personalised Fire Brigade Shield Keyring
 seoTitle: Personalised Fire Brigade Shield Keyring | Firefighter Gift
-category: keychains
+category: keyrings
 tagline: A fire brigade shield keyring with a name, station or badge number in raised letters. A gift for firefighters, for graduation, promotion or retirement.
 images:
-- /images/personalized-firefighter-keychain-custom-fire-brigade-shield-keyring-01.jpg
-- /images/personalized-firefighter-keychain-custom-fire-brigade-shield-keyring-02.jpg
-- /images/personalized-firefighter-keychain-custom-fire-brigade-shield-keyring-03.jpg
-- /images/personalized-firefighter-keychain-custom-fire-brigade-shield-keyring-04.jpg
+- /images/fire-brigade-shield-keyring-01.jpg
+- /images/fire-brigade-shield-keyring-02.jpg
+- /images/fire-brigade-shield-keyring-03.jpg
+- /images/fire-brigade-shield-keyring-04.jpg
 icon: generic
 fromPrice: 7.2
 etsyUrl: https://make3die.etsy.com/listing/4578054848

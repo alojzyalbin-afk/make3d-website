@@ -5,10 +5,10 @@ seoTitle: Personalised Pet Memorial Urn | Cat and Dog Ashes Keepsake
 category: keepsakes
 tagline: A pyramid pet urn in matte black and gold with a plaque for your pet's name and dates. Screw-off top, about 0.25 L inside. Made with care in Dublin.
 images:
-- /images/personalized-pet-memorial-urn-custom-engraved-keepsake-01.jpg
-- /images/personalized-pet-memorial-urn-custom-engraved-keepsake-02.jpg
-- /images/personalized-pet-memorial-urn-custom-engraved-keepsake-03.jpg
-- /images/personalized-pet-memorial-urn-custom-engraved-keepsake-04.jpg
+- /images/pet-memorial-urn-01.jpg
+- /images/pet-memorial-urn-02.jpg
+- /images/pet-memorial-urn-03.jpg
+- /images/pet-memorial-urn-04.jpg
 icon: generic
 fromPrice: 40.5
 etsyUrl: https://make3die.etsy.com/listing/4572488950

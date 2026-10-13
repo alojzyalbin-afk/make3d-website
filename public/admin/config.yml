@@ -28,7 +28,7 @@ collections:
         search_fields: ["name"]
         value_field: "{{slug}}"
         display_fields: ["name"]
-        hint: "Manage the list under Categories in the sidebar."
+        hint: "Manage the list under Categories in the sidebar. A category with no products is hidden on the site."
       - { label: "Tagline (short, shown on the homepage card)", name: "tagline", widget: "string", hint: "Also the description Google shows under the title. Up to about 155 characters." }
       - label: "Images"
         name: "images"
@@ -125,9 +125,12 @@ collections:
     identifier_field: name
     summary: "{{name}}"
     fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Name (shown on the buttons in the shop)", name: "name", widget: "string" }
+      - { label: "Heading (big title on the category page)", name: "heading", widget: "string", required: false }
+      - { label: "Google title (optional)", name: "seoTitle", widget: "string", required: false, hint: "Keep it under about 60 characters. Leave empty to use the heading." }
+      - { label: "Google description", name: "description", widget: "text", required: false, hint: "Shown by Google under the title. Up to about 155 characters." }
       - { label: "Sort order (lower shows first)", name: "order", widget: "number", value_type: "int", default: 99, required: false }
+      - { label: "Intro (text at the top of the category page)", name: "body", widget: "markdown", required: false }
 
   - name: "details"
     label: "Short details"

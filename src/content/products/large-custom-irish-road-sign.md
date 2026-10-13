@@ -2,7 +2,7 @@
 name: Large Personalised Irish Road Sign
 heading: Large Personalised Irish Road Sign
 seoTitle: Large Personalised Irish Road Sign | Irish Diaspora Gift
-category: keepsakes
+category: home-decor
 tagline: A freestanding replica of Ireland's bilingual Gaelic road signs, with your place name, distance and arrow. Made to order in Dublin, a housewarming gift.
 images:
 - /images/large-custom-irish-road-sign-01.jpg

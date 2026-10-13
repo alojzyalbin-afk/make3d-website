@@ -8,8 +8,8 @@
   --color-red: #E7382C;
   --color-muted: #9C98A0;
 
-  --font-display: "Bricolage Grotesque", sans-serif;
-  --font-body: "Hanken Grotesk", sans-serif;
+  --font-display: "Bricolage Grotesque Variable", "Bricolage Grotesque", sans-serif;
+  --font-body: "Hanken Grotesk Variable", "Hanken Grotesk", sans-serif;
   --font-mono: "Space Mono", monospace;
 }
 
@@ -78,4 +78,5 @@ header, main, footer { position: relative; z-index: 1; }
 .product-body li + li { margin-top: 0.35rem; }
 .product-body li::marker { color: rgba(246, 243, 236, 0.4); }
 .product-body strong { color: var(--color-paper); }
+.product-body a { color: var(--color-gold); text-decoration: underline; text-underline-offset: 3px; }
 details > summary::-webkit-details-marker { display: none; }

@@ -1,0 +1,25 @@
+---
+// Category buttons for the shop and category pages. They are real links,
+// so Google can follow them to each category page.
+interface Props {
+  categories: { slug: string; name: string; count: number }[];
+  total: number;
+  active: string; // 'all' or a category slug
+}
+
+const { categories, total, active } = Astro.props;
+const chip = 'text-sm font-mono px-4 py-2 rounded-full border transition-colors';
+const on = 'border-gold bg-gold/10 text-gold';
+const off = 'border-paper/15 text-paper/70 hover:border-paper/40 hover:text-paper';
+---
+
+<nav aria-label="Product categories" class="flex flex-wrap gap-2 mb-10 pb-8 border-b border-paper/10">
+  <a href="/shop/" class={`${chip} ${active === 'all' ? on : off}`} aria-current={active === 'all' ? 'page' : undefined}>
+    All <span class="opacity-60">({total})</span>
+  </a>
+  {categories.map((cat) => (
+    <a href={`/${cat.slug}/`} class={`${chip} ${active === cat.slug ? on : off}`} aria-current={active === cat.slug ? 'page' : undefined}>
+      {cat.name} <span class="opacity-60">({cat.count})</span>
+    </a>
+  ))}
+</nav>

@@ -1,9 +1,9 @@
 ---
 const links = [
-  { href: '/shop', label: 'Shop' },
-  { href: '/#services', label: 'Services' },
-  { href: '/#about', label: 'About' },
+  { href: '/shop/', label: 'Shop' },
+  { href: '/custom-3d-printing-dublin/', label: 'Custom printing' },
   { href: '/#how-it-works', label: 'How it works' },
+  { href: '/delivery-and-returns/', label: 'Delivery' },
 ];
 ---
 
@@ -55,4 +55,12 @@ const links = [
       </a>
     </div>
   </div>
+  <!-- phones: the same links on a second row -->
+  <nav class="md:hidden border-t border-paper/10" aria-label="Main">
+    <div class="max-w-6xl mx-auto px-5 h-11 flex items-center gap-6 overflow-x-auto no-scrollbar text-sm font-medium whitespace-nowrap">
+      {links.map((link) => (
+        <a href={link.href} class="text-paper/80 hover:text-gold transition-colors">{link.label}</a>
+      ))}
+    </div>
+  </nav>
 </header>

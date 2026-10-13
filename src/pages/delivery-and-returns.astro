@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SHIPPING, DELIVERY } from '../lib/library';
+
+const tables = [
+  { title: 'Keyrings and fridge magnets', rows: SHIPPING['free-ireland'].rows },
+  { title: 'Everything else', rows: SHIPPING.standard.rows },
+];
+---
+
+<Layout
+  title="Delivery and Returns"
+  description="Free collection in Dublin, free hand delivery in the Dublin area on orders of €100 or more, postage across Ireland, the EU and worldwide, delivery times and returns."
+>
+  <section class="max-w-3xl mx-auto px-5 sm:px-8 py-12 md:py-16">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Delivery and returns', href: '/delivery-and-returns/' }]} />
+    <h1 class="font-display font-bold text-3xl sm:text-4xl mb-8">Delivery and returns</h1>
+
+    <div class="product-body text-paper/75 leading-relaxed space-y-4">
+      <h2 class="font-display font-semibold text-xl text-paper">Collection in Dublin</h2>
+      <p>Free collection in {DELIVERY.collectionAreas}, by arrangement. We agree the time and the place by email when your order is ready.</p>
+
+      <h2 class="font-display font-semibold text-xl text-paper pt-4">Hand delivery in Dublin</h2>
+      <p>
+        Orders of €{DELIVERY.handDeliveryMin} or more get free hand delivery in {DELIVERY.handDeliveryArea}.
+        Outside the Dublin area, for example Naas, orders go by post.
+      </p>
+
+      <h2 class="font-display font-semibold text-xl text-paper pt-4">Postage</h2>
+      <p>The first item costs the price shown. Each extra item in the same order adds the smaller amount.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5 mt-5">
+      {tables.map((t) => (
+        <div class="rounded-2xl border border-paper/10 p-5">
+          <h3 class="font-mono text-xs uppercase tracking-widest text-gold mb-3">{t.title}</h3>
+          <table class="w-full text-sm">
+            <tbody>
+              {t.rows.map((row) => (
+                <tr class="border-b border-paper/10 last:border-0">
+                  <th scope="row" class="text-left font-normal text-paper/70 py-2">{row.region}</th>
+                  <td class="text-right py-2">
+                    <span class="font-semibold">{row.price}</span>
+                    {'extra' in row && row.extra && <span class="block text-xs text-paper/55">+{row.extra} each extra item</span>}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ))}
+    </div>
+
+    <div class="product-body text-paper/75 leading-relaxed space-y-4 mt-10">
+      <h2 class="font-display font-semibold text-xl text-paper">Delivery times</h2>
+      <p>Estimated time from when you confirm your order until it arrives:</p>
+      <ul>
+        {DELIVERY.times.map((t) => <li>{t.region}: {t.days}</li>)}
+      </ul>
+      <p>
+        It depends on the piece, how complex it is and the personalisation, so I confirm the timing in my first reply.
+        Custom pieces that I design for you take longer, and I give you their timing together with the price.
+      </p>
+      <p>Larger items go with tracking. Keyrings and magnets go by An Post letter post, without tracking.</p>
+
+      <h2 class="font-display font-semibold text-xl text-paper pt-4">Customs and import duties</h2>
+      <p>
+        Everything is posted from Ireland, so buyers in the EU pay no customs fees.
+        Outside the EU, import duties and taxes are set by your country and paid by you on delivery.
+        Before I post an order outside the EU, I message you an estimate and only ship once you agree.
+      </p>
+
+      <h2 class="font-display font-semibold text-xl text-paper pt-4">Returns</h2>
+      <ul>
+        <li>
+          <strong>Personalised items:</strong> each one is made with your name, text or details, so it can't be returned or exchanged,
+          unless it arrives damaged or faulty.
+        </li>
+        <li>
+          <strong>Items that aren't personalised</strong>, for example the barber pole lamp or the lanterns: you can cancel within 14 days of receiving them.
+          Email me first and send the item back in the same condition. You pay the return postage, and I refund what you paid, including the original postage.
+        </li>
+        <li>
+          <strong>Damaged or not what we agreed:</strong> email me a photo within 14 days of receiving it and I'll remake it or refund you.
+        </li>
+      </ul>
+      <p>None of this affects your legal rights as a consumer. Orders placed on Etsy follow Etsy's own policies and Purchase Protection.</p>
+
+      <p class="pt-4">Questions? Email <a href="mailto:contact@make3d.ie">contact@make3d.ie</a>.</p>
+    </div>
+  </section>
+</Layout>

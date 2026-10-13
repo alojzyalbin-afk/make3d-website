@@ -1,0 +1,177 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { DELIVERY } from '../lib/library';
+
+const uses = [
+  {
+    title: 'Replacement parts',
+    text: "Clips, brackets, knobs, covers, hooks and other plastic parts that broke or can't be bought anymore.",
+  },
+  {
+    title: 'Custom pieces and gifts',
+    text: "Signs, plaques and gifts with your own text and colours, beyond what's in the shop.",
+  },
+  {
+    title: 'Small batches for businesses',
+    text: 'Keyrings, card holders and signs with your name or a simple, bold logo, for a team, a club or an event.',
+  },
+  {
+    title: 'Figurines and models',
+    text: 'Printed in white and prepared for painting, with sanding and primer, so they are ready for you to paint.',
+  },
+];
+---
+
+<Layout
+  title="Custom 3D Printing in Dublin | Replacement Parts and One-offs"
+  description="Custom 3D printing in Dublin: replacement parts, one-off pieces, small batches and figurines printed in white. Send an STL or 3MF file, or photos and measurements."
+>
+  <section class="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-16">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Custom 3D printing', href: '/custom-3d-printing-dublin/' }]} />
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="min-w-0">
+        <h1 class="font-display font-bold text-3xl sm:text-4xl mb-5">Custom 3D printing in Dublin</h1>
+        <p class="text-paper/75 text-lg leading-relaxed mb-10">
+          Have a 3D file, an idea or a broken part you can't buy anymore? I print one-off pieces and small batches to order in Dublin, for people and small businesses across Ireland.
+        </p>
+
+        <h2 class="font-display font-semibold text-xl mb-4">What I can print</h2>
+        <div class="grid sm:grid-cols-2 gap-4 mb-6">
+          {uses.map((u) => (
+            <div class="p-5 rounded-2xl bg-panel border border-paper/10">
+              <h3 class="font-display font-semibold mb-1.5">{u.title}</h3>
+              <p class="text-sm text-paper/65 leading-relaxed">{u.text}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-sm text-paper/60 leading-relaxed mb-10">
+          Painting is not part of my standard service. On request, a painter I work with can paint a figurine, and the price for that is confirmed separately.
+        </p>
+
+        <div class="product-body text-paper/70 leading-relaxed space-y-4">
+          <h2 class="font-display font-semibold text-xl text-paper">With a file or without</h2>
+          <ul>
+            <li><strong>You have a 3D file (STL or 3MF):</strong> I check it and print it, and you pay for the printing only. This is the cheapest way.</li>
+            <li><strong>You don't have a file:</strong> send photos and the measurements. For a broken part, a photo of it next to a ruler helps. I model it for you, and the design time is included in the price.</li>
+          </ul>
+
+          <h2 class="font-display font-semibold text-xl text-paper pt-4">How the price is worked out</h2>
+          <p>
+            Every custom job is priced on its own. The price depends on the printing time, the material, the size and, if I design the piece, the design time. A piece that takes longer costs more. You get the price before anything is printed, and the quote is free.
+          </p>
+
+          <h2 class="font-display font-semibold text-xl text-paper pt-4">Sizes and materials</h2>
+          <p>
+            Single pieces up to about 25 cm. Bigger items can sometimes be printed in parts and joined, depending on the design. I use PLA for most pieces, PETG where a part needs more strength or heat resistance and ASA for parts that live outdoors.
+          </p>
+
+          <h2 class="font-display font-semibold text-xl text-paper pt-4">Timing and collection</h2>
+          <p>
+            Custom work takes longer than shop items, because of the design and the test prints, so I give you the timing together with the price. Collection is free in {DELIVERY.collectionAreas}, or I post it to you. See <a href="/delivery-and-returns/">delivery and returns</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="min-w-0 md:sticky md:top-24 md:self-start">
+        <div class="bg-panel rounded-2xl border border-paper/10 p-6 sm:p-8">
+          <h2 class="font-display font-semibold text-xl mb-1">Ask for a quote</h2>
+          <p class="text-sm text-paper/60 leading-relaxed mb-6">Free, and you pay nothing until you agree to the price.</p>
+
+          <form id="quote-form" class="space-y-5">
+            <input type="hidden" name="access_key" value="38b3beaa-aa0d-4a06-adf5-d066f732ffcd" />
+            <input type="hidden" name="subject" value="Custom 3D printing request (make3d.ie)" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
+
+            <div>
+              <label for="job" class="block text-sm font-medium mb-1.5">What do you need?</label>
+              <select id="job" name="job" class="w-full rounded-lg border border-paper/15 bg-ink px-3 py-2.5 text-sm text-paper focus:outline-none focus:ring-2 focus:ring-gold">
+                <option>A replacement part</option>
+                <option>A custom piece or gift</option>
+                <option>A small batch for a business</option>
+                <option>A figurine or model</option>
+                <option>Something else</option>
+              </select>
+            </div>
+
+            <fieldset>
+              <legend class="text-sm font-medium mb-2">Do you have a 3D file?</legend>
+              <div class="space-y-2 text-sm">
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="file" value="Yes, STL or 3MF" checked class="accent-gold" />
+                  Yes, an STL or 3MF file
+                </label>
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="file" value="No, photos and measurements" class="accent-gold" />
+                  No, I have photos and measurements
+                </label>
+              </div>
+            </fieldset>
+
+            <div>
+              <label for="details" class="block text-sm font-medium mb-1.5">Tell me about it</label>
+              <textarea id="details" name="details" rows="4" required placeholder="What it is, roughly how big, colours, how many..."
+                class="w-full rounded-lg border border-paper/15 bg-paper/[0.04] px-3 py-2.5 text-sm text-paper placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="qname" class="block text-sm font-medium mb-1.5">Your name</label>
+                <input id="qname" name="name" type="text" required
+                  class="w-full rounded-lg border border-paper/15 bg-paper/[0.04] px-3 py-2.5 text-sm text-paper focus:outline-none focus:ring-2 focus:ring-gold" />
+              </div>
+              <div>
+                <label for="qemail" class="block text-sm font-medium mb-1.5">Email</label>
+                <input id="qemail" name="email" type="email" required
+                  class="w-full rounded-lg border border-paper/15 bg-paper/[0.04] px-3 py-2.5 text-sm text-paper focus:outline-none focus:ring-2 focus:ring-gold" />
+              </div>
+            </div>
+
+            <button type="submit" id="quote-submit"
+              class="w-full bg-red text-paper font-display font-semibold py-3.5 rounded-full hover:bg-red/90 transition-colors focus-visible:outline-2 focus-visible:outline-gold">
+              Send my request
+            </button>
+            <p class="text-xs text-paper/60 leading-relaxed text-center -mt-1">
+              I reply by email. Reply to that email with your file or photos, or send them to{' '}
+              <a href="mailto:contact@make3d.ie" class="text-gold hover:underline">contact@make3d.ie</a>.
+            </p>
+            <p id="quote-status" class="text-sm text-center hidden"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const form = document.getElementById('quote-form') as HTMLFormElement | null;
+  const status = document.getElementById('quote-status');
+  const button = document.getElementById('quote-submit') as HTMLButtonElement | null;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!status || !button) return;
+    button.disabled = true;
+    const label = button.textContent;
+    button.textContent = 'Sending…';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
+      const result = await res.json();
+      if (!result.success) throw new Error(result.message || 'Something went wrong');
+      status.textContent = "Thanks, I'll get back to you by email. Reply to it with your file or photos.";
+      status.className = 'text-sm text-center text-gold';
+      form.reset();
+    } catch {
+      status.textContent = 'Something went wrong sending this. Please email contact@make3d.ie directly.';
+      status.className = 'text-sm text-center text-red';
+    } finally {
+      button.disabled = false;
+      button.textContent = label;
+    }
+  });
+</script>

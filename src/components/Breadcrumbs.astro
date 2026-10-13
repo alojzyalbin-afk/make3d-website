@@ -1,0 +1,35 @@
+---
+// Visible "Home / Shop / ..." trail plus the same trail for Google (BreadcrumbList).
+interface Props {
+  items: { name: string; href: string }[]; // last item is the current page
+}
+
+const { items } = Astro.props;
+const site = 'https://make3d.ie';
+const data = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.name,
+    item: new URL(item.href, site).href,
+  })),
+};
+---
+
+<nav aria-label="Breadcrumb" class="text-sm text-paper/60 mb-8">
+  <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
+    {items.map((item, i) => (
+      <li class="flex items-center gap-2 min-w-0">
+        {i > 0 && <span aria-hidden="true" class="text-paper/30">/</span>}
+        {i < items.length - 1 ? (
+          <a href={item.href} class="hover:text-gold transition-colors">{item.name}</a>
+        ) : (
+          <span aria-current="page" class="text-paper/80 truncate">{item.name}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(data)} />

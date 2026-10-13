@@ -1,5 +1,12 @@
 ---
+import '@fontsource-variable/bricolage-grotesque/opsz.css';
+import '@fontsource-variable/hanken-grotesk';
+import '@fontsource/space-mono/400.css';
+import '@fontsource/space-mono/700.css';
 import '../styles/global.css';
+// the two main fonts are fetched early so the first text appears sooner
+import bodyFont from '@fontsource-variable/hanken-grotesk/files/hanken-grotesk-latin-wght-normal.woff2?url';
+import displayFont from '@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-opsz-normal.woff2?url';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
@@ -51,6 +58,8 @@ const business = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href={bodyFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin />
     <link rel="canonical" href={canonicalUrl.href} />
     <meta name="generator" content={Astro.generator} />
     <title>{fullTitle}</title>
@@ -73,22 +82,6 @@ const business = {
 
     <script type="application/ld+json" set:html={JSON.stringify(business)} />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2L36H9BKJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-X2L36H9BKJ');
-    </script>
-
     <!-- Cloudflare Web Analytics (cookieless, GDPR-safe) -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d34ac78e20944a7e9f32f6043384ba64"}'></script>
   </head>
@@ -96,5 +89,74 @@ const business = {
     <Nav />
     <slot />
     <Footer />
+
+    <!-- Cookie banner: Google Analytics loads only after "Accept". -->
+    <div id="cookie-banner" hidden role="dialog" aria-live="polite" aria-label="Cookies"
+      class="fixed inset-x-3 bottom-3 z-[60] sm:left-auto sm:right-5 sm:bottom-5 sm:max-w-sm rounded-2xl border border-paper/15 bg-panel shadow-2xl shadow-black/50 p-5">
+      <p class="text-sm text-paper/80 leading-relaxed mb-4">
+        I'd like to use Google Analytics cookies to see how the site is used. Only if you agree.{' '}
+        <a href="/privacy/" class="text-gold hover:underline">Privacy</a>
+      </p>
+      <div class="grid grid-cols-2 gap-3">
+        <button type="button" data-consent="denied"
+          class="rounded-full border border-paper/25 py-2.5 text-sm font-semibold hover:border-paper/60 transition-colors focus-visible:outline-2 focus-visible:outline-gold">Reject</button>
+        <button type="button" data-consent="granted"
+          class="rounded-full border border-paper/25 py-2.5 text-sm font-semibold hover:border-paper/60 transition-colors focus-visible:outline-2 focus-visible:outline-gold">Accept</button>
+      </div>
+    </div>
+
+    <script is:inline>
+      (function () {
+        var GA_ID = 'G-X2L36H9BKJ';
+        var KEY = 'cookie-consent';
+        var banner = document.getElementById('cookie-banner');
+
+        function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+        function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+        function loadAnalytics() {
+          if (window.__gaLoaded) return;
+          window.__gaLoaded = true;
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () { window.dataLayer.push(arguments); };
+          window.gtag('js', new Date());
+          window.gtag('config', GA_ID);
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+          document.head.appendChild(s);
+        }
+
+        function clearAnalyticsCookies() {
+          document.cookie.split(';').forEach(function (c) {
+            var name = c.split('=')[0].trim();
+            if (name === '_ga' || name.indexOf('_ga_') === 0) {
+              ['', '; domain=' + location.hostname, '; domain=.' + location.hostname.replace(/^www\./, '')].forEach(function (d) {
+                document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
+              });
+            }
+          });
+        }
+
+        var choice = read();
+        if (choice === 'granted') loadAnalytics();
+        else if (choice !== 'denied' && banner) banner.hidden = false;
+
+        document.querySelectorAll('[data-consent]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var value = btn.getAttribute('data-consent');
+            var before = read();
+            save(value);
+            if (banner) banner.hidden = true;
+            if (value === 'granted') loadAnalytics();
+            else if (before === 'granted') { clearAnalyticsCookies(); location.reload(); }
+          });
+        });
+
+        document.querySelectorAll('[data-cookie-settings]').forEach(function (btn) {
+          btn.addEventListener('click', function () { if (banner) banner.hidden = false; });
+        });
+      })();
+    </script>
   </body>
 </html>

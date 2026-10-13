@@ -2,7 +2,7 @@
 name: Personalised Irish Road Sign Keyring
 heading: Personalised Irish Road Sign Keyring
 seoTitle: Personalised Irish Road Sign Keyring | Bilingual Gaelic Gift
-category: keychains
+category: keyrings
 tagline: A keyring in the style of Irish road signs, in Irish and English, with your place name and distance. A gift for the Irish abroad, made in Dublin.
 images:
 - /images/irish-road-sign-keyring-01.jpg

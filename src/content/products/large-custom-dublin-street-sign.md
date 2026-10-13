@@ -2,7 +2,7 @@
 name: Large Personalised Dublin Street Sign
 heading: Large Personalised Dublin Street Sign
 seoTitle: Large Personalised Dublin Street Sign | Unique Housewarming Gift
-category: keepsakes
+category: home-decor
 tagline: A freestanding name plaque in the style of Dublin street signs, in Irish and English, with your street, family name or number. A moving-in gift made in Dublin.
 images:
 - /images/large-custom-dublin-street-sign-01.jpg

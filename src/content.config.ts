@@ -60,6 +60,11 @@ const categories = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/categories' }),
   schema: z.object({
     name: z.string(),
+    // Big title on the category page; falls back to the name.
+    heading: z.string().optional(),
+    // Title for Google and the browser tab; falls back to the heading.
+    seoTitle: z.string().optional(),
+    // Description shown by Google under the title.
     description: z.string().optional(),
     order: z.number().default(99),
   }),

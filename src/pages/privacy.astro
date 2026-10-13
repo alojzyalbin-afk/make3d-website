@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<Layout title="Privacy" description="How make3d.ie uses the details you send through its forms, and how cookies and analytics work on the site.">
+  <section class="max-w-3xl mx-auto px-5 sm:px-8 py-12 md:py-16">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Privacy', href: '/privacy/' }]} />
+    <h1 class="font-display font-bold text-3xl sm:text-4xl mb-2">Privacy</h1>
+    <p class="text-sm text-paper/55 mb-8">Last updated: 13 October 2026</p>
+
+    <div class="product-body text-paper/75 leading-relaxed space-y-4">
+      <h2 class="font-display font-semibold text-xl text-paper">Who I am</h2>
+      <p>
+        make3d.ie is run by Marius, trading as Make 3D Ireland, in Dublin, Ireland.
+        For anything about your data, email <a href="mailto:contact@make3d.ie">contact@make3d.ie</a>.
+      </p>
+
+      <h2 class="font-display font-semibold text-xl text-paper pt-4">What I collect and why</h2>
+      <p>
+        When you send an order or a quote request, the form sends me your name, your email, the details you write
+        and whether you want collection or post. I use them only to reply to you and to make and deliver your order.
+        The forms go through Web3Forms, a service that forwards them to my email.
+      </p>
+      <p>
+        You pay through a Revolut payment request or on Etsy. Their own privacy policies apply, and I never see your card details.
+      </p>
+      <p>
+        I keep emails and order details for as long as I need them for the order and for my accounts, which Irish tax rules
+        require me to keep for six years. I don't sell your details or use them for advertising.
+      </p>
+
+      <h2 class="font-display font-semibold text-xl text-paper pt-4">Cookies and analytics</h2>
+      <ul>
+        <li>
+          <strong>Cloudflare Web Analytics</strong> counts visits to the site without cookies and without identifying you. It is always on.
+        </li>
+        <li>
+          <strong>Google Analytics</strong> runs only if you click Accept on the cookie banner. It sets cookies (named _ga and _ga_ followed by an ID)
+          to measure how the site is used, and the data is processed by Google. If you click Reject, it is not loaded at all.
+        </li>
+      </ul>
+      <p>
+        You can change your choice at any time with <button type="button" data-cookie-settings class="text-gold underline">cookie settings</button>,
+        also linked at the bottom of every page.
+      </p>
+      <p>The site is hosted by Cloudflare, which may log IP addresses for a short time to keep the site secure.</p>
+
+      <h2 class="font-display font-semibold text-xl text-paper pt-4">Your rights</h2>
+      <p>
+        You can ask me for a copy of your data, to correct it or to delete it, by emailing{' '}
+        <a href="mailto:contact@make3d.ie">contact@make3d.ie</a>. If you're not happy with how I handle your data,
+        you can complain to the Data Protection Commission at <a href="https://www.dataprotection.ie" target="_blank" rel="noopener noreferrer">dataprotection.ie</a>.
+      </p>
+    </div>
+  </section>
+</Layout>

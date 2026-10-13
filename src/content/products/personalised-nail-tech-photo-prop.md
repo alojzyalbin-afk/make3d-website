@@ -2,7 +2,7 @@
 name: Personalised Nail Tech Photo Prop
 heading: Personalised Nail Tech Photo Prop
 seoTitle: Personalised Nail Tech Photo Prop Plaque | Branded Salon Decor
-category: business
+category: for-business
 tagline: A hand-held plaque with your salon or brand name, made for nail photos on Instagram and TikTok. Your colours, made in Dublin for nail techs across Ireland.
 images:
 - /images/personalised-nail-tech-photo-prop-01.jpg

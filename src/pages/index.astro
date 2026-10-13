@@ -1,37 +1,32 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-import ProductIcon from '../components/ProductIcon.astro';
-import { formatEuro } from '../lib/library';
+import ProductCard from '../components/ProductCard.astro';
+import { getCatalog } from '../lib/library';
 
-const productEntries = await getCollection('products');
-const products = productEntries.map((entry) => ({
-  slug: entry.id,
-  name: entry.data.name,
-  tagline: entry.data.tagline,
-  fromPrice: entry.data.fromPrice,
-  freeIreland: entry.data.shipping === 'free-ireland',
-  icon: entry.data.icon,
-  thumb: entry.data.images.find((src) => !/\.(mp4|webm)$/i.test(src)) ?? null,
-}));
+const { products, categories } = await getCatalog();
+const order = new Map(categories.map((c, i) => [c.slug, i]));
+const featured = [...products].sort(
+  (a, b) => (order.get(a.category) ?? 99) - (order.get(b.category) ?? 99) || a.name.localeCompare(b.name)
+);
 
 const M_PATH =
   'M30,200 L30,40 L74,40 L120,128 L166,40 L210,40 L210,200 L176,200 L176,92 L133,170 L107,170 L64,92 L64,200 Z';
 const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
 ---
 
-<Layout title="Custom 3D-printed gifts, made in Dublin" description="Custom 3D-printed gifts, home decor and replacement parts, designed and printed in Dublin. Free collection in Dublin or delivery across Ireland, the EU and beyond.">
+<Layout title="Custom 3D Printing & Personalised Gifts in Dublin, Ireland" description="Custom 3D printing and personalised gifts made in Dublin: keyrings, Irish road sign magnets, name lights, home decor and replacement parts. Delivery across Ireland.">
 
   <!-- HERO -->
   <section class="bg-ink text-paper">
     <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <p class="font-mono text-xs tracking-widest text-muted uppercase mb-5">MAKE3D.IE — DUBLIN, IRELAND</p>
-        <h1 class="font-display font-bold text-4xl sm:text-5xl leading-[1.08] mb-5">Still <span class="text-gold">printing.</span></h1>
-        <p class="text-paper/75 text-lg leading-relaxed mb-6 max-w-md">Custom gifts, on-demand builds and replacement parts — designed, printed and finished by hand, right here in Dublin.</p>
+        <p class="font-mono text-xs tracking-widest text-muted uppercase mb-5">Still printing · Dublin, Ireland</p>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl leading-[1.08] mb-5">Custom 3D printing and personalised gifts, <span class="text-gold">made in Dublin.</span></h1>
+        <p class="text-paper/75 text-lg leading-relaxed mb-6 max-w-md">Personalised keyrings, Irish road sign magnets, name lights, home decor and replacement parts, designed and printed to order in Dublin. Free collection in Dublin, delivery across Ireland and beyond.</p>
         <div class="flex flex-wrap gap-2 mb-8">
           <span class="text-xs font-mono px-3 py-1.5 rounded-full border border-paper/10 bg-panel">Custom Design</span>
-          <span class="text-xs font-mono px-3 py-1.5 rounded-full border border-paper/10 bg-panel">Personalized Gifts</span>
+          <span class="text-xs font-mono px-3 py-1.5 rounded-full border border-paper/10 bg-panel">Personalised Gifts</span>
           <span class="text-xs font-mono px-3 py-1.5 rounded-full border border-paper/10 bg-panel">Made to Order</span>
         </div>
         <div class="flex items-center gap-6 flex-wrap">
@@ -87,7 +82,7 @@ const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
       <div>
         <p class="font-mono text-xs text-gold mb-3">03</p>
         <h3 class="font-display font-semibold mb-2">Collect or get it posted</h3>
-        <p class="text-sm text-paper/65 leading-relaxed">Collect it free in Dublin, or I post it to you across Ireland, the EU and beyond. Larger pieces go with tracking.</p>
+        <p class="text-sm text-paper/65 leading-relaxed">Collect it free in Dublin 24, Dublin 8 or the city centre, or I post it to you. Orders of €100 or more get free hand delivery in the Dublin area.</p>
       </div>
     </div>
   </section>
@@ -97,7 +92,7 @@ const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
     <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-20">
       <div class="flex items-end justify-between flex-wrap gap-4 mb-10">
         <div>
-          <h2 class="font-display font-bold text-3xl mb-3">Featured products</h2>
+          <h2 class="font-display font-bold text-3xl mb-3">Personalised gifts, made to order</h2>
           <p class="text-paper/70 leading-relaxed max-w-md">Each one opens to sizes, colours and pricing.</p>
         </div>
         <div class="flex items-center gap-2">
@@ -110,30 +105,7 @@ const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
         </div>
       </div>
       <div id="carousel" class="flex gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2 scroll-smooth">
-        {products.map((product) => (
-          <a href={`/shop/${product.slug}`} class="snap-start shrink-0 w-64 group block bg-ink rounded-2xl border border-paper/10 overflow-hidden transition-all hover:-translate-y-1 hover:border-gold/40 hover:shadow-xl hover:shadow-black/30">
-            {product.thumb ? (
-              <div class="aspect-[4/3] overflow-hidden bg-panel">
-                <picture>
-                  <source srcset={product.thumb.replace(/\.(jpg|jpeg|png)$/i, '.webp')} type="image/webp" />
-                  <img src={product.thumb} alt={product.name} loading="lazy" decoding="async" width="600" height="450"
-                    class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300" />
-                </picture>
-              </div>
-            ) : (
-              <div class="aspect-[4/3] flex items-center justify-center bg-panel">
-                <ProductIcon icon={product.icon} size={48} />
-              </div>
-            )}
-            <div class="p-6">
-              <h3 class="font-display font-semibold text-lg mb-1.5">{product.name}</h3>
-              <p class="text-sm text-paper/65 leading-relaxed mb-4 line-clamp-3">{product.tagline}</p>
-              <p class="font-mono text-sm text-gold mb-3">from {formatEuro(product.fromPrice)}</p>
-            {product.freeIreland && <p class="text-xs text-paper/60 -mt-2 mb-3">Free delivery in Ireland</p>}
-              <span class="text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">See options →</span>
-            </div>
-          </a>
-        ))}
+        {featured.map((product) => <ProductCard product={product} variant="carousel" headingTag="h3" />)}
       </div>
       <a href="/shop" class="inline-flex items-center gap-1 mt-8 text-sm font-medium text-gold hover:gap-2 transition-all">
         Browse the full catalogue →
@@ -144,8 +116,8 @@ const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
   <!-- SERVICES -->
   <section id="services" class="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-24">
     <div class="max-w-xl mb-12">
-      <h2 class="font-display font-bold text-3xl mb-3">What I can make for you</h2>
-      <p class="text-paper/70 leading-relaxed">Beyond the shop — if it can be modelled, it can probably be printed.</p>
+      <h2 class="font-display font-bold text-3xl mb-3">Custom 3D printing in Dublin</h2>
+      <p class="text-paper/70 leading-relaxed">Beyond the shop: if it can be modelled, it can probably be printed. <a href="/custom-3d-printing-dublin/" class="text-gold hover:underline">How custom printing works →</a></p>
     </div>
     <div class="grid sm:grid-cols-3 gap-6">
       <div class="p-6 rounded-2xl bg-panel border border-paper/10">
@@ -164,7 +136,7 @@ const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
           </svg>
         </div>
         <h3 class="font-display font-semibold text-lg mb-2">On-demand builds</h3>
-        <p class="text-sm text-paper/65 leading-relaxed">Figurines, cars, props, one-off ideas — describe it and I'll quote it.</p>
+        <p class="text-sm text-paper/65 leading-relaxed">Props, models and one-off ideas. Figurines are printed in white and prepared for you to paint. Describe it and I'll quote it.</p>
       </div>
       <div class="p-6 rounded-2xl bg-panel border border-paper/10">
         <div class="w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
@@ -173,7 +145,7 @@ const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
           </svg>
         </div>
         <h3 class="font-display font-semibold text-lg mb-2">Repairs &amp; replacement parts</h3>
-        <p class="text-sm text-paper/65 leading-relaxed">Broke a clip, a bracket, a part you can't buy anymore? Send a photo or the measurements and I'll print a replacement.</p>
+        <p class="text-sm text-paper/65 leading-relaxed">Broke a clip, a bracket, a part you can't buy anymore? Send a 3D file, or a photo with the measurements, and I'll print a replacement.</p>
       </div>
     </div>
   </section>
@@ -182,7 +154,7 @@ const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
   <section id="about" class="bg-panel border-y border-paper/10">
     <div class="max-w-3xl mx-auto px-5 sm:px-8 py-16 md:py-20">
       <h2 class="font-display font-bold text-3xl mb-6">About</h2>
-      <p class="text-paper/70 leading-relaxed text-lg">Custom 3D Prints Ireland is a one-person workshop in Dublin. I design, print, sand, prime and paint every piece myself — nothing is outsourced. It started as a side project and turned into something people keep coming back to.</p>
+      <p class="text-paper/70 leading-relaxed text-lg">Make 3D Ireland is a one-person workshop in Dublin. I design and 3D print every piece myself, then finish and assemble it by hand, from sanding to wiring the LEDs. It started as a side project and turned into something people keep coming back to.</p>
     </div>
   </section>
 
