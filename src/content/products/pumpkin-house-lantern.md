@@ -12,7 +12,7 @@ images:
 - /images/pumpkin-house-lantern-05.jpg
 - /images/pumpkin-house-lantern-06.jpg
 icon: generic
-fromPrice: 26.55
+fromPrice: 31.05
 etsyUrl: https://make3die.etsy.com/listing/4583419472
 shipping: standard
 priceMode: single

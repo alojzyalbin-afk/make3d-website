@@ -18,30 +18,30 @@ images:
 - /images/irish-army-rank-keyring-11.jpg
 - /images/irish-army-rank-keyring-12.jpg
 icon: generic
-fromPrice: 9
+fromPrice: 10.8
 etsyUrl: https://make3die.etsy.com/listing/4585358533
 shipping: free-ireland
 priceMode: single
 optionsLabel: Rank
 options:
 - label: Recruit (no insignia)
-  price: 9
+  price: 10.8
 - label: 2 Star Private
-  price: 9
+  price: 10.8
 - label: 3 Star Private, Gunner and Trooper
-  price: 9
+  price: 10.8
 - label: Corporal
-  price: 9
+  price: 10.8
 - label: Sergeant
-  price: 9
+  price: 10.8
 - label: Company Quartermaster Sergeant
-  price: 9
+  price: 10.8
 - label: Company Sergeant
-  price: 9
+  price: 10.8
 - label: Battalion Quartermaster Sergeant
-  price: 9
+  price: 10.8
 - label: Battalion Sergeant Major
-  price: 9
+  price: 10.8
 customFields:
 - id: surname
   label: Surname

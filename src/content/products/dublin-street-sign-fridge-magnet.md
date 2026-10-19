@@ -10,7 +10,7 @@ images:
 - /images/dublin-street-sign-fridge-magnet-03.jpg
 - /images/dublin-street-sign-fridge-magnet-04.jpg
 icon: generic
-fromPrice: 6.75
+fromPrice: 8.1
 etsyUrl: https://make3die.etsy.com/listing/4579550538
 shipping: free-ireland
 priceMode: single

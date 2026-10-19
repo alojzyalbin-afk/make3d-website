@@ -16,31 +16,41 @@ images:
 - /images/irish-navy-rank-keyring-09.jpg
 - /images/irish-navy-rank-keyring-10.jpg
 - /images/irish-navy-rank-keyring-11.jpg
+- /images/irish-navy-rank-keyring-12.jpg
+- /images/irish-navy-rank-keyring-13.jpg
+- /images/irish-navy-rank-keyring-14.jpg
+- /images/irish-navy-rank-keyring-15.jpg
+- /images/irish-navy-rank-keyring-16.jpg
+- /images/irish-navy-rank-keyring-17.jpg
+- /images/irish-navy-rank-keyring-18.mp4
+- /images/irish-navy-rank-keyring-19.mp4
+- /images/irish-navy-rank-keyring-20.mp4
+- /images/irish-navy-rank-keyring-21.mp4
 icon: generic
-fromPrice: 9
+fromPrice: 10.8
 etsyUrl: https://make3die.etsy.com/listing/4588068700
 shipping: free-ireland
 priceMode: single
 optionsLabel: Rank
 options:
 - label: Recruit (no insignia)
-  price: 9
+  price: 10.8
 - label: Ordinary Seaman
-  price: 9
+  price: 10.8
 - label: Able Seaman
-  price: 9
+  price: 10.8
 - label: Leading Seaman
-  price: 9
+  price: 10.8
 - label: Petty Officer
-  price: 9
+  price: 10.8
 - label: Senior Petty Officer
-  price: 9
+  price: 10.8
 - label: Chief Petty Officer
-  price: 9
+  price: 10.8
 - label: Senior Chief Petty Officer
-  price: 9
+  price: 10.8
 - label: Warrant Officer
-  price: 9
+  price: 10.8
 customFields:
 - id: surname
   label: Surname

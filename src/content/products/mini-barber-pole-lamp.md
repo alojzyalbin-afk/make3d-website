@@ -12,7 +12,7 @@ images:
 - /images/mini-barber-pole-lamp-05.jpg
 - /images/mini-barber-pole-lamp-06.jpg
 icon: generic
-fromPrice: 36
+fromPrice: 40.5
 etsyUrl: https://make3die.etsy.com/listing/4579749882
 shipping: standard
 priceMode: single

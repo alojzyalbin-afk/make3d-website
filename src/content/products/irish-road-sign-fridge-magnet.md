@@ -16,7 +16,7 @@ images:
 - /images/irish-road-sign-fridge-magnet-09.jpg
 - /images/irish-road-sign-fridge-magnet-10.jpg
 icon: generic
-fromPrice: 7.2
+fromPrice: 8.1
 etsyUrl: https://make3die.etsy.com/listing/4570212828
 shipping: free-ireland
 priceMode: single

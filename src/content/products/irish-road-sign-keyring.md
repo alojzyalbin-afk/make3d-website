@@ -13,7 +13,7 @@ images:
 - /images/irish-road-sign-keyring-06.jpg
 - /images/irish-road-sign-keyring-07.jpg
 icon: generic
-fromPrice: 7.2
+fromPrice: 8.1
 etsyUrl: https://make3die.etsy.com/listing/4579651425
 shipping: free-ireland
 priceMode: single

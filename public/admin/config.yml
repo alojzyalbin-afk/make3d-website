@@ -55,7 +55,7 @@ collections:
         widget: "select"
         default: "standard"
         options:
-          - { label: "Keyrings and magnets: free in Ireland, EU €5 + €5", value: "free-ireland" }
+          - { label: "Keyrings, magnets and small flat pieces (ruler, comb): free in Ireland, EU €5 + €5", value: "free-ireland" }
           - { label: "Standard: Ireland €5 + €5, EU €10 + €5, rest of world €15 + €10", value: "standard" }
         hint: "Sets the delivery table on the product page. Rates are the same as on Etsy."
       - label: "Pricing type"

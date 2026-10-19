@@ -12,7 +12,7 @@ images:
 - /images/hohoho-light-up-sign-05.jpg
 - /images/hohoho-light-up-sign-06.jpg
 icon: generic
-fromPrice: 40.5
+fromPrice: 43.2
 etsyUrl: https://make3die.etsy.com/listing/4590788521
 shipping: standard
 priceMode: single

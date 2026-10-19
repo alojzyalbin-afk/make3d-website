@@ -20,22 +20,22 @@ images:
 - /images/cursive-name-light-13.jpg
 - /images/cursive-name-light-14.mp4
 icon: nameLights
-fromPrice: 36
+fromPrice: 40.5
 etsyUrl: https://make3die.etsy.com/listing/4550182391
 shipping: standard
 priceMode: single
 optionsLabel: Height
 options:
 - label: 15 cm
-  price: 36
-- label: 17 cm
   price: 40.5
-- label: 20 cm
+- label: 17 cm
   price: 45
-- label: 22 cm
+- label: 20 cm
   price: 49.5
-- label: 25 cm
+- label: 22 cm
   price: 54
+- label: 25 cm
+  price: 58.5
 customFields:
 - id: letter
   label: Main letter

@@ -8,7 +8,7 @@ images:
 - /images/personalised-nail-tech-photo-prop-01.jpg
 - /images/personalised-nail-tech-photo-prop-02.jpg
 icon: generic
-fromPrice: 13.5
+fromPrice: 15.75
 etsyUrl: https://make3die.etsy.com/listing/4590761213
 shipping: standard
 priceMode: single

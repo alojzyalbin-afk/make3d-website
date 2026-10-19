@@ -10,7 +10,7 @@ images:
 - /images/large-custom-dublin-street-sign-03.jpg
 - /images/large-custom-dublin-street-sign-04.jpg
 icon: generic
-fromPrice: 22.5
+fromPrice: 26.55
 etsyUrl: https://make3die.etsy.com/listing/4581201555
 shipping: standard
 priceMode: single

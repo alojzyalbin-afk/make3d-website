@@ -11,16 +11,16 @@ images:
 - /images/star-of-life-keyring-04.jpg
 - /images/star-of-life-keyring-05.jpg
 icon: generic
-fromPrice: 7.2
+fromPrice: 8.1
 etsyUrl: https://make3die.etsy.com/listing/4574819267
 shipping: free-ireland
 priceMode: single
 optionsLabel: Colour
 options:
 - label: Navy blue
-  price: 7.2
+  price: 8.1
 - label: Grey
-  price: 7.2
+  price: 8.1
 customFields:
 - id: keyringText
   label: Text to show

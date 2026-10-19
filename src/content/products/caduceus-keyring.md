@@ -10,8 +10,16 @@ images:
 - /images/caduceus-keyring-03.jpg
 - /images/caduceus-keyring-04.jpg
 - /images/caduceus-keyring-05.jpg
+- /images/caduceus-keyring-06.jpg
+- /images/caduceus-keyring-07.jpg
+- /images/caduceus-keyring-08.jpg
+- /images/caduceus-keyring-09.jpg
+- /images/caduceus-keyring-10.jpg
+- /images/caduceus-keyring-11.jpg
+- /images/caduceus-keyring-12.mp4
+- /images/caduceus-keyring-13.mp4
 icon: generic
-fromPrice: 7.2
+fromPrice: 8.1
 etsyUrl: https://make3die.etsy.com/listing/4574281533
 shipping: free-ireland
 priceMode: single

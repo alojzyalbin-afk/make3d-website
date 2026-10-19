@@ -1,6 +1,6 @@
 ---
 name: For your business
-order: 7
+order: 8
 heading: For your business
 seoTitle: Custom 3D Printed Pieces for Clinics and Salons
 description: 'Custom 3D printed pieces for small businesses: a dentist business card holder and a nail tech photo prop, with your name or salon name.'

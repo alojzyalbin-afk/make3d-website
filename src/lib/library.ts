@@ -32,7 +32,7 @@ export function formatEuro(value: number) {
 
 /**
  * Delivery rates, same as the Etsy shipping profiles.
- * 'free-ireland' = keyrings and fridge magnets, 'standard' = everything else.
+ * 'free-ireland' = keyrings, fridge magnets and small flat pieces (ruler, comb), 'standard' = everything else.
  * extra = what each additional item in the same order adds.
  */
 export const SHIPPING = {

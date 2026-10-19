@@ -13,7 +13,7 @@ images:
 - /images/dentist-business-card-holder-06.mp4
 - /images/dentist-business-card-holder-07.mp4
 icon: generic
-fromPrice: 18
+fromPrice: 22.46
 etsyUrl: https://make3die.etsy.com/listing/4576764917
 shipping: standard
 priceMode: single

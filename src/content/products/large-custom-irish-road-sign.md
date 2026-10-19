@@ -15,19 +15,24 @@ images:
 - /images/large-custom-irish-road-sign-08.jpg
 - /images/large-custom-irish-road-sign-09.jpg
 - /images/large-custom-irish-road-sign-10.jpg
+- /images/large-custom-irish-road-sign-11.jpg
+- /images/large-custom-irish-road-sign-12.jpg
+- /images/large-custom-irish-road-sign-13.jpg
+- /images/large-custom-irish-road-sign-14.mp4
+- /images/large-custom-irish-road-sign-15.mp4
 icon: generic
-fromPrice: 22.5
+fromPrice: 26.55
 etsyUrl: https://make3die.etsy.com/listing/4580709016
 shipping: standard
 priceMode: single
 optionsLabel: Colour scheme
 options:
 - label: Classic (black and white)
-  price: 22.5
+  price: 26.55
 - label: Heritage (brown and white)
-  price: 22.5
+  price: 26.55
 - label: Scenic (green and white)
-  price: 22.5
+  price: 26.55
 customFields:
 - id: irishName
   label: Irish name (optional)
