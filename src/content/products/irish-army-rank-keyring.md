@@ -1,7 +1,7 @@
 ---
-name: Personalised Irish Army Rank Keyring
-heading: Personalised Irish Army Rank Keyring
-seoTitle: Personalised Irish Army Rank Keyring | Defence Forces Gift
+name: Irish Army Rank Keyring
+heading: Irish Army Rank Keyring
+seoTitle: Irish Army Rank Keyring | Personalised Defence Forces Gift
 category: keyrings
 tagline: An epaulette keyring with your Irish Army rank and surname. A personalised military gift for promotions and retirements, made in Dublin.
 images:
@@ -18,35 +18,39 @@ images:
 - /images/irish-army-rank-keyring-11.jpg
 - /images/irish-army-rank-keyring-12.jpg
 icon: generic
-fromPrice: 10.8
+fromPrice: 10.75
 etsyUrl: https://make3die.etsy.com/listing/4585358533
 shipping: free-ireland
 priceMode: single
 optionsLabel: Rank
 options:
 - label: Recruit (no insignia)
-  price: 10.8
+  price: 10.75
 - label: 2 Star Private
-  price: 10.8
+  price: 10.75
 - label: 3 Star Private, Gunner and Trooper
-  price: 10.8
+  price: 10.75
 - label: Corporal
-  price: 10.8
+  price: 10.75
 - label: Sergeant
-  price: 10.8
+  price: 10.75
 - label: Company Quartermaster Sergeant
-  price: 10.8
+  price: 10.75
 - label: Company Sergeant
-  price: 10.8
+  price: 10.75
 - label: Battalion Quartermaster Sergeant
-  price: 10.8
+  price: 10.75
 - label: Battalion Sergeant Major
-  price: 10.8
+  price: 10.75
 customFields:
 - id: surname
-  label: Surname
+  label: Surname (up to 14 characters)
   placeholder: e.g. MURPHY
   required: true
+- id: otherColours
+  label: Other colours (optional)
+  placeholder: Want other colours? Write them here
+  required: false
 details:
 - made-in-dublin
 - made-to-order

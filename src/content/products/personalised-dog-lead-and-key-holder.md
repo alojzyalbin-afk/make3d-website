@@ -22,18 +22,18 @@ images:
 - /images/personalised-dog-lead-and-key-holder-15.mp4
 - /images/personalised-dog-lead-and-key-holder-16.mp4
 icon: generic
-fromPrice: 15.3
+fromPrice: 17.55
 etsyUrl: https://make3die.etsy.com/listing/4591487622
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Number of hooks
 options:
 - label: 4 hooks (175 mm)
-  price: 15.3
+  price: 17.55
 - label: 5 hooks (210 mm)
-  price: 18
+  price: 20.25
 - label: 6 hooks (245 mm)
-  price: 20.7
+  price: 22.95
 customFields:
 - id: familyName
   label: Family name

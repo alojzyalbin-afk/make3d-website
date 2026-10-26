@@ -15,7 +15,7 @@ images:
 - /images/dublin-street-sign-keyring-08.mp4
 - /images/dublin-street-sign-keyring-09.mp4
 icon: generic
-fromPrice: 8.1
+fromPrice: 10.75
 etsyUrl: https://make3die.etsy.com/listing/4571625546
 shipping: free-ireland
 priceMode: single

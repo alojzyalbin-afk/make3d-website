@@ -135,7 +135,7 @@ const shareImage = media.find((m) => !m.video)?.src ?? first?.poster;
           tiers={p.tiers}
           customFields={p.customFields}
           hasEtsy={!!p.etsyUrl}
-          freeIreland={p.shipping === 'free-ireland'}
+          freeIreland={p.shipping !== 'standard'}
         />
 
         {p.etsyUrl && (
@@ -197,15 +197,16 @@ const shareImage = media.find((m) => !m.video)?.src ?? first?.poster;
               ))}
             </tbody>
           </table>
+          {p.deliveryNote && <p class="text-xs text-paper/65 leading-relaxed mt-4">{p.deliveryNote}</p>}
           <p class="text-xs text-paper/65 leading-relaxed mt-4">
             Estimated delivery after you confirm: {DELIVERY.times
-              .filter((t) => p.shipping === 'standard' || t.region !== 'Rest of the world')
+              .filter((t) => shipping.worldwide || t.region !== 'Rest of the world')
               .map((t) => `${t.region} ${t.days}`)
               .join(', ')}. It depends on the piece and the personalisation, so I confirm the timing in my first reply.
           </p>
           <p class="text-xs text-paper/55 leading-relaxed mt-3">
             Made to order in Dublin and posted from Ireland, so EU buyers pay no customs fees.
-            {p.shipping === 'standard' && (
+            {shipping.worldwide && (
               <> Outside the EU, import duties and taxes are set by your country and paid by you on delivery. I message you an estimate before I post, and only ship once you agree.</>
             )}
             {' '}<a href="/delivery-and-returns/" class="text-gold hover:underline">Delivery and returns</a>

@@ -1,7 +1,7 @@
 ---
-name: Dachshund Shaped Ruler
-heading: Dachshund Shaped Ruler
-seoTitle: Dachshund Shaped Ruler | 15 cm Sausage Dog Desk Accessory
+name: Dachshund Shaped 15 cm Ruler
+heading: Dachshund Shaped 15 cm Ruler
+seoTitle: Dachshund Shaped 15 cm Ruler | Sausage Dog Desk Accessory
 category: dachshund-gifts
 tagline: A sausage dog ruler with a 15 cm scale along its straight back, starting right where the neck ends. A fun desk piece for dachshund fans, made in Dublin.
 images:
@@ -14,15 +14,15 @@ images:
 - /images/dachshund-ruler-07.jpg
 - /images/dachshund-ruler-08.jpg
 icon: generic
-fromPrice: 15.29
+fromPrice: 13.45
 etsyUrl: https://make3die.etsy.com/listing/4595562278
-shipping: free-ireland
+shipping: included
 priceMode: single
 optionsLabel: Options
 customFields:
 - id: colour
   label: Colour (optional)
-  placeholder: Red as in the photos, or ask for black, brown or tan
+  placeholder: Red as in the photos, or tell me the colour you want
   required: false
 details:
 - made-in-dublin
@@ -42,9 +42,11 @@ It is a fun, useful piece for the desk, the craft table or the sewing box. It al
 - The marks follow a 1 mm scale, but this is a 3D printed novelty ruler, not a certified measuring tool
 - 3D printed by me in Dublin, Ireland
 
-### Custom colours
+### Colours
 
-Want the dog in black, brown or tan to match your own dachshund? Send me a message before you order and I will tell you which colours I can do.
+The dog is red as in the photos unless you choose another colour. Write it in the order form: White, Cream White, Grey, Black, Cherry Red, Red, Pink, Sunny Orange, Pumpkin Orange, Apple Green, Mint Green, Olive Green, Mustard Green, Ice Blue, Soft Blue or Cobalt Blue.
+
+Want brown or tan to match your own dachshund? Send me a message before you order and I will tell you which shades I can do.
 
 ### Great for
 

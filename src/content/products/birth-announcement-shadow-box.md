@@ -10,20 +10,20 @@ images:
 - /images/birth-announcement-shadow-box-03.jpg
 - /images/birth-announcement-shadow-box-04.jpg
 icon: shadowBox
-fromPrice: 36
+fromPrice: 40.45
 etsyUrl: https://make3die.etsy.com/listing/4550031242
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Decoration
 options:
 - label: Balloon
-  price: 36
+  price: 40.45
 - label: Bow
-  price: 36
+  price: 40.45
 - label: Photo frame
-  price: 40.5
+  price: 44.95
 - label: Teddy bear
-  price: 45
+  price: 49.45
 customFields:
 - id: colour
   label: Colour

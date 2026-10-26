@@ -53,11 +53,14 @@ collections:
       - label: "Delivery"
         name: "shipping"
         widget: "select"
-        default: "standard"
+        default: "included"
         options:
-          - { label: "Keyrings, magnets and small flat pieces (ruler, comb): free in Ireland, EU €5 + €5", value: "free-ireland" }
-          - { label: "Standard: Ireland €5 + €5, EU €10 + €5, rest of world €15 + €10", value: "standard" }
-        hint: "Sets the delivery table on the product page. Rates are the same as on Etsy."
+          - { label: "Keyrings, magnets and sets: same price everywhere, free in Ireland, EU postage €5 + €5", value: "free-ireland" }
+          - { label: "Delivery built into the price: free in Ireland, EU and UK +€4.50 on the price, US +€6.30", value: "included" }
+          - { label: "Free delivery in Ireland, the EU and the US (Christmas baubles)", value: "free-everywhere" }
+          - { label: "Postage added: Ireland €5 + €5, EU €10 + €5, rest of world €15 + €10 (large signs)", value: "standard" }
+        hint: "Sets the delivery table on the product page. Matches the shipping profile used on Etsy."
+      - { label: "Delivery note (optional)", name: "deliveryNote", widget: "string", required: false, hint: "One extra line under the delivery table, for example an extra charge for the EU." }
       - label: "Pricing type"
         name: "priceMode"
         widget: "select"

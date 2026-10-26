@@ -32,7 +32,7 @@ const carousel = variant === 'carousel';
     <Heading class="font-display font-semibold text-lg mb-1.5">{product.name}</Heading>
     <p class="text-sm text-paper/65 leading-relaxed mb-3 line-clamp-3">{product.tagline}</p>
     <p class="font-mono text-sm text-gold">from {formatEuro(product.fromPrice)}</p>
-    {product.freeIreland && <p class="text-xs text-paper/60 mt-1">Free delivery in Ireland</p>}
+    {product.deliveryBadge && <p class="text-xs text-paper/60 mt-1">{product.deliveryBadge}</p>}
     {carousel && <span class="text-sm font-medium inline-flex items-center gap-1 mt-3 group-hover:gap-2 transition-all">See options →</span>}
   </div>
 </a>

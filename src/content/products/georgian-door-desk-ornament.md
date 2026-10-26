@@ -1,7 +1,7 @@
 ---
-name: Personalised Dublin Georgian Door Desk Ornament
-heading: Personalised Dublin Georgian Door Desk Ornament
-seoTitle: Personalised Dublin Georgian Door Desk Ornament | Family Name
+name: Personalised Dublin Georgian Door Ornament
+heading: Personalised Dublin Georgian Door Ornament
+seoTitle: Personalised Dublin Georgian Door Ornament | Family Name
 category: home-decor
 tagline: A Dublin Georgian door standing on a black base, with your family name above the door, your house number and the door colour you choose. Made in Dublin.
 images:
@@ -11,9 +11,9 @@ images:
 - /images/georgian-door-desk-ornament-04.jpg
 - /images/georgian-door-desk-ornament-05.jpg
 icon: generic
-fromPrice: 22.46
+fromPrice: 22.45
 etsyUrl: https://make3die.etsy.com/listing/4593785051
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Options
 customFields:

@@ -13,16 +13,20 @@ images:
 - /images/dentist-business-card-holder-06.mp4
 - /images/dentist-business-card-holder-07.mp4
 icon: generic
-fromPrice: 22.46
+fromPrice: 22.45
 etsyUrl: https://make3die.etsy.com/listing/4576764917
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Options
 customFields:
 - id: cardText
-  label: Text exactly as you want it shown
+  label: Text exactly as you want it shown (up to 50 characters)
   placeholder: e.g. Dr. Sarah Murphy
   required: true
+- id: otherColours
+  label: Other colours (optional)
+  placeholder: Want other colours? Write them here
+  required: false
 details:
 - made-in-dublin
 - made-to-order

@@ -1,7 +1,7 @@
 ---
-name: Personalised Irish Air Corps Rank Keyring
-heading: Personalised Irish Air Corps Rank Keyring
-seoTitle: Personalised Irish Air Corps Rank Keyring | Defence Forces Gift
+name: Irish Air Corps Rank Keyring
+heading: Irish Air Corps Rank Keyring
+seoTitle: Irish Air Corps Rank Keyring | Personalised Defence Forces Gift
 category: keyrings
 tagline: An epaulette keyring with your Irish Air Corps rank and surname. A personalised military gift for promotions and retirements, made in Dublin.
 images:
@@ -23,35 +23,39 @@ images:
 - /images/irish-air-corps-rank-keyring-16.mp4
 - /images/irish-air-corps-rank-keyring-17.mp4
 icon: generic
-fromPrice: 10.8
+fromPrice: 10.75
 etsyUrl: https://make3die.etsy.com/listing/4590642898
 shipping: free-ireland
 priceMode: single
 optionsLabel: Rank
 options:
 - label: Apprentice
-  price: 10.8
+  price: 10.75
 - label: 2 Star Airman
-  price: 10.8
+  price: 10.75
 - label: 3 Star Airman
-  price: 10.8
+  price: 10.75
 - label: Corporal
-  price: 10.8
+  price: 10.75
 - label: Sergeant
-  price: 10.8
+  price: 10.75
 - label: Flight Quartermaster Sergeant
-  price: 10.8
+  price: 10.75
 - label: Flight Sergeant
-  price: 10.8
+  price: 10.75
 - label: Regimental Quartermaster Sergeant
-  price: 10.8
+  price: 10.75
 - label: Regimental Sergeant Major
-  price: 10.8
+  price: 10.75
 customFields:
 - id: surname
-  label: Surname
+  label: Surname (up to 14 characters)
   placeholder: e.g. MURPHY
   required: true
+- id: otherColours
+  label: Other colours (optional)
+  placeholder: Want other colours? Write them here
+  required: false
 details:
 - made-in-dublin
 - made-to-order

@@ -1,7 +1,7 @@
 ---
-name: HoHoHo Light Up Sign
-heading: HoHoHo Light Up Sign
-seoTitle: HoHoHo Light Up Sign | LED Christmas Decoration
+name: Christmas Light Up Sign Mantel Decoration
+heading: Christmas Light Up Sign Mantel Decoration
+seoTitle: Christmas Light Up Sign Mantel Decoration | HoHoHo LED Sign
 category: christmas
 tagline: A big light-up HoHoHo sign with Santa, an elf and a snowman. USB powered with an on/off switch, for a Christmas mantel or shelf. Made in Dublin.
 images:
@@ -12,9 +12,9 @@ images:
 - /images/hohoho-light-up-sign-05.jpg
 - /images/hohoho-light-up-sign-06.jpg
 icon: generic
-fromPrice: 43.2
+fromPrice: 53.95
 etsyUrl: https://make3die.etsy.com/listing/4590788521
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Options
 customFields:

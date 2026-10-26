@@ -10,9 +10,9 @@ images:
 - /images/pet-memorial-urn-03.jpg
 - /images/pet-memorial-urn-04.jpg
 icon: generic
-fromPrice: 44.1
+fromPrice: 44.95
 etsyUrl: https://make3die.etsy.com/listing/4572488950
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Options
 customFields:

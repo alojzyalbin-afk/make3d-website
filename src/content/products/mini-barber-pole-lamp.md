@@ -1,7 +1,7 @@
 ---
-name: Mini Barber Pole Lamp
-heading: Mini Barber Pole Lamp
-seoTitle: Mini Barber Pole Lamp | Retro Barbershop LED Light
+name: Mini Barber Pole LED Lamp
+heading: Mini Barber Pole LED Lamp
+seoTitle: Mini Barber Pole LED Lamp | Retro Barbershop Desk Light
 category: lighting
 tagline: A 23 cm mini barber pole lamp with a warm retro glow, USB powered. A gift for barbers and hairdressers, or decor for a salon. Made in Dublin.
 images:
@@ -12,9 +12,9 @@ images:
 - /images/mini-barber-pole-lamp-05.jpg
 - /images/mini-barber-pole-lamp-06.jpg
 icon: generic
-fromPrice: 40.5
+fromPrice: 40.45
 etsyUrl: https://make3die.etsy.com/listing/4579749882
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Options
 customFields: []

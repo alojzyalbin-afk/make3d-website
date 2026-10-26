@@ -10,11 +10,17 @@ images:
 - /images/large-custom-dublin-street-sign-03.jpg
 - /images/large-custom-dublin-street-sign-04.jpg
 icon: generic
-fromPrice: 26.55
+fromPrice: 9.85
 etsyUrl: https://make3die.etsy.com/listing/4581201555
 shipping: standard
+deliveryNote: The prices on this page are for Ireland. For the EU and the UK add €4.50 to the price of the sign, and for the United States add €6.30, as well as the postage in the table.
 priceMode: single
-optionsLabel: Options
+optionsLabel: Width
+options:
+- label: 150 mm
+  price: 9.85
+- label: 260 mm
+  price: 14.35
 customFields:
 - id: irishName
   label: Irish name (optional)
@@ -44,7 +50,7 @@ Choose your favourite Dublin street, a family surname, a name for the man cave o
 
 ### Details
 
-- Size: approx. 285 mm long, 70 mm wide and 15 mm deep
+- Two widths: 150 mm (approx. 150 x 44 x 8 mm) or 260 mm (approx. 260 x 70 x 15 mm)
 - Freestanding: it stands on its own, with no stand or wall fixing needed
 - Matte PLA plastic in classic Dublin blue and white
 - Designed and 3D printed by me in Dublin, Ireland
@@ -60,9 +66,10 @@ Choose your favourite Dublin street, a family surname, a name for the man cave o
 
 Fill in your details in the order form:
 
-1. Irish name (leave it blank if you do not know it and I will find the correct translation)
-2. English street or custom name (for example Grafton Street, James's Street or Dad's Bar)
-3. District or house number (for example 2, 4, 8 or 24)
-4. Colour: classic Dublin blue and white by default. Brown or green is available on request.
+1. Width: 150 mm or 260 mm
+2. Irish name (leave it blank if you do not know it and I will find the correct translation)
+3. English street or custom name (for example Grafton Street, James's Street or Dad's Bar)
+4. District or house number (for example 2, 4, 8 or 24)
+5. Colour: classic Dublin blue and white by default. Brown or green is available on request.
 
 I can also move the number box to the left or change the layout. Send me a message before you order if you want something special.

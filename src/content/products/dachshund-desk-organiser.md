@@ -1,7 +1,7 @@
 ---
-name: Personalised Dachshund Desk Organiser
-heading: Personalised Dachshund Desk Organiser
-seoTitle: Personalised Dachshund Desk Organiser | Sausage Dog Pen Holder
+name: Dachshund Desk Organiser Pen Holder
+heading: Dachshund Desk Organiser Pen Holder
+seoTitle: Dachshund Desk Organiser Pen Holder | Personalised Collar Tag
 category: dachshund-gifts
 tagline: A sausage dog desk organiser with your dog's name on the collar tag, 1 to 4 compartments and an optional phone slot. Your colours, made to order in Dublin.
 images:
@@ -23,31 +23,31 @@ images:
 - /images/dachshund-desk-organiser-16.jpg
 - /images/dachshund-desk-organiser-17.jpg
 icon: generic
-fromPrice: 31.5
+fromPrice: 36
 etsyUrl: https://make3die.etsy.com/listing/4598952307
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Compartments
 options:
 - label: 1 compartment
-  price: 31.5
+  price: 36
 - label: 1 compartment + phone slot
-  price: 41.4
+  price: 45.9
 - label: 2 compartments
-  price: 38.25
+  price: 42.75
 - label: 2 compartments + phone slot
-  price: 48.15
+  price: 52.65
 - label: 3 compartments
-  price: 45
+  price: 49.5
 - label: 3 compartments + phone slot
-  price: 54.9
+  price: 59.4
 - label: 4 compartments
-  price: 51.75
+  price: 56.25
 - label: 4 compartments + phone slot
-  price: 61.65
+  price: 66.15
 customFields:
 - id: dogName
-  label: Dog's name for the collar tag
+  label: Dog's name for the collar tag (best at 8 letters or fewer)
   placeholder: e.g. Biscuit
   required: true
 - id: colours

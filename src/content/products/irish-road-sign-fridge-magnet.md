@@ -1,7 +1,7 @@
 ---
-name: Personalised Irish Road Sign Fridge Magnet
-heading: Personalised Irish Road Sign Fridge Magnet
-seoTitle: Personalised Irish Road Sign Fridge Magnet | Custom Gaelic Gift
+name: Irish Road Sign Fridge Magnet
+heading: Irish Road Sign Fridge Magnet
+seoTitle: Irish Road Sign Fridge Magnet | Personalised Gaelic Gift
 category: fridge-magnets
 tagline: A bilingual Irish road sign fridge magnet with your place name and distance, in Irish and English. A personal Irish souvenir, designed and 3D printed in Dublin.
 images:
@@ -16,7 +16,7 @@ images:
 - /images/irish-road-sign-fridge-magnet-09.jpg
 - /images/irish-road-sign-fridge-magnet-10.jpg
 icon: generic
-fromPrice: 8.1
+fromPrice: 10.75
 etsyUrl: https://make3die.etsy.com/listing/4570212828
 shipping: free-ireland
 priceMode: single

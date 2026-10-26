@@ -1,7 +1,7 @@
 ---
-name: Personalised Fire Brigade Shield Keyring
-heading: Personalised Fire Brigade Shield Keyring
-seoTitle: Personalised Fire Brigade Shield Keyring | Firefighter Gift
+name: Personalised Firefighter Name Keyring
+heading: Personalised Firefighter Name Keyring
+seoTitle: Personalised Firefighter Name Keyring | Fire Brigade Shield
 category: keyrings
 tagline: A fire brigade shield keyring with a name, station or badge number in raised letters. A gift for firefighters, for graduation, promotion or retirement.
 images:
@@ -10,7 +10,7 @@ images:
 - /images/fire-brigade-shield-keyring-03.jpg
 - /images/fire-brigade-shield-keyring-04.jpg
 icon: generic
-fromPrice: 8.1
+fromPrice: 10.75
 etsyUrl: https://make3die.etsy.com/listing/4578054848
 shipping: free-ireland
 priceMode: single
@@ -20,6 +20,10 @@ customFields:
   label: Text for the shield (4 to 10 characters)
   placeholder: e.g. BYRNE or STATION 12
   required: true
+- id: otherColours
+  label: Other colours (optional)
+  placeholder: Want other colours? Write them here
+  required: false
 details:
 - made-in-dublin
 - made-to-order
