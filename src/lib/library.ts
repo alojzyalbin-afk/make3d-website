@@ -31,21 +31,51 @@ export function formatEuro(value: number) {
 }
 
 /**
- * Delivery rates, same as the Etsy shipping profiles.
- * 'free-ireland' = keyrings, fridge magnets and small flat pieces (ruler, comb), 'standard' = everything else.
- * extra = what each additional item in the same order adds.
+ * Delivery, same as the Etsy shipping profiles.
+ *
+ * 'free-ireland'    = keyrings, fridge magnets and sets: same price everywhere, free in Ireland, postage added for the EU.
+ * 'included'        = most other pieces: postage is built into the price in Ireland; EU and UK buyers pay a little more on
+ *                     the price and US buyers a bit more again (the site shows Etsy's extra minus the 10% discount).
+ * 'free-everywhere' = the Christmas baubles: one price, free delivery in Ireland, the EU and the US.
+ * 'standard'        = the two large signs: postage added on top of the price.
+ *
+ * extra = what each additional item in the same order adds (postage modes only).
+ * worldwide = this mode also sells outside the EU, so the product page shows the rest-of-the-world delivery time
+ *             and the import duty note.
  */
 export const SHIPPING = {
   'free-ireland': {
     badge: 'Free delivery in Ireland',
+    worldwide: false,
     rows: [
       { region: 'Ireland', price: 'Free' },
       { region: 'European Union', price: '€5', extra: '€5' },
       { region: 'Outside the EU', price: 'Message me first' },
     ],
   },
+  included: {
+    badge: 'Free delivery in Ireland',
+    worldwide: true,
+    rows: [
+      { region: 'Ireland', price: 'Free, built into the price' },
+      { region: 'European Union and UK', price: '+€4.50 on the price' },
+      { region: 'United States', price: '+€6.30 on the price' },
+      { region: 'Anywhere else', price: 'Message me first' },
+    ],
+  },
+  'free-everywhere': {
+    badge: 'Free delivery in Ireland, the EU and the US',
+    worldwide: true,
+    rows: [
+      { region: 'Ireland', price: 'Free' },
+      { region: 'European Union', price: 'Free' },
+      { region: 'United States', price: 'Free' },
+      { region: 'Anywhere else', price: 'Message me first' },
+    ],
+  },
   standard: {
     badge: null,
+    worldwide: true,
     rows: [
       { region: 'Ireland', price: '€5', extra: '€5' },
       { region: 'European Union', price: '€10', extra: '€5' },
@@ -89,7 +119,7 @@ export async function getCatalog() {
     fromPrice: entry.data.fromPrice,
     icon: entry.data.icon,
     category: entry.data.category,
-    freeIreland: entry.data.shipping === 'free-ireland',
+    deliveryBadge: SHIPPING[entry.data.shipping].badge,
     thumb: entry.data.images.find((src) => !isVideo(src)) ?? null,
   }));
   const categories = (await getCollection('categories'))

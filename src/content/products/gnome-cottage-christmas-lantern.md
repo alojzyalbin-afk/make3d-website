@@ -11,9 +11,9 @@ images:
 - /images/gnome-cottage-christmas-lantern-04.jpg
 - /images/gnome-cottage-christmas-lantern-05.mp4
 icon: generic
-fromPrice: 21.11
+fromPrice: 22.45
 etsyUrl: https://make3die.etsy.com/listing/4573126567
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Options
 customFields: []

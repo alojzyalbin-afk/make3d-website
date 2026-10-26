@@ -1,7 +1,7 @@
 ---
-name: Personalised Caduceus Keyring
-heading: Personalised Caduceus Keyring
-seoTitle: Personalised Caduceus Keyring | Doctor and Nurse Gift
+name: Personalised Doctor Keyring with Caduceus
+heading: Personalised Doctor Keyring with Caduceus
+seoTitle: Personalised Doctor Keyring with Caduceus | Nurse Gift
 category: keyrings
 tagline: A caduceus keyring in navy blue and gold with a doctor's or nurse's name or title. A medical graduation or thank-you gift, made in Dublin.
 images:
@@ -19,16 +19,20 @@ images:
 - /images/caduceus-keyring-12.mp4
 - /images/caduceus-keyring-13.mp4
 icon: generic
-fromPrice: 8.1
+fromPrice: 10.75
 etsyUrl: https://make3die.etsy.com/listing/4574281533
 shipping: free-ireland
 priceMode: single
 optionsLabel: Options
 customFields:
 - id: keyringText
-  label: Name or title
+  label: Name or title (up to 20 characters)
   placeholder: e.g. DR. MURPHY
   required: true
+- id: otherColours
+  label: Other colours (optional)
+  placeholder: Want other colours? Write them here
+  required: false
 details:
 - made-in-dublin
 - made-to-order

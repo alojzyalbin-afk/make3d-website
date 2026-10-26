@@ -1,7 +1,7 @@
 ---
-name: Comb for Bald Heads
-heading: Comb for Bald Heads
-seoTitle: Comb for Bald Heads | Funny Toothless Gag Gift in 6 Languages
+name: Funny Comb for Bald Heads
+heading: Funny Comb for Bald Heads
+seoTitle: Funny Comb for Bald Heads | Toothless Gag Gift in 6 Languages
 category: home-decor
 tagline: A 25 cm comb for bald heads, with no teeth at all and the joke written in one of six languages. A gag gift for bald dads, brothers and mates, made in Dublin.
 images:
@@ -13,9 +13,9 @@ images:
 - /images/comb-for-bald-heads-06.jpg
 - /images/comb-for-bald-heads-07.jpg
 icon: generic
-fromPrice: 15.29
+fromPrice: 13.45
 etsyUrl: https://make3die.etsy.com/listing/4595613040
-shipping: free-ireland
+shipping: included
 priceMode: single
 optionsLabel: Options
 customFields:
@@ -23,9 +23,9 @@ customFields:
   label: Language
   placeholder: English, Italian, Romanian, French, Spanish or Portuguese
   required: true
-- id: lettering
-  label: Lettering colour
-  placeholder: White or red
+- id: colours
+  label: Colours (optional)
+  placeholder: Comb and lettering, e.g. black with white letters (the default)
   required: false
 details:
 - made-in-dublin
@@ -34,12 +34,12 @@ details:
 ---
 A comb for bald heads. It follows the curve of the scalp and has no teeth at all, so it never snags. Hang it by the hook, hand it over with a straight face and wait.
 
-The words on the handle come in six languages. Pick yours in the order form, and pick white or red for the lettering.
+The words on the handle come in six languages. Pick yours in the order form. The comb is black with white lettering unless you ask for other colours.
 
 ### Details
 
 - Size: approx. 250 x 60 mm and 3 mm thick
-- Black PLA plastic with the lettering inlaid in a second colour, red or white. The colour comes from the plastic itself, with no paint
+- Black PLA plastic with the lettering inlaid in a second colour, white unless you ask for another. The colour comes from the plastic itself, with no paint
 - Hanging hole at the top, for a hook or a nail
 - Six languages: English (COMB FOR BALD HEADS), Italian (PETTINE PER CALVI), Romanian (PIEPTAN PENTRU CHELIOSI), French (PEIGNE POUR CHAUVES), Spanish (PEINE PARA CALVOS) and Portuguese (PENTE PARA CARECAS)
 - 3D printed by me in Dublin, Ireland

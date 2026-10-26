@@ -1,7 +1,7 @@
 ---
-name: Unique Personalised Straight Razor Lamp
-heading: Unique Personalised Straight Razor Lamp
-seoTitle: Personalised Straight Razor Lamp | Barber Shop Name Sign
+name: Straight Razor Barber Shop Lamp
+heading: Straight Razor Barber Shop Lamp
+seoTitle: Straight Razor Barber Shop Lamp | Personalised Name Light
 category: lighting
 tagline: A lamp shaped like an open straight razor, with your name glowing on the blade and your own text on the tang. USB powered, made to order in Dublin.
 images:
@@ -15,9 +15,9 @@ images:
 - /images/straight-razor-lamp-08.jpg
 - /images/straight-razor-lamp-09.jpg
 icon: generic
-fromPrice: 71.1
+fromPrice: 53.95
 etsyUrl: https://make3die.etsy.com/listing/4598270145
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Options
 customFields:

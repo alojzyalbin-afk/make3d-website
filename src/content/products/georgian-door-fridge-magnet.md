@@ -1,7 +1,7 @@
 ---
-name: Personalised Dublin Georgian Door Fridge Magnet
-heading: Personalised Dublin Georgian Door Fridge Magnet
-seoTitle: Personalised Dublin Georgian Door Fridge Magnet | Family Name
+name: Personalised Dublin Georgian Door Magnet
+heading: Personalised Dublin Georgian Door Magnet
+seoTitle: Personalised Dublin Georgian Door Magnet | Family Name Gift
 category: fridge-magnets
 tagline: A fridge magnet shaped like a Dublin Georgian door, with your family name above the door, your house number and the door colour you choose. Made in Dublin.
 images:
@@ -22,7 +22,7 @@ images:
 - /images/georgian-door-fridge-magnet-15.mp4
 - /images/georgian-door-fridge-magnet-16.mp4
 icon: generic
-fromPrice: 12.56
+fromPrice: 11.65
 etsyUrl: https://make3die.etsy.com/listing/4593669399
 shipping: free-ireland
 priceMode: single
@@ -38,7 +38,7 @@ customFields:
   required: true
 - id: doorColour
   label: Door colour
-  placeholder: Green, Blue, Red, Yellow, Black, Grey or another colour
+  placeholder: Green, Blue, Red, Yellow, Black, Brown, Grey, Purple, Orange or another colour
   required: true
 details:
 - made-in-dublin

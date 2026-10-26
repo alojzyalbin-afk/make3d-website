@@ -9,22 +9,22 @@ images:
 - /images/hot-air-balloon-birth-announcement-02.jpg
 - /images/hot-air-balloon-birth-announcement-03.jpg
 icon: dateBalloon
-fromPrice: 31.5
+fromPrice: 22.45
 etsyUrl: https://make3die.etsy.com/listing/4550646535
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Size
 options:
 - label: 15 cm
-  price: 31.5
+  price: 22.45
 - label: 17 cm
-  price: 36
+  price: 26.95
 - label: 20 cm
-  price: 40.5
+  price: 31.45
 - label: 22 cm
-  price: 45
+  price: 35.95
 - label: 25 cm
-  price: 49.5
+  price: 40.45
 customFields:
 - id: colour
   label: Colour

@@ -1,7 +1,7 @@
 ---
-name: Pumpkin House Lantern
-heading: Pumpkin House Lantern
-seoTitle: Pumpkin House Lantern | Halloween Tea Light Holder
+name: Pumpkin House Tea Light Lantern
+heading: Pumpkin House Tea Light Lantern
+seoTitle: Pumpkin House Tea Light Lantern | Halloween Fairy House
 category: home-decor
 tagline: A pumpkin house lantern for Halloween and autumn that glows through its windows with an LED tea light (not included). Assembled by hand in Dublin.
 images:
@@ -12,9 +12,9 @@ images:
 - /images/pumpkin-house-lantern-05.jpg
 - /images/pumpkin-house-lantern-06.jpg
 icon: generic
-fromPrice: 31.05
+fromPrice: 31.45
 etsyUrl: https://make3die.etsy.com/listing/4583419472
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Options
 customFields: []

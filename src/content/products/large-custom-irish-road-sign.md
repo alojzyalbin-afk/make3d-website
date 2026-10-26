@@ -21,18 +21,17 @@ images:
 - /images/large-custom-irish-road-sign-14.mp4
 - /images/large-custom-irish-road-sign-15.mp4
 icon: generic
-fromPrice: 26.55
+fromPrice: 9.85
 etsyUrl: https://make3die.etsy.com/listing/4580709016
 shipping: standard
+deliveryNote: The prices on this page are for Ireland. For the EU and the UK add €4.50 to the price of the sign, and for the United States add €6.30, as well as the postage in the table.
 priceMode: single
-optionsLabel: Colour scheme
+optionsLabel: Width
 options:
-- label: Classic (black and white)
-  price: 26.55
-- label: Heritage (brown and white)
-  price: 26.55
-- label: Scenic (green and white)
-  price: 26.55
+- label: 150 mm
+  price: 9.85
+- label: 250 mm
+  price: 14.35
 customFields:
 - id: irishName
   label: Irish name (optional)
@@ -50,6 +49,10 @@ customFields:
   label: Arrow direction
   placeholder: Left or right
   required: true
+- id: colourScheme
+  label: Colour scheme
+  placeholder: Classic (black and white), Heritage (brown and white) or Scenic (green and white)
+  required: true
 details:
 - freestanding-no-power
 - made-in-dublin
@@ -62,7 +65,7 @@ Tell me your destination and distance: a hometown, a wedding venue, a holiday sp
 
 ### Details
 
-- Size: approx. 290 mm x 85 mm x 17 mm, freestanding
+- Two widths, both freestanding: 150 mm (approx. 150 x 44 x 8 mm) or 250 mm (approx. 250 x 70 x 15 mm)
 - Matte PLA plastic with raised lettering
 - Arrow pointing left or right, your choice
 - Three colour schemes: Classic (black and white), Heritage (brown and white) or Scenic (green and white)
@@ -79,10 +82,11 @@ Tell me your destination and distance: a hometown, a wedding venue, a holiday sp
 
 Fill in your details in the order form:
 
-1. Irish name (leave it blank if you do not know it and I will find the traditional Irish version)
-2. English place name or your own text
-3. Distance in km
-4. Arrow direction: left or right
-5. Colour scheme: Classic, Heritage or Scenic
+1. Width: 150 mm or 250 mm
+2. Irish name (leave it blank if you do not know it and I will find the traditional Irish version)
+3. English place name or your own text
+4. Distance in km
+5. Arrow direction: left or right
+6. Colour scheme: Classic, Heritage or Scenic
 
 This is for the freestanding sign only. It does not include wall brackets. For a special colour combination or a logo, send me a message before you order.

@@ -1,7 +1,7 @@
 ---
-name: Personalised Irish Navy Rank Keyring
-heading: Personalised Irish Navy Rank Keyring
-seoTitle: Personalised Irish Navy Rank Keyring | Naval Service Gift
+name: Irish Naval Service Rank Keyring
+heading: Irish Naval Service Rank Keyring
+seoTitle: Irish Naval Service Rank Keyring | Personalised Navy Gift
 category: keyrings
 tagline: An epaulette keyring with your Naval Service rank and surname. A personalised military gift for promotions and retirements, made in Dublin.
 images:
@@ -27,35 +27,39 @@ images:
 - /images/irish-navy-rank-keyring-20.mp4
 - /images/irish-navy-rank-keyring-21.mp4
 icon: generic
-fromPrice: 10.8
+fromPrice: 10.75
 etsyUrl: https://make3die.etsy.com/listing/4588068700
 shipping: free-ireland
 priceMode: single
 optionsLabel: Rank
 options:
 - label: Recruit (no insignia)
-  price: 10.8
+  price: 10.75
 - label: Ordinary Seaman
-  price: 10.8
+  price: 10.75
 - label: Able Seaman
-  price: 10.8
+  price: 10.75
 - label: Leading Seaman
-  price: 10.8
+  price: 10.75
 - label: Petty Officer
-  price: 10.8
+  price: 10.75
 - label: Senior Petty Officer
-  price: 10.8
+  price: 10.75
 - label: Chief Petty Officer
-  price: 10.8
+  price: 10.75
 - label: Senior Chief Petty Officer
-  price: 10.8
+  price: 10.75
 - label: Warrant Officer
-  price: 10.8
+  price: 10.75
 customFields:
 - id: surname
-  label: Surname
+  label: Surname (up to 14 characters)
   placeholder: e.g. MURPHY
   required: true
+- id: otherColours
+  label: Other colours (optional)
+  placeholder: Want other colours? Write them here
+  required: false
 details:
 - made-in-dublin
 - made-to-order

@@ -4,8 +4,10 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { SHIPPING, DELIVERY } from '../lib/library';
 
 const tables = [
-  { title: 'Keyrings, fridge magnets and other small flat pieces', rows: SHIPPING['free-ireland'].rows },
-  { title: 'Everything else', rows: SHIPPING.standard.rows },
+  { title: 'Keyrings, fridge magnets and sets', rows: SHIPPING['free-ireland'].rows },
+  { title: 'Lamps, plaques, keepsakes and most other pieces', rows: SHIPPING.included.rows },
+  { title: 'Christmas baubles', rows: SHIPPING['free-everywhere'].rows },
+  { title: 'Large signs', rows: SHIPPING.standard.rows },
 ];
 ---
 
@@ -28,7 +30,16 @@ const tables = [
       </p>
 
       <h2 class="font-display font-semibold text-xl text-paper pt-4">Postage</h2>
-      <p>The first item costs the price shown. Each extra item in the same order adds the smaller amount.</p>
+      <p>
+        Postage works in four ways, depending on the piece. The product page shows the one that applies,
+        and the tables below list all four.
+      </p>
+      <ul>
+        <li><strong>Keyrings, fridge magnets and sets:</strong> the price is the same everywhere. Delivery in Ireland is free. For the EU, the first item adds the postage shown and each extra item in the same order adds the smaller amount.</li>
+        <li><strong>Lamps, plaques, keepsakes and most other pieces:</strong> delivery in Ireland is built into the price, so there is nothing to add. Buyers in the EU and the UK pay a little more on the price, and buyers in the US a little more again, instead of a separate postage charge.</li>
+        <li><strong>Christmas baubles:</strong> one price, with free delivery in Ireland, the EU and the US.</li>
+        <li><strong>Large signs:</strong> postage is added to the price. The first item costs the postage shown and each extra item in the same order adds the smaller amount.</li>
+      </ul>
     </div>
 
     <div class="grid sm:grid-cols-2 gap-5 mt-5">
@@ -62,7 +73,7 @@ const tables = [
         It depends on the piece, how complex it is and the personalisation, so I confirm the timing in my first reply.
         Custom pieces that I design for you take longer, and I give you their timing together with the price.
       </p>
-      <p>Larger items go with tracking. Keyrings, magnets and other small flat pieces (like the dachshund ruler and the comb) go by An Post letter or large envelope, without tracking.</p>
+      <p>Larger items go with tracking. Keyrings, magnets, sets and other small flat pieces (like the dachshund ruler and the comb) go by An Post letter or large envelope, without tracking.</p>
 
       <h2 class="font-display font-semibold text-xl text-paper pt-4">Customs and import duties</h2>
       <p>

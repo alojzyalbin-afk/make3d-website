@@ -1,7 +1,7 @@
 ---
-name: Irish Mammy's Wooden Spoon of Discipline
-heading: Irish Mammy's Wooden Spoon of Discipline
-seoTitle: Irish Mammy's Wooden Spoon Plaque | Funny Irish Kitchen Gift
+name: Irish Mammy Wooden Spoon Wall Plaque
+heading: Irish Mammy Wooden Spoon Wall Plaque
+seoTitle: Irish Mammy Wooden Spoon Wall Plaque | Funny Kitchen Sign
 category: home-decor
 tagline: A funny Irish kitchen wall plaque that holds a real wooden spoon, included. Celtic knot, raised lettering and your choice of colours. Made in Dublin.
 images:
@@ -19,9 +19,9 @@ images:
 - /images/irish-mammy-wooden-spoon-plaque-12.mp4
 - /images/irish-mammy-wooden-spoon-plaque-13.mp4
 icon: generic
-fromPrice: 30.15
+fromPrice: 22.45
 etsyUrl: https://make3die.etsy.com/listing/4592806661
-shipping: standard
+shipping: included
 priceMode: single
 optionsLabel: Options
 customFields:
