@@ -10,7 +10,7 @@ images:
 - /images/fire-brigade-shield-keyring-03.jpg
 - /images/fire-brigade-shield-keyring-04.jpg
 icon: generic
-fromPrice: 10.75
+fromPrice: 11.65
 etsyUrl: https://make3die.etsy.com/listing/4578054848
 shipping: free-ireland
 priceMode: single

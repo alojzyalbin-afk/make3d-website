@@ -23,30 +23,30 @@ images:
 - /images/irish-air-corps-rank-keyring-16.mp4
 - /images/irish-air-corps-rank-keyring-17.mp4
 icon: generic
-fromPrice: 10.75
+fromPrice: 11.65
 etsyUrl: https://make3die.etsy.com/listing/4590642898
 shipping: free-ireland
 priceMode: single
 optionsLabel: Rank
 options:
 - label: Apprentice
-  price: 10.75
+  price: 11.65
 - label: 2 Star Airman
-  price: 10.75
+  price: 11.65
 - label: 3 Star Airman
-  price: 10.75
+  price: 11.65
 - label: Corporal
-  price: 10.75
+  price: 11.65
 - label: Sergeant
-  price: 10.75
+  price: 11.65
 - label: Flight Quartermaster Sergeant
-  price: 10.75
+  price: 11.65
 - label: Flight Sergeant
-  price: 10.75
+  price: 11.65
 - label: Regimental Quartermaster Sergeant
-  price: 10.75
+  price: 11.65
 - label: Regimental Sergeant Major
-  price: 10.75
+  price: 11.65
 customFields:
 - id: surname
   label: Surname (up to 14 characters)

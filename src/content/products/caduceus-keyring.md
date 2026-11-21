@@ -19,7 +19,7 @@ images:
 - /images/caduceus-keyring-12.mp4
 - /images/caduceus-keyring-13.mp4
 icon: generic
-fromPrice: 10.75
+fromPrice: 11.65
 etsyUrl: https://make3die.etsy.com/listing/4574281533
 shipping: free-ireland
 priceMode: single

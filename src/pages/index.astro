@@ -10,6 +10,33 @@ const featured = [...products].sort(
   (a, b) => (order.get(a.category) ?? 99) - (order.get(b.category) ?? 99) || a.name.localeCompare(b.name)
 );
 
+const customProjects = [
+  {
+    title: 'Cartoon-style explorer compass locket',
+    text: 'A round gold and turquoise star compass that opens to show a hidden constellation, with a name engraved on the back. A custom 3D printed prop for cosplay, dress-up, adventure play and themed parties.',
+    images: ['/images/custom-explorer-star-locket-1.jpg', '/images/custom-explorer-star-locket-2.jpg', '/images/custom-explorer-star-locket-3.jpg'],
+    alt: 'Custom 3D printed gold star compass locket prop that opens to show a constellation',
+  },
+  {
+    title: 'Diorama-style scale model of a building',
+    text: 'A miniature shed built from photos as a birthday gift: scale model, diorama, architectural miniature and keepsake in one. Any house, shed, shop or pub can become a desk-sized 3D printed model.',
+    images: ['/images/custom-shed-diorama-1.jpg', '/images/custom-shed-diorama-2.jpg', '/images/custom-shed-diorama-3.jpg'],
+    alt: 'Custom 3D printed diorama-style miniature model of a shed',
+  },
+  {
+    title: 'Snowman character keyring',
+    text: 'A small multi-colour character keyring with a name on the scarf, made as a personalised Christmas gift for a child. Cartoon characters, pets and mascots can all become custom 3D printed keyrings and bag charms.',
+    images: ['/images/custom-frosty-snowman-keyring-1.jpg', '/images/custom-frosty-snowman-keyring-2.jpg', '/images/custom-frosty-snowman-keyring-3.jpg'],
+    alt: 'Custom 3D printed snowman character keyring with a name on the scarf',
+  },
+  {
+    title: 'Raised 3D course patch',
+    text: 'A military-style course patch with a walking figure and a motto, turned into a raised 3D printed badge. Good for course memorabilia, club badges, wall plaques and one-off keepsakes.',
+    images: ['/images/custom-course-patch-1.jpg'],
+    alt: 'Custom 3D printed military-style course patch with a walking soldier',
+  },
+];
+
 const M_PATH =
   'M30,200 L30,40 L74,40 L120,128 L166,40 L210,40 L210,200 L176,200 L176,92 L133,170 L107,170 L64,92 L64,200 Z';
 const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
@@ -110,6 +137,36 @@ const layerLines = Array.from({ length: 33 }, (_, i) => 40 + i * 5);
       <a href="/shop" class="inline-flex items-center gap-1 mt-8 text-sm font-medium text-gold hover:gap-2 transition-all">
         Browse the full catalogue →
       </a>
+    </div>
+  </section>
+
+  <!-- CUSTOM PROJECTS -->
+  <section id="custom-projects" class="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-24">
+    <div class="max-w-xl mb-12">
+      <h2 class="font-display font-bold text-3xl mb-3">Custom 3D printing projects</h2>
+      <p class="text-paper/70 leading-relaxed">A few one-off pieces I have designed and printed to order in Dublin: props, scale models, keepsakes and personalised gifts. Got a custom idea? <a href="/custom-3d-printing-dublin/" class="text-gold hover:underline">Tell me about it →</a></p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-6">
+      {customProjects.map((project) => (
+        <article class="rounded-2xl bg-panel border border-paper/10 overflow-hidden">
+          <div class="grid gap-1 bg-ink" style={project.images.length > 1 ? 'grid-template-columns: 2fr 1fr;' : ''}>
+            <picture class={project.images.length > 1 ? 'row-span-2' : ''}>
+              <source srcset={project.images[0].replace('.jpg', '.webp')} type="image/webp" />
+              <img src={project.images[0]} alt={project.alt} loading="lazy" class="w-full h-full object-cover aspect-[4/5]" />
+            </picture>
+            {project.images.slice(1).map((img) => (
+              <picture>
+                <source srcset={img.replace('.jpg', '.webp')} type="image/webp" />
+                <img src={img} alt={project.alt} loading="lazy" class="w-full h-full object-cover aspect-square" />
+              </picture>
+            ))}
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-semibold text-lg mb-2">{project.title}</h3>
+            <p class="text-sm text-paper/65 leading-relaxed">{project.text}</p>
+          </div>
+        </article>
+      ))}
     </div>
   </section>
 

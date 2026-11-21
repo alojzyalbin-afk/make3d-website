@@ -22,7 +22,7 @@ images:
 - /images/georgian-door-fridge-magnet-15.mp4
 - /images/georgian-door-fridge-magnet-16.mp4
 icon: generic
-fromPrice: 11.65
+fromPrice: 13.45
 etsyUrl: https://make3die.etsy.com/listing/4593669399
 shipping: free-ireland
 priceMode: single

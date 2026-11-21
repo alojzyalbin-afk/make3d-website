@@ -11,32 +11,32 @@ images:
 - /images/dachshund-keyrings-set-of-5-04.jpg
 - /images/dachshund-keyrings-set-of-5-05.jpg
 icon: generic
-fromPrice: 10.75
+fromPrice: 11.65
 etsyUrl: https://make3die.etsy.com/listing/4600464721
 shipping: free-ireland
 priceMode: single
 optionsLabel: Colour
 options:
 - label: Apple Green
-  price: 10.75
+  price: 11.65
 - label: Mint Green
-  price: 10.75
+  price: 11.65
 - label: Olive Green
-  price: 10.75
+  price: 11.65
 - label: Red
-  price: 10.75
+  price: 11.65
 - label: Orange
-  price: 10.75
+  price: 11.65
 - label: Blue
-  price: 10.75
+  price: 11.65
 - label: Ice Blue
-  price: 10.75
+  price: 11.65
 - label: Cherry Red
-  price: 10.75
+  price: 11.65
 - label: Pink
-  price: 10.75
+  price: 11.65
 - label: Mustard Green
-  price: 10.75
+  price: 11.65
 customFields:
 - id: name
   label: Name (optional, up to 15 characters)

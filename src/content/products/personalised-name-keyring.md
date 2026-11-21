@@ -20,7 +20,7 @@ images:
 - /images/personalised-name-keyring-13.jpg
 - /images/personalised-name-keyring-14.jpg
 icon: generic
-fromPrice: 10.75
+fromPrice: 11.65
 etsyUrl: https://make3die.etsy.com/listing/4601373130
 shipping: free-ireland
 priceMode: single

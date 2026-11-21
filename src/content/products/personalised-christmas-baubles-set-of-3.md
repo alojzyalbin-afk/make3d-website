@@ -33,7 +33,7 @@ images:
 - /images/personalised-christmas-baubles-set-of-3-26.jpg
 - /images/personalised-christmas-baubles-set-of-3-27.jpg
 icon: generic
-fromPrice: 17.95
+fromPrice: 15.25
 etsyUrl: https://make3die.etsy.com/listing/4603168920
 shipping: free-everywhere
 priceMode: single

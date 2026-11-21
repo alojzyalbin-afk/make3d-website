@@ -8,20 +8,20 @@ images:
 - /images/dachshund-christmas-decorations-set-of-5-01.jpg
 - /images/dachshund-christmas-decorations-set-of-5-02.jpg
 icon: generic
-fromPrice: 10.75
+fromPrice: 11.65
 etsyUrl: https://make3die.etsy.com/listing/4600469007
 shipping: free-ireland
 priceMode: single
 optionsLabel: Colour
 options:
 - label: White
-  price: 10.75
+  price: 11.65
 - label: Titanium Steel
-  price: 10.75
+  price: 11.65
 - label: Candy Red
-  price: 10.75
+  price: 11.65
 - label: Gold
-  price: 10.75
+  price: 11.65
 customFields:
 - id: name
   label: Name (optional, up to 15 characters)
