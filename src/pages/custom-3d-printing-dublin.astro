@@ -32,50 +32,59 @@ const uses = [
   <section class="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-16">
     <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Custom 3D printing', href: '/custom-3d-printing-dublin/' }]} />
 
-    <div class="grid md:grid-cols-2 gap-12">
-      <div class="min-w-0">
-        <h1 class="font-display font-bold text-3xl sm:text-4xl mb-5">Custom 3D printing in Dublin</h1>
-        <p class="text-paper/75 text-lg leading-relaxed mb-10">
-          Have a 3D file, an idea or a broken part you can't buy anymore? I print one-off pieces and small batches to order in Dublin, for people and small businesses across Ireland.
-        </p>
+    <div class="max-w-3xl mb-12">
+      <h1 class="font-display font-bold text-3xl sm:text-4xl mb-5">Custom 3D printing in Dublin</h1>
+      <p class="text-paper/75 text-lg leading-relaxed">
+        Have a 3D file, an idea or a broken part you can't buy anymore? I print one-off pieces and small batches to order in Dublin, for people and small businesses across Ireland.
+      </p>
+      <div class="flex items-center gap-6 flex-wrap mt-6">
+        <a href="#quote" class="inline-flex items-center gap-2 bg-red text-paper font-display font-semibold px-6 py-3 rounded-full hover:bg-red/90 transition-colors focus-visible:outline-2 focus-visible:outline-gold">Ask for a free quote</a>
+        <a href="#custom-projects" class="text-sm font-medium text-paper/70 hover:text-gold transition-colors underline underline-offset-4 decoration-paper/30">See my custom projects</a>
+      </div>
+    </div>
 
-        <h2 class="font-display font-semibold text-xl mb-4">What I can print</h2>
-        <div class="grid sm:grid-cols-2 gap-4 mb-6">
-          {uses.map((u) => (
-            <div class="p-5 rounded-2xl bg-panel border border-paper/10">
-              <h3 class="font-display font-semibold mb-1.5">{u.title}</h3>
-              <p class="text-sm text-paper/65 leading-relaxed">{u.text}</p>
-            </div>
-          ))}
+    <h2 class="font-display font-semibold text-xl mb-4">What I can print</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+      {uses.map((u) => (
+        <div class="p-5 rounded-2xl bg-panel border border-paper/10">
+          <h3 class="font-display font-semibold mb-1.5">{u.title}</h3>
+          <p class="text-sm text-paper/65 leading-relaxed">{u.text}</p>
         </div>
-        <p class="text-sm text-paper/60 leading-relaxed mb-10">
-          I no longer paint, but I can print figurines and prepare them with sanding and primer, so they reach you ready to paint.
-        </p>
+      ))}
+    </div>
+    <p class="text-sm text-paper/60 leading-relaxed mb-14">
+      I no longer paint, but I can print figurines and prepare them with sanding and primer, so they reach you ready to paint.
+    </p>
 
-        <div class="product-body text-paper/70 leading-relaxed space-y-4">
-          <h2 class="font-display font-semibold text-xl text-paper">With a file or without</h2>
-          <ul>
-            <li><strong>You have a 3D file (STL or 3MF):</strong> I check it and print it, and you pay for the printing only. This is the cheapest way.</li>
-            <li><strong>You don't have a file:</strong> send photos and the measurements. For a broken part, a photo of it next to a ruler helps. I model it for you, and the design time is included in the price.</li>
-          </ul>
-
-          <h2 class="font-display font-semibold text-xl text-paper pt-4">How the price is worked out</h2>
-          <p>
-            Every custom job is priced on its own. The price depends on the printing time, the material, the size and, if I design the piece, the design time. A piece that takes longer costs more. You get the price before anything is printed, and the quote is free.
-          </p>
-
-          <h2 class="font-display font-semibold text-xl text-paper pt-4">Sizes and materials</h2>
-          <p>
-            Single pieces up to about 25 cm. Bigger items can sometimes be printed in parts and joined, depending on the design. I use PLA for most pieces, PETG where a part needs more strength or heat resistance and ASA for parts that live outdoors.
-          </p>
-
-          <h2 class="font-display font-semibold text-xl text-paper pt-4">Timing and collection</h2>
-          <p>
-            Custom work takes longer than shop items, because of the design and the test prints, so I give you the timing together with the price. Collection is free in {DELIVERY.collectionAreas}, or I post it to you. See <a href="/delivery-and-returns/">delivery and returns</a>.
-          </p>
-        </div>
+    <div class="product-body text-paper/70 leading-relaxed grid md:grid-cols-2 gap-x-12 gap-y-10">
+      <div class="space-y-4">
+        <h2 class="font-display font-semibold text-xl text-paper">With a file or without</h2>
+        <ul>
+          <li><strong>You have a 3D file (STL or 3MF):</strong> I check it and print it, and you pay for the printing only. This is the cheapest way.</li>
+          <li><strong>You don't have a file:</strong> send photos and the measurements. For a broken part, a photo of it next to a ruler helps. I model it for you, and the design time is included in the price.</li>
+        </ul>
       </div>
 
+      <div class="space-y-4">
+        <h2 class="font-display font-semibold text-xl text-paper">How the price is worked out</h2>
+        <p>
+          Every custom job is priced on its own. The price depends on the printing time, the material, the size and, if I design the piece, the design time. A piece that takes longer costs more. You get the price before anything is printed, and the quote is free.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="font-display font-semibold text-xl text-paper">Sizes and materials</h2>
+        <p>
+          Single pieces up to about 25 cm. Bigger items can sometimes be printed in parts and joined, depending on the design. I use PLA for most pieces, PETG where a part needs more strength or heat resistance and ASA for parts that live outdoors.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="font-display font-semibold text-xl text-paper">Timing and collection</h2>
+        <p>
+          Custom work takes longer than shop items, because of the design and the test prints, so I give you the timing together with the price. Collection is free in {DELIVERY.collectionAreas}, or I post it to you. See <a href="/delivery-and-returns/">delivery and returns</a>.
+        </p>
+      </div>
     </div>
   </section>
 
