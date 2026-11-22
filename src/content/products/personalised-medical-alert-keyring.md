@@ -44,16 +44,16 @@ images:
 - /images/personalised-medical-alert-keyring-37.jpg
 - /images/personalised-medical-alert-keyring-38.jpg
 icon: generic
-fromPrice: 8.95
+fromPrice: 9.85
 etsyUrl: https://make3die.etsy.com/listing/4602954435
 shipping: free-ireland
 priceMode: single
 optionsLabel: NFC chip
 options:
 - label: Without NFC tag
-  price: 8.95
-- label: With NFC tag
   price: 9.85
+- label: With NFC tag
+  price: 11.65
 customFields:
 - id: shape
   label: Shape
