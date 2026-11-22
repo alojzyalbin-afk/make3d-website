@@ -17,6 +17,7 @@ images:
 - /images/personalised-christmas-name-tags-set-of-3-09.jpg
 - /images/personalised-christmas-name-tags-set-of-3-10.jpg
 fromPrice: 15.25
+etsyUrl: https://make3die.etsy.com/listing/4605971851
 shipping: free-everywhere
 priceMode: single
 optionsLabel: Options

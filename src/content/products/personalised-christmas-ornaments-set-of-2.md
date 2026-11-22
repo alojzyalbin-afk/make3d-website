@@ -19,6 +19,7 @@ images:
 - /images/personalised-christmas-ornaments-set-of-2-11.jpg
 - /images/personalised-christmas-ornaments-set-of-2-12.jpg
 fromPrice: 15.25
+etsyUrl: https://make3die.etsy.com/listing/4603713645
 shipping: free-everywhere
 priceMode: single
 optionsLabel: Options

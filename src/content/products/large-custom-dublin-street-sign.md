@@ -10,7 +10,7 @@ images:
 - /images/large-custom-dublin-street-sign-03.jpg
 - /images/large-custom-dublin-street-sign-04.jpg
 icon: generic
-fromPrice: 9.85
+fromPrice: 14.35
 etsyUrl: https://make3die.etsy.com/listing/4581201555
 shipping: standard
 deliveryNote: The prices on this page are for Ireland. For the EU and the UK add €4.50 to the price of the sign, and for the United States add €6.30, as well as the postage in the table.
@@ -18,9 +18,11 @@ priceMode: single
 optionsLabel: Width
 options:
 - label: 150 mm
-  price: 9.85
-- label: 260 mm
   price: 14.35
+- label: 250 mm
+  price: 19.75
+- label: 285 mm
+  price: 22.45
 customFields:
 - id: irishName
   label: Irish name (optional)
@@ -50,7 +52,7 @@ Choose your favourite Dublin street, a family surname, a name for the man cave o
 
 ### Details
 
-- Two widths: 150 mm (approx. 150 x 44 x 8 mm) or 260 mm (approx. 260 x 70 x 15 mm)
+- Three widths: 150 mm (approx. 150 x 44 x 8 mm), 250 mm (approx. 250 x 60 x 13 mm) or 285 mm (approx. 285 x 68 x 15 mm)
 - Freestanding: it stands on its own, with no stand or wall fixing needed
 - Matte PLA plastic in classic Dublin blue and white
 - Designed and 3D printed by me in Dublin, Ireland
@@ -66,7 +68,7 @@ Choose your favourite Dublin street, a family surname, a name for the man cave o
 
 Fill in your details in the order form:
 
-1. Width: 150 mm or 260 mm
+1. Width: 150 mm, 250 mm or 285 mm
 2. Irish name (leave it blank if you do not know it and I will find the correct translation)
 3. English street or custom name (for example Grafton Street, James's Street or Dad's Bar)
 4. District or house number (for example 2, 4, 8 or 24)

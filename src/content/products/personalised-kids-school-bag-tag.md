@@ -34,6 +34,7 @@ images:
 - /images/personalised-kids-school-bag-tag-26.jpg
 - /images/personalised-kids-school-bag-tag-27.jpg
 fromPrice: 11.65
+etsyUrl: https://make3die.etsy.com/listing/4609291464
 shipping: free-ireland
 priceMode: single
 optionsLabel: Options

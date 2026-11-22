@@ -19,6 +19,7 @@ images:
 - /images/personalised-christmas-gift-tags-set-of-3-11.jpg
 - /images/personalised-christmas-gift-tags-set-of-3-12.jpg
 fromPrice: 15.25
+etsyUrl: https://make3die.etsy.com/listing/4605965913
 shipping: free-everywhere
 priceMode: single
 optionsLabel: Options
