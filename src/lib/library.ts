@@ -37,7 +37,7 @@ export function formatEuro(value: number) {
  * 'included'        = most other pieces: postage is built into the price in Ireland; EU and UK buyers pay a little more on
  *                     the price and US buyers a bit more again (the site shows Etsy's extra minus the 10% discount).
  * 'free-everywhere' = the Christmas baubles: one price, free delivery in Ireland, the EU and the US.
- * 'standard'        = the two large signs: postage added on top of the price.
+ * 'standard'        = the two large signs: €5 postage added in Ireland; postage to other countries is quoted on request.
  *
  * extra = what each additional item in the same order adds (postage modes only).
  * worldwide = this mode also sells outside the EU, so the product page shows the rest-of-the-world delivery time
@@ -78,8 +78,7 @@ export const SHIPPING = {
     worldwide: true,
     rows: [
       { region: 'Ireland', price: '€5', extra: '€5' },
-      { region: 'European Union', price: '€10', extra: '€5' },
-      { region: 'Rest of the world', price: '€15', extra: '€10' },
+      { region: 'Outside Ireland', price: 'Message me first' },
     ],
   },
 } as const;

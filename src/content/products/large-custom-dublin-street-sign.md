@@ -13,7 +13,6 @@ icon: generic
 fromPrice: 14.35
 etsyUrl: https://make3die.etsy.com/listing/4581201555
 shipping: standard
-deliveryNote: The prices on this page are for Ireland. For the EU and the UK add €4.50 to the price of the sign, and for the United States add €6.30, as well as the postage in the table.
 priceMode: single
 optionsLabel: Width
 options:
