@@ -1,0 +1,71 @@
+---
+import { thumbUrl } from '../lib/library';
+interface Props { id: string; images: string[]; alt: string; }
+const { id, images, alt } = Astro.props;
+const media = images.map((src) => {
+  const video = /\.(mp4|webm)$/i.test(src);
+  return {
+    src,
+    video,
+    poster: video ? src.replace(/\.(mp4|webm)$/i, '-poster.jpg') : src,
+    webp: video ? '' : src.replace(/\.(jpg|jpeg|png)$/i, '.webp'),
+  };
+});
+const first = media[0];
+---
+<div class="project-gallery" data-gallery={id}>
+  <div class="rounded-2xl overflow-hidden border border-paper/10 bg-panel aspect-[4/5]">
+    <picture class={first.video ? 'hidden' : 'block w-full h-full'} data-role="picture">
+      <source data-role="source" srcset={first.webp || undefined} type="image/webp" />
+      <img data-role="main" src={first.video ? first.poster : first.src} alt={alt} width="1200" height="1500" loading="lazy" decoding="async"
+        class="w-full h-full object-contain transition-opacity duration-200" />
+    </picture>
+    <video data-role="video" class={first.video ? 'w-full h-full object-contain' : 'hidden w-full h-full object-contain'}
+      muted loop playsinline controls preload="none"></video>
+  </div>
+  {media.length > 1 && (
+    <div class="flex gap-3 mt-3 overflow-x-auto no-scrollbar pb-1">
+      {media.map((m, i) => (
+        <button type="button" data-src={m.src} data-webp={m.webp} data-poster={m.poster} data-video={m.video ? '1' : ''}
+          aria-label={m.video ? `Play video ${i + 1}` : `View photo ${i + 1}`}
+          class={`gallery-thumb relative shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${i === 0 ? 'border-gold' : 'border-paper/15 hover:border-paper/40'}`}>
+          <img src={thumbUrl(m.poster, 'sm')} data-full={m.poster} onerror="this.onerror=null;this.src=this.dataset.full"
+            alt="" loading="lazy" decoding="async" width="80" height="80" class="w-full h-full object-cover" />
+          {m.video && (
+            <span class="absolute inset-0 flex items-center justify-center bg-ink/30" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#F6F3EC"><path d="M8 5v14l11-7z" /></svg>
+            </span>
+          )}
+        </button>
+      ))}
+    </div>
+  )}
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.project-gallery').forEach((g) => {
+    const picture = g.querySelector<HTMLElement>('[data-role=picture]')!;
+    const source = g.querySelector<HTMLSourceElement>('[data-role=source]')!;
+    const main = g.querySelector<HTMLImageElement>('[data-role=main]')!;
+    const video = g.querySelector<HTMLVideoElement>('[data-role=video]')!;
+    const thumbs = g.querySelectorAll<HTMLButtonElement>('.gallery-thumb');
+    thumbs.forEach((t) => {
+      t.addEventListener('click', () => {
+        const { src = '', webp = '', poster = '', video: isVideo } = t.dataset;
+        if (isVideo) {
+          picture.classList.add('hidden'); picture.classList.remove('block');
+          video.classList.remove('hidden');
+          video.poster = poster; video.src = src;
+          video.play().catch(() => {});
+        } else {
+          video.pause(); video.classList.add('hidden');
+          picture.classList.remove('hidden'); picture.classList.add('block');
+          main.style.opacity = '0';
+          setTimeout(() => { source.srcset = webp || src; main.src = src; main.style.opacity = '1'; }, 150);
+        }
+        thumbs.forEach((x) => { x.classList.remove('border-gold'); x.classList.add('border-paper/15', 'hover:border-paper/40'); });
+        t.classList.add('border-gold'); t.classList.remove('border-paper/15', 'hover:border-paper/40');
+      });
+    });
+  });
+</script>

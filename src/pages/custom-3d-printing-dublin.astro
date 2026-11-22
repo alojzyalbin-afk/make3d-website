@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { DELIVERY } from '../lib/library';
+import ProjectGallery from '../components/ProjectGallery.astro';
+import { customProjects } from '../data/customProjects';
 
 const uses = [
   {
@@ -24,8 +26,8 @@ const uses = [
 ---
 
 <Layout
-  title="Custom 3D Printing in Dublin | Replacement Parts and One-offs"
-  description="Custom 3D printing in Dublin: replacement parts, one-off pieces, small batches and figurines printed in white. Send an STL or 3MF file, or photos and measurements."
+  title="Custom 3D Printing in Dublin | Props, Scale Models, Gifts and Replacement Parts"
+  description="Custom 3D printing in Dublin: props, scale models, personalised gifts, keyrings, Christmas and seasonal decor, patches and replacement parts. See my custom projects and ask for a free quote."
 >
   <section class="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-16">
     <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Custom 3D printing', href: '/custom-3d-printing-dublin/' }]} />
@@ -74,8 +76,38 @@ const uses = [
         </div>
       </div>
 
-      <div class="min-w-0 md:sticky md:top-24 md:self-start">
-        <div class="bg-panel rounded-2xl border border-paper/10 p-6 sm:p-8">
+    </div>
+  </section>
+
+  <!-- CUSTOM PROJECTS -->
+  <section id="custom-projects" class="bg-panel border-y border-paper/10">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14 md:py-20">
+      <h2 class="font-display font-bold text-3xl mb-3">Custom 3D printing projects</h2>
+      <p class="text-paper/70 leading-relaxed max-w-2xl mb-14">
+        A selection of one-off pieces I have designed and 3D printed to order in Dublin: props, scale models, keepsakes, novelty accessories and seasonal decor. Every one started as an idea or a photo.
+      </p>
+      <div class="space-y-20">
+        {customProjects.map((project, idx) => (
+          <article id={project.slug} class="grid md:grid-cols-2 gap-8 md:gap-12 items-start scroll-mt-24">
+            <div class={idx % 2 === 1 ? 'md:order-2 min-w-0' : 'min-w-0'}>
+              <ProjectGallery id={project.slug} images={project.images} alt={project.alt} />
+            </div>
+            <div class={idx % 2 === 1 ? 'md:order-1 min-w-0' : 'min-w-0'}>
+              <h3 class="font-display font-bold text-2xl mb-4">{project.title}</h3>
+              <div class="text-paper/70 leading-relaxed space-y-4">
+                {project.paragraphs.map((t) => <p>{t}</p>)}
+              </div>
+              <a href="#quote" class="inline-block mt-6 text-sm font-medium text-gold hover:underline underline-offset-4">Ask for something similar →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <section id="quote" class="max-w-2xl mx-auto px-5 sm:px-8 py-14 md:py-20 scroll-mt-24">
+              <div class="bg-panel rounded-2xl border border-paper/10 p-6 sm:p-8">
           <h2 class="font-display font-semibold text-xl mb-1">Ask for a quote</h2>
           <p class="text-sm text-paper/60 leading-relaxed mb-6">Free, and you pay nothing until you agree to the price.</p>
 
@@ -139,8 +171,6 @@ const uses = [
             <p id="quote-status" class="text-sm text-center hidden"></p>
           </form>
         </div>
-      </div>
-    </div>
   </section>
 </Layout>
 
